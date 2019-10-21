@@ -1,0 +1,10 @@
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\CuaHangDoChoi.exe.config
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\CuaHangDoChoi.exe
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\CuaHangDoChoi.pdb
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csprojAssemblyReference.cache
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.Form1.resources
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.Properties.Resources.resources
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.GenerateResource.cache
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.CoreCompileInputs.cache
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.exe
+E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.pdb
