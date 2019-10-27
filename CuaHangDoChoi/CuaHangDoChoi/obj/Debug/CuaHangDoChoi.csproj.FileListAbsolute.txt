@@ -8,3 +8,14 @@ E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoC
 E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.CoreCompileInputs.cache
 E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.exe
 E:\Visual Studio 2017\source\C#\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.pdb
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\CuaHangDoChoi.exe.config
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\CuaHangDoChoi.exe
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\CuaHangDoChoi.pdb
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csprojAssemblyReference.cache
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.Form1.resources
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.Properties.Resources.resources
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.TrangChu.resources
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.GenerateResource.cache
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.CoreCompileInputs.cache
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.exe
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.pdb
