@@ -19,3 +19,4 @@ D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoCh
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.CoreCompileInputs.cache
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.exe
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.pdb
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachNhanVien.resources
