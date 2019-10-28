@@ -27,3 +27,4 @@ D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoCh
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachNhanVien_QuanLy.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DangNhap.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.TrangChu_QuanLy.resources
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachHoaDon_QuanLy.resources
