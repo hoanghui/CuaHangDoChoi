@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhSachHangHoa.cs">
+    <Compile Include="DanhSachHangHoa_QuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachHangHoa.Designer.cs">
-      <DependentUpon>DanhSachHangHoa.cs</DependentUpon>
+    <Compile Include="DanhSachHangHoa_QuanLy.Designer.cs">
+      <DependentUpon>DanhSachHangHoa_QuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhSachKhachHang.cs">
       <SubType>Form</SubType>
@@ -58,17 +58,17 @@
     <Compile Include="DanhSachKhachHang.Designer.cs">
       <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhSachNhanVien.cs">
+    <Compile Include="DanhSachNhanVien_QuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachNhanVien.Designer.cs">
-      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    <Compile Include="DanhSachNhanVien_QuanLy.Designer.cs">
+      <DependentUpon>DanhSachNhanVien_QuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
@@ -84,23 +84,23 @@
     <Compile Include="ThongKe.Designer.cs">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrangChu.cs">
+    <Compile Include="TrangChu_QuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrangChu.Designer.cs">
-      <DependentUpon>TrangChu.cs</DependentUpon>
+    <Compile Include="TrangChu_QuanLy.Designer.cs">
+      <DependentUpon>TrangChu_QuanLy.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DanhSachHangHoa.resx">
-      <DependentUpon>DanhSachHangHoa.cs</DependentUpon>
+    <EmbeddedResource Include="DanhSachHangHoa_QuanLy.resx">
+      <DependentUpon>DanhSachHangHoa_QuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachKhachHang.resx">
       <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhSachNhanVien.resx">
-      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="DanhSachNhanVien_QuanLy.resx">
+      <DependentUpon>DanhSachNhanVien_QuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrangChu.resx">
-      <DependentUpon>TrangChu.cs</DependentUpon>
+    <EmbeddedResource Include="TrangChu_QuanLy.resx">
+      <DependentUpon>TrangChu_QuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

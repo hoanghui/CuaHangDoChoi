@@ -1,6 +1,6 @@
 ﻿namespace CuaHangDoChoi
 {
-    partial class DanhSachNhanVien
+    partial class DanhSachNhanVien_QuanLy
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachNhanVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachNhanVien_QuanLy));
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -83,7 +83,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Pink;
+            this.button5.BackColor = System.Drawing.Color.Plum;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -97,7 +97,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Pink;
+            this.button4.BackColor = System.Drawing.Color.Plum;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -111,7 +111,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Pink;
+            this.button2.BackColor = System.Drawing.Color.Plum;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -125,7 +125,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Pink;
+            this.button1.BackColor = System.Drawing.Color.Plum;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,7 +152,7 @@
             // 
             // btThemNV
             // 
-            this.btThemNV.BackColor = System.Drawing.Color.Pink;
+            this.btThemNV.BackColor = System.Drawing.Color.Plum;
             this.btThemNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btThemNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNV.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -166,7 +166,7 @@
             // 
             // btXoaNV
             // 
-            this.btXoaNV.BackColor = System.Drawing.Color.Pink;
+            this.btXoaNV.BackColor = System.Drawing.Color.Plum;
             this.btXoaNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btXoaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -191,6 +191,7 @@
             // pbSearch
             // 
             this.pbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.pbSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
             this.pbSearch.Location = new System.Drawing.Point(750, 169);
             this.pbSearch.Margin = new System.Windows.Forms.Padding(2);
@@ -215,6 +216,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Location = new System.Drawing.Point(806, 213);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(159, 207);
@@ -313,10 +315,11 @@
             this.label8.Text = "Tìm kiếm nhân viên";
             this.label8.Click += new System.EventHandler(this.label1_Click);
             // 
-            // DanhSachNhanVien
+            // DanhSachNhanVien_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Plum;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1344, 684);
@@ -341,7 +344,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "DanhSachNhanVien";
+            this.Name = "DanhSachNhanVien_QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách nhân viên";
             this.Load += new System.EventHandler(this.DanhSachNhanVien_Load);

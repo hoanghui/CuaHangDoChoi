@@ -1,6 +1,6 @@
 ﻿namespace CuaHangDoChoi
 {
-    partial class DanhSachHangHoa
+    partial class DanhSachHangHoa_QuanLy
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachHangHoa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachHangHoa_QuanLy));
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lvDanhSachNhanVien = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
