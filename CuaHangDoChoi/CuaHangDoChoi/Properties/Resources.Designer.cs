@@ -73,9 +73,39 @@ namespace CuaHangDoChoi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_header_search_image_1540158 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_header_search_image_1540158", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_magnifying_glass_search_1891418 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_magnifying_glass_search_1891418", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_magnifying_glass_search_511943 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_magnifying_glass_search_511943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_magnifying_glass_search_511943__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_magnifying_glass_search_511943__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

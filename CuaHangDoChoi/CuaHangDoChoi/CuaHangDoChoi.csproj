@@ -149,5 +149,17 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_67_111124.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_magnifying_glass_search_1891418.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_header-search-image_1540158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_magnifying-glass-search_511943.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_magnifying-glass-search_511943 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
