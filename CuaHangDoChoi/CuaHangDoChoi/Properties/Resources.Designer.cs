@@ -73,6 +73,16 @@ namespace CuaHangDoChoi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_magnifying_glass_search_1891418 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_magnifying_glass_search_1891418", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_search_126577 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_search_126577", resourceCulture);
