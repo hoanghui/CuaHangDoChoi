@@ -46,7 +46,7 @@
             this.txtUsername.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(180, 204);
+            this.txtUsername.Location = new System.Drawing.Point(354, 273);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(279, 37);
@@ -56,7 +56,7 @@
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(180, 283);
+            this.txtPassword.Location = new System.Drawing.Point(354, 352);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '♥';
@@ -67,7 +67,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 215);
+            this.pictureBox1.Location = new System.Drawing.Point(296, 284);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(122, 296);
+            this.pictureBox2.Location = new System.Drawing.Point(296, 365);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // 
             this.picLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogin.Image = ((System.Drawing.Image)(resources.GetObject("picLogin.Image")));
-            this.picLogin.Location = new System.Drawing.Point(168, 345);
+            this.picLogin.Location = new System.Drawing.Point(342, 414);
             this.picLogin.Name = "picLogin";
             this.picLogin.Size = new System.Drawing.Size(300, 66);
             this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,19 +99,19 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(143, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(317, 81);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(364, 327);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // Form1
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(638, 427);
+            this.ClientSize = new System.Drawing.Size(959, 557);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtUsername);
@@ -119,7 +119,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.picLogin);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Name = "Form1";
+            this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.Form1_Load);
