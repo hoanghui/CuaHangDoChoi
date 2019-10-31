@@ -63,6 +63,36 @@ namespace CuaHangDoChoi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7d1d31c51d236bbda42b0ab01a6688be {
+            get {
+                object obj = ResourceManager.GetObject("_7d1d31c51d236bbda42b0ab01a6688be", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abbcfce899a860705041a1425e07488f {
+            get {
+                object obj = ResourceManager.GetObject("abbcfce899a860705041a1425e07488f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d625045f0b22faf8d8ab3bd236f86085 {
+            get {
+                object obj = ResourceManager.GetObject("d625045f0b22faf8d8ab3bd236f86085", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_67_111124 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_67_111124", resourceCulture);
