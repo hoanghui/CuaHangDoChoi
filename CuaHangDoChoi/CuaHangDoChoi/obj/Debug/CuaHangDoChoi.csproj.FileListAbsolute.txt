@@ -22,9 +22,9 @@ C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaH
 C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.pdb
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.NhanVien.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachKhachHang.resources
-D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.ThongKe.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachHangHoa_QuanLy.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachNhanVien_QuanLy.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DangNhap.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.TrangChu_QuanLy.resources
 D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachHoaDon_QuanLy.resources
+D:\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.ThongKe_QuanLy.resources
