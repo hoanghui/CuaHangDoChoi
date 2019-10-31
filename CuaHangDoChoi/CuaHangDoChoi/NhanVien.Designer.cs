@@ -35,21 +35,26 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(289, 130);
+            this.label2.Location = new System.Drawing.Point(289, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 33);
             this.label2.TabIndex = 0;
@@ -58,7 +63,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(857, 130);
+            this.label3.Location = new System.Drawing.Point(857, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 33);
             this.label3.TabIndex = 0;
@@ -67,9 +72,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(799, 175);
+            this.listBox1.Location = new System.Drawing.Point(799, 201);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(278, 420);
+            this.listBox1.Size = new System.Drawing.Size(278, 394);
             this.listBox1.TabIndex = 1;
             // 
             // button1
@@ -98,7 +103,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(46, 175);
+            this.textBox4.Location = new System.Drawing.Point(46, 151);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(570, 40);
@@ -107,10 +112,64 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(46, 221);
+            this.listBox2.Location = new System.Drawing.Point(46, 201);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(715, 446);
+            this.listBox2.Size = new System.Drawing.Size(715, 472);
             this.listBox2.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(498, 219);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(42, 41);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "-";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(574, 219);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(42, 41);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "+";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(622, 219);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(60, 41);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Thêm ";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(688, 219);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(60, 41);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Xóa";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::CuaHangDoChoi.Properties.Resources.iconfinder_exit_2676937__1_;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Location = new System.Drawing.Point(1024, 13);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(52, 47);
+            this.button8.TabIndex = 7;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(58, 210);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -123,67 +182,68 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button3.BackgroundImage = global::CuaHangDoChoi.Properties.Resources.iconfinder_magnifying_glass_search_511943__1_;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(622, 175);
+            this.button3.Location = new System.Drawing.Point(1007, 151);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 40);
+            this.button3.Size = new System.Drawing.Size(69, 40);
             this.button3.TabIndex = 3;
-            this.button3.Text = "   Tìm Kiếm";
+            this.button3.Text = "Nhập";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // label1
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(58, 234);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(114, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Họ và tên :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button4
+            // label4
             // 
-            this.button4.Location = new System.Drawing.Point(483, 234);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 41);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(114, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 23);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Chức vụ   :";
+            this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button5
+            // textBox1
             // 
-            this.button5.Location = new System.Drawing.Point(574, 234);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 41);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(799, 151);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(214, 40);
+            this.textBox1.TabIndex = 2;
             // 
-            // button6
+            // button9
             // 
-            this.button6.Location = new System.Drawing.Point(622, 234);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 41);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Thêm ";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(688, 234);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 41);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Xóa";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button9.BackgroundImage = global::CuaHangDoChoi.Properties.Resources.iconfinder_magnifying_glass_search_511943__1_;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button9.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(622, 151);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(139, 40);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "   Tìm Kiếm";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 691);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -191,8 +251,10 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
@@ -200,8 +262,8 @@
             this.Controls.Add(this.label2);
             this.Name = "NhanVien";
             this.Text = "NhanVien";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +285,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button9;
     }
 }
