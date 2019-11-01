@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CuaHangDoChoi
+namespace BUS
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace CuaHangDoChoi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanVien());
+            Application.Run(new Form1());
         }
     }
 }
