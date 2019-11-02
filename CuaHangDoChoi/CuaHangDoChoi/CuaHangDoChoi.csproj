@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Bigdata\mysql-connector-net-8.0.18-noinstall\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class1_2.cs" />
+    <Compile Include="ConnectionDATA.cs" />
     <Compile Include="DanhSachHangHoa_QuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +83,7 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBase.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>

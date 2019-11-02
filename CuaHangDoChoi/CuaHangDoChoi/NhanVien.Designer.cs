@@ -57,6 +57,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(286, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 33);
@@ -112,10 +113,11 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(570, 40);
             this.textBox4.TabIndex = 2;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // listBox2
             // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.listBox2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(46, 201);
             this.listBox2.Name = "listBox2";
@@ -185,7 +187,6 @@
             this.label1.Size = new System.Drawing.Size(116, 23);
             this.label1.TabIndex = 8;
             this.label1.Text = "Họ và tên :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -196,7 +197,6 @@
             this.label4.Size = new System.Drawing.Size(116, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Chức vụ   :";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -217,7 +217,6 @@
             this.label5.Size = new System.Drawing.Size(88, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "SĐT KH :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button8
             // 
@@ -265,9 +264,9 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(911, 22);
+            this.label6.Location = new System.Drawing.Point(911, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 26);
+            this.label6.Size = new System.Drawing.Size(108, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "ĐĂNG XUẤT";
             // 
