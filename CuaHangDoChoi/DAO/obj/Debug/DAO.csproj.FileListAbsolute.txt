@@ -1,1 +1,14 @@
 C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.exe.config
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.exe.config
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.pdb
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DTO.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DTO.pdb
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DTO.exe.config
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.Properties.Resources.resources
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.pdb

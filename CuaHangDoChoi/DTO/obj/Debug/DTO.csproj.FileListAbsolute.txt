@@ -1,0 +1,9 @@
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\bin\Debug\DTO.exe.config
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\bin\Debug\DTO.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\bin\Debug\DTO.pdb
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.Properties.Resources.resources
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.pdb

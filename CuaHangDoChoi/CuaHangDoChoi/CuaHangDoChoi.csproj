@@ -180,5 +180,15 @@
   <ItemGroup>
     <None Include="Resources\7d1d31c51d236bbda42b0ab01a6688be.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{F1434A14-B9DC-4DBC-B3CB-4BEE3B098935}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{67600F82-3E9B-4E37-889A-F6CEF0872D3A}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
