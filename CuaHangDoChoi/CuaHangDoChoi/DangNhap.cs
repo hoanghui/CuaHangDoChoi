@@ -34,7 +34,7 @@ namespace CuaHangDoChoi
 
         }
 
-        private void picLogin_Click(object sender, EventArgs e)
+        private void SignIn()
         {
             string tenDangNhap = txtUsername.Text;
             string matKhau = txtPassword.Text;
@@ -65,8 +65,55 @@ namespace CuaHangDoChoi
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại!");
             }
+        }
+
+        private void picLogin_Click(object sender, EventArgs e)
+        {
+            SignIn();
+            //string tenDangNhap = txtUsername.Text;
+            //string matKhau = txtPassword.Text;
+            //TaiKhoan taikhoan = TaiKhoanDAO.Instance.layTaiKhoan(tenDangNhap);
+            //if (taikhoan != null)
+            //{
+            //    if (matKhau == taikhoan.MatKhau)
+            //    {
+            //        if (taikhoan.LoaiTaiKhoan == 1)
+            //        {
+            //            TrangChu_QuanLy tc = new TrangChu_QuanLy();
+            //            tc.Show();
+            //            this.Dispose(false);
+            //        }
+            //        else
+            //        {
+            //            NhanVien nv = new NhanVien();
+            //            nv.Show();
+            //            this.Dispose(false);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Đăng nhập thất bại. Vui lòng nhập lại!", "ĐĂNG NHẬP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại!");
+            //}
 
 
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            switch(keyData)
+            {
+                case Keys.Enter:
+                    {
+                        SignIn();
+                        return true;
+                    }
+            }
+            return false;
         }
     }
 }
