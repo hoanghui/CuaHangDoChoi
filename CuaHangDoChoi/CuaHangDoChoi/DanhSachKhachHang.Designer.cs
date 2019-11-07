@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.lvDanhSachNhanVien = new System.Windows.Forms.ListView();
+            this.lvDanhSachKhachHang = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -87,16 +87,17 @@
             this.txtTimKiem.Size = new System.Drawing.Size(242, 39);
             this.txtTimKiem.TabIndex = 29;
             // 
-            // lvDanhSachNhanVien
+            // lvDanhSachKhachHang
             // 
-            this.lvDanhSachNhanVien.HideSelection = false;
-            this.lvDanhSachNhanVien.Location = new System.Drawing.Point(253, 160);
-            this.lvDanhSachNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lvDanhSachNhanVien.Name = "lvDanhSachNhanVien";
-            this.lvDanhSachNhanVien.Size = new System.Drawing.Size(632, 411);
-            this.lvDanhSachNhanVien.TabIndex = 28;
-            this.lvDanhSachNhanVien.UseCompatibleStateImageBehavior = false;
-            this.lvDanhSachNhanVien.View = System.Windows.Forms.View.Details;
+            this.lvDanhSachKhachHang.HideSelection = false;
+            this.lvDanhSachKhachHang.Location = new System.Drawing.Point(253, 160);
+            this.lvDanhSachKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvDanhSachKhachHang.Name = "lvDanhSachKhachHang";
+            this.lvDanhSachKhachHang.Size = new System.Drawing.Size(632, 411);
+            this.lvDanhSachKhachHang.TabIndex = 28;
+            this.lvDanhSachKhachHang.UseCompatibleStateImageBehavior = false;
+            this.lvDanhSachKhachHang.View = System.Windows.Forms.View.Details;
+            this.lvDanhSachKhachHang.SelectedIndexChanged += new System.EventHandler(this.lvDanhSachKhachHang_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -197,7 +198,7 @@
             this.btXoaNV.Name = "btXoaNV";
             this.btXoaNV.Size = new System.Drawing.Size(155, 39);
             this.btXoaNV.TabIndex = 15;
-            this.btXoaNV.Text = "Xóa nhân viên";
+            this.btXoaNV.Text = "Xóa khách hàng";
             this.btXoaNV.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -225,7 +226,7 @@
             this.btThemNV.Name = "btThemNV";
             this.btThemNV.Size = new System.Drawing.Size(144, 39);
             this.btThemNV.TabIndex = 13;
-            this.btThemNV.Text = "Thêm nhân viên";
+            this.btThemNV.Text = "Thêm khách hàng";
             this.btThemNV.UseVisualStyleBackColor = false;
             // 
             // button6
@@ -322,7 +323,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.lvDanhSachNhanVien);
+            this.Controls.Add(this.lvDanhSachKhachHang);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -340,7 +341,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DanhSachKhachHang";
             this.Text = "Danh Sách Khách Hàng";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -355,7 +356,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.ListView lvDanhSachNhanVien;
+        private System.Windows.Forms.ListView lvDanhSachKhachHang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;

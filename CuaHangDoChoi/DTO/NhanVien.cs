@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class KhachHang
+    class NhanVien
     {
-        private string maKhachHang;
+        private string maNhanVien;
         private string hoTen;
         private int soDienThoai;
         private int cMND;
         private string gioiTinh;
         private DateTime ngaySinh;
         private string diaChi;
-    
-        public KhachHang(DataRow row)
+
+        public NhanVien(DataRow row)
         {
-            this.maKhachHang = row["maKhachHang"].ToString();
+            this.maNhanVien = row["maKhachHang"].ToString();
             this.hoTen = row["hoTen"].ToString();
             this.soDienThoai = (int)row["soDienThoai"];
             this.cMND = (int)row["CMND"];
@@ -28,7 +28,7 @@ namespace DTO
             this.diaChi = row["diaChi"].ToString();
         }
 
-        public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
+        public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public int SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
         public int CMND { get => cMND; set => cMND = value; }

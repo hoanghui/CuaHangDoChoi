@@ -16,5 +16,20 @@ namespace CuaHangDoChoi
         {
             InitializeComponent();
         }
+
+        //hàm xử lý người dùng chọn một dòng
+        private void lvDanhSachKhachHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvDanhSachKhachHang.SelectedItems.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                ListViewItem item = lvDanhSachKhachHang.SelectedItems[0];
+                lvDanhSachKhachHang.Text = item.SubItems[0].Text;
+                lvDanhSachKhachHang.Text = item.SubItems[1].Text;
+            }
+        }
     }
 }

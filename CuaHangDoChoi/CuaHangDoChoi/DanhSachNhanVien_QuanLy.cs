@@ -29,7 +29,16 @@ namespace CuaHangDoChoi
 
         private void lvDanhSachNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (lvDanhSachNhanVien.SelectedItems.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                ListViewItem item = lvDanhSachNhanVien.SelectedItems[0];
+                lvDanhSachNhanVien.Text = item.SubItems[0].Text;
+                lvDanhSachNhanVien.Text = item.SubItems[1].Text;
+            }
         }
 
         void LoadListView()
