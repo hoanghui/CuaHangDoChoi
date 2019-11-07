@@ -22,9 +22,9 @@ namespace DAO
         private NhanVienDAO() { }
 
         // đổ data vào 
-        public NhanVien layMaKhachHang(string maKhachHang)
+        public NhanVien layMaNhanVien(string maNhanVien)
         {
-            string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang= '" + maKhachHang + "'";
+            string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang= '" + maNhanVien+ "'";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
