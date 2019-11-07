@@ -13,44 +13,18 @@ namespace CuaHangDoChoi
 {
     public partial class DanhSachNhanVien_QuanLy : Form
     {
+        BindingSource bd = new BindingSource();
         public DanhSachNhanVien_QuanLy()
         {
             InitializeComponent();
             HienThiDanhSach();
+            GanDuLieu();
         }
-
-        //private void DanhSachNhanVien_Load(object sender, EventArgs e)
-        //{
-        //    lvDanhSachNhanVien.View = View.Details;
-        //    lvDanhSachNhanVien.GridLines = true;
-            
-
-        //    lvDanhSachNhanVien.Columns.Add("Mã nhân viên", 100);
-        //    lvDanhSachNhanVien.Columns.Add("Tên nhân viên", 300);
-        //}
-
-        //private void lvDanhSachNhanVien_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (lvDanhSachNhanVien.SelectedItems.Count == 0)
-        //    {
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        ListViewItem item = lvDanhSachNhanVien.SelectedItems[0];
-        //        lvDanhSachNhanVien.Text = item.SubItems[0].Text;
-        //        lvDanhSachNhanVien.Text = item.SubItems[1].Text;
-        //    }
-        //}
-
-        //void LoadListView()
-        //{
-        //    lvDanhSachNhanVien.Columns.Add("Mã nhân viên");
-        //}
 
        void HienThiDanhSach()
         {
-            dgvNhanVien.DataSource = NhanVienDAO.Instance.LayDanhSachKH();
+            bd.DataSource = NhanVienDAO.Instance.LayDanhSachKH();
+            dgvNhanVien.DataSource = bd;
 
             // set tên cột
             dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
@@ -66,10 +40,44 @@ namespace CuaHangDoChoi
             dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
         }
 
+        void GanDuLieu()
+        {
+            txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
+            txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
+            txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
+            txtBirthDay.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
+            txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
+            //txtName.DataBindings.Add("Text", dgvNhanVien, "tenDangNhap", true, DataSourceUpdateMode.Never);
+        }
+
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
+        private void DanhSachNhanVien_QuanLy_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBirthDay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSex_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
