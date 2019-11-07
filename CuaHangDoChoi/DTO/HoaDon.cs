@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class HoaDon
+    public class HoaDon
     {
         private int maHoaDon;
         private int maKhachHang;
