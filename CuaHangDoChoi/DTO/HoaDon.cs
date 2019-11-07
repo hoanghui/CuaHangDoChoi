@@ -24,7 +24,7 @@ namespace DTO
 
         public int MaHoaDon { get => maHoaDon; set => maHoaDon = value; }
         public int MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
-        public int MaKhachHang{ get => maKhachHang; set => maKhachHang = value; }
+        public int MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
         public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
-        
+    } 
 }

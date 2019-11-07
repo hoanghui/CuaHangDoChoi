@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class NhanVienDAO
+    public class NhanVienDAO
     {
         //biến singleton, khởi tạo 1 lần duy nhất
+        //biến instance để lấy dữ liệu từ csdl lên từ lần đầu, những lần sau khỏi phải xuống csdl nữa
+
         private static NhanVienDAO instance;
 
         public static NhanVienDAO Instance
@@ -22,15 +24,27 @@ namespace DAO
         private NhanVienDAO() { }
 
         // đổ data vào 
-        public NhanVien layMaNhanVien(string maNhanVien)
+        //public NhanVien layMaNhanVien(string maNhanVien)
+        //{
+        //    string query = "SELECT * FROM dbo.NhanVien WHERE ma= '" + maNhanVien+ "'";
+        //    DataTable table = DataProvider.Instance.ExecuteQuery(query);
+        //    foreach (DataRow row in table.Rows)
+        //    {
+        //        return new NhanVien(row);
+        //    }
+        //    return null;
+        //}
+
+        public List<NhanVien> LayDanhSachKH()
         {
-            string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang= '" + maNhanVien+ "'";
+            List<NhanVien> ds = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
-                return new NhanVien(row);
+                ds.Add(new NhanVien(row));
             }
-            return null;
+            return ds;
         }
 
 

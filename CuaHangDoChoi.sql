@@ -51,7 +51,7 @@ CREATE TABLE SanPham
 )
 GO
 
-CREATE TABLE HoaDon
+CREATE TABLE HoaDon   
 (
 	maHoaDon INT PRIMARY KEY,
 	maKhachHang INT,
@@ -74,3 +74,16 @@ CREATE TABLE ChiTietHoaDon
 )
 GO
 
+--Thêm dữ liệu vào bảng TaiKhoan --
+
+INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('admin', 1, 1),
+																 ('hoanghuy',1,0),
+																 ('giahuy',1,0),
+																 ('anhkhoa',1,0)
+																 
+--Thêm dữ liệu vào bảng NhanVien --
+INSERT INTO NhanVien VALUES (111, N'Nguyễn Hoàng Huy', 321764933,'11/19/1999','Nam', 'hoanghuy')
+INSERT INTO NhanVien VALUES (112, N'Nguyễn Gia Huy', 845156151,'10/06/1999','Nam', 'giahuy')
+INSERT INTO NhanVien VALUES(113, N'Phan Anh Khoa', 465151551,'10/22/1999','Nam', 'anhkhoa')
+INSERT INTO NhanVien VALUES(114, N'Trịnh Hoàng Yến', 846813565,'11/12/1999','Nu', 'admin')
+INSERT INTO NhanVien VALUES(115, N'Nguyễn Thanh Tú', 123456789,'09/29/1999','Nam', 'admin')

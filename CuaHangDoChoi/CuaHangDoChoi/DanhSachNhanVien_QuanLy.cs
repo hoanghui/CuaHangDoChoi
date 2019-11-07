@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,45 +16,60 @@ namespace CuaHangDoChoi
         public DanhSachNhanVien_QuanLy()
         {
             InitializeComponent();
+            HienThiDanhSach();
         }
 
-        private void DanhSachNhanVien_Load(object sender, EventArgs e)
-        {
-            lvDanhSachNhanVien.View = View.Details;
-            lvDanhSachNhanVien.GridLines = true;
+        //private void DanhSachNhanVien_Load(object sender, EventArgs e)
+        //{
+        //    lvDanhSachNhanVien.View = View.Details;
+        //    lvDanhSachNhanVien.GridLines = true;
             
 
-            lvDanhSachNhanVien.Columns.Add("Mã nhân viên", 100);
-            lvDanhSachNhanVien.Columns.Add("Tên nhân viên", 300);
-        }
+        //    lvDanhSachNhanVien.Columns.Add("Mã nhân viên", 100);
+        //    lvDanhSachNhanVien.Columns.Add("Tên nhân viên", 300);
+        //}
 
-        private void lvDanhSachNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        //private void lvDanhSachNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (lvDanhSachNhanVien.SelectedItems.Count == 0)
+        //    {
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        ListViewItem item = lvDanhSachNhanVien.SelectedItems[0];
+        //        lvDanhSachNhanVien.Text = item.SubItems[0].Text;
+        //        lvDanhSachNhanVien.Text = item.SubItems[1].Text;
+        //    }
+        //}
+
+        //void LoadListView()
+        //{
+        //    lvDanhSachNhanVien.Columns.Add("Mã nhân viên");
+        //}
+
+       void HienThiDanhSach()
         {
-            if (lvDanhSachNhanVien.SelectedItems.Count == 0)
-            {
-                return;
-            }
-            else
-            {
-                ListViewItem item = lvDanhSachNhanVien.SelectedItems[0];
-                lvDanhSachNhanVien.Text = item.SubItems[0].Text;
-                lvDanhSachNhanVien.Text = item.SubItems[1].Text;
-            }
+            dgvNhanVien.DataSource = NhanVienDAO.Instance.LayDanhSachKH();
+
+            // set tên cột
+            dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
+
+            dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
+
+            dgvNhanVien.Columns[2].HeaderText = "CMND";
+
+            dgvNhanVien.Columns[3].HeaderText = "Ngày sinh";
+
+            dgvNhanVien.Columns[4].HeaderText = "Giới tính";
+
+            dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
         }
 
-        void LoadListView()
-        {
-            lvDanhSachNhanVien.Columns.Add("Mã nhân viên");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
     }
 }
