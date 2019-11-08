@@ -45,7 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.txtBirthDay = new System.Windows.Forms.TextBox();
@@ -53,6 +53,9 @@
             this.txtSex = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtNhanVienID = new System.Windows.Forms.TextBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lbUserName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -77,7 +80,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button6.Location = new System.Drawing.Point(11, 627);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(142, 46);
             this.button6.TabIndex = 2;
@@ -91,7 +94,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button5.Location = new System.Drawing.Point(34, 409);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(205, 61);
             this.button5.TabIndex = 3;
@@ -105,7 +108,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button4.Location = new System.Drawing.Point(34, 344);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(205, 61);
             this.button4.TabIndex = 4;
@@ -119,7 +122,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Location = new System.Drawing.Point(34, 276);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(205, 62);
             this.button2.TabIndex = 5;
@@ -134,7 +137,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Location = new System.Drawing.Point(34, 204);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 68);
             this.button1.TabIndex = 6;
@@ -148,7 +151,7 @@
             this.btThemNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNV.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btThemNV.Location = new System.Drawing.Point(427, 557);
-            this.btThemNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btThemNV.Margin = new System.Windows.Forms.Padding(2);
             this.btThemNV.Name = "btThemNV";
             this.btThemNV.Size = new System.Drawing.Size(171, 46);
             this.btThemNV.TabIndex = 2;
@@ -162,7 +165,7 @@
             this.btXoaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btXoaNV.Location = new System.Drawing.Point(602, 557);
-            this.btXoaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btXoaNV.Margin = new System.Windows.Forms.Padding(2);
             this.btXoaNV.Name = "btXoaNV";
             this.btXoaNV.Size = new System.Drawing.Size(179, 46);
             this.btXoaNV.TabIndex = 2;
@@ -173,7 +176,7 @@
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(544, 169);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(205, 32);
@@ -185,7 +188,7 @@
             this.pbSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
             this.pbSearch.Location = new System.Drawing.Point(750, 169);
-            this.pbSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(31, 31);
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,19 +264,20 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Giới tính:";
             // 
-            // button3
+            // btnCapNhat
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(976, 536);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(171, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Chỉnh sửa";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCapNhat.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCapNhat.Location = new System.Drawing.Point(976, 554);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(171, 53);
+            this.btnCapNhat.TabIndex = 2;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label8
             // 
@@ -291,7 +295,7 @@
             // 
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Location = new System.Drawing.Point(249, 209);
-            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.Size = new System.Drawing.Size(532, 327);
@@ -352,16 +356,48 @@
             this.txtNhanVienID.TabIndex = 37;
             this.txtNhanVienID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(983, 93);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(193, 20);
+            this.dtpNgaySinh.TabIndex = 38;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(1146, 411);
+            this.txtUserName.Multiline = true;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(232, 38);
+            this.txtUserName.TabIndex = 35;
+            this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtSex_TextChanged);
+            // 
+            // lbUserName
+            // 
+            this.lbUserName.BackColor = System.Drawing.Color.Transparent;
+            this.lbUserName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.ForeColor = System.Drawing.Color.White;
+            this.lbUserName.Location = new System.Drawing.Point(970, 420);
+            this.lbUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(171, 44);
+            this.lbUserName.TabIndex = 7;
+            this.lbUserName.Text = "Tên đăng nhập:";
+            this.lbUserName.Click += new System.EventHandler(this.lbUserName_Click);
+            // 
             // DanhSachNhanVien_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Plum;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1350, 779);
+            this.ClientSize = new System.Drawing.Size(1391, 779);
+            this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.txtBirthDay);
             this.Controls.Add(this.txtCMND);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtSex);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtNhanVienID);
@@ -369,6 +405,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.lbUserName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -377,14 +414,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btXoaNV);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btThemNV);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DanhSachNhanVien_QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.DanhSachNhanVien_QuanLy_Load);
@@ -414,7 +451,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.TextBox txtBirthDay;
@@ -422,5 +459,8 @@
         private System.Windows.Forms.TextBox txtSex;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtNhanVienID;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label lbUserName;
     }
 }
