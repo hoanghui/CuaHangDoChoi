@@ -36,14 +36,15 @@ namespace CuaHangDoChoi
 
             // set tên cột
             dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
-
+            
             dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
+            dgvNhanVien.Columns[1].Width = 150; // set độ rộng cho cột
 
             dgvNhanVien.Columns[2].HeaderText = "CMND";
 
-            dgvNhanVien.Columns[3].HeaderText = "Ngày sinh";
+            dgvNhanVien.Columns[4].HeaderText = "Ngày sinh";
 
-            dgvNhanVien.Columns[4].HeaderText = "Giới tính";
+            dgvNhanVien.Columns[3].HeaderText = "Giới tính";
 
             dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
         }
@@ -72,6 +73,7 @@ namespace CuaHangDoChoi
             txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
             txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
             txtBirthDay.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
+            dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
         }
@@ -144,6 +146,27 @@ namespace CuaHangDoChoi
         private void lbUserName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btXoaNV_Click(object sender, EventArgs e)
+        {
+            if (this.dgvNhanVien.SelectedRows.Count > 0)
+            {
+                dgvNhanVien.Rows.RemoveAt(this.dgvNhanVien.SelectedRows[0].Index);
+            }
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
+            this.Dispose(false);
+        }
+
+        private void DanhSachNhanVien_QuanLy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn đăng xuất? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

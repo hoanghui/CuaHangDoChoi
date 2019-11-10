@@ -112,6 +112,12 @@ namespace CuaHangDoChoi
                         SignIn();
                         return true;
                     }
+                case Keys.Tab:
+                    {
+                       
+                            return txtPassword.Focus();
+          
+                    }
             }
             return false;
         }
