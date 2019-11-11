@@ -47,7 +47,6 @@
             this.txtChucVu = new System.Windows.Forms.TextBox();
             this.txtNhanVienId = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.btnShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuanLy)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +91,7 @@
             this.btSanPham.Name = "btSanPham";
             this.btSanPham.Size = new System.Drawing.Size(359, 79);
             this.btSanPham.TabIndex = 0;
-            this.btSanPham.Text = "HÀNG HÓA";
+            this.btSanPham.Text = "SẢN PHẨM";
             this.btSanPham.UseVisualStyleBackColor = false;
             this.btSanPham.Click += new System.EventHandler(this.btSanPham_Click);
             // 
@@ -261,23 +260,12 @@
             this.txtUserName.Size = new System.Drawing.Size(328, 39);
             this.txtUserName.TabIndex = 3;
             // 
-            // btnShow
-            // 
-            this.btnShow.Location = new System.Drawing.Point(448, 211);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(160, 148);
-            this.btnShow.TabIndex = 4;
-            this.btnShow.Text = "button1";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
             // TrangChu_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1058, 760);
-            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtNhanVienId);
             this.Controls.Add(this.txtChucVu);
@@ -300,6 +288,7 @@
             this.Name = "TrangChu_QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang Chủ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrangChu_QuanLy_FormClosing);
             this.Load += new System.EventHandler(this.TrangChu_QuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbQuanLy)).EndInit();
             this.ResumeLayout(false);
@@ -327,6 +316,5 @@
         private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.TextBox txtNhanVienId;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Button btnShow;
     }
 }

@@ -31,5 +31,33 @@ namespace CuaHangDoChoi
                 lvDanhSachKhachHang.Text = item.SubItems[1].Text;
             }
         }
+
+        private void btnDSNhanVien_Click(object sender, EventArgs e)
+        {
+            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
+            nv.Show();
+            this.Dispose(false);
+        }
+
+        private void btnDSHoaDon_Click(object sender, EventArgs e)
+        {
+            DanhSachHoaDon_QuanLy hd = new DanhSachHoaDon_QuanLy();
+            hd.Show();
+            this.Dispose(false);
+        }
+
+        private void btnDSHangHoa_Click(object sender, EventArgs e)
+        {
+            DanhSachHangHoa_QuanLy hh = new DanhSachHangHoa_QuanLy();
+            hh.Show();
+            this.Dispose(false);
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKe_QuanLy tk = new ThongKe_QuanLy();
+            tk.Show();
+            this.Dispose(false);
+        }
     }
 }

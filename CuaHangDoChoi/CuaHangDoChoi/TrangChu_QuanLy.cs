@@ -64,6 +64,8 @@ namespace CuaHangDoChoi
             this.Dispose(false);
         }
 
+        // lấy dữ liệu username từ Form DangNhap truyền qua Form này
+
         public void funData(TextBox txtName)
         {
             txtUserName.Text = txtName.Text;
@@ -78,18 +80,21 @@ namespace CuaHangDoChoi
                 txtHoTen.DataBindings.Add("Text", bd.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
                 txtNgaySinh.DataBindings.Add("Text", bd.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
                 txtChucVu.Text = "QUẢN LÝ";
+                pbQuanLy.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienId.Text.ToString() + ".jpg ");
+                pbQuanLy.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             
-        }
-
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            //GanDuLieu();
         }
 
         private void TrangChu_QuanLy_Load(object sender, EventArgs e)
         {
             GanDuLieu();
+        }
+
+        private void TrangChu_QuanLy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn đăng xuất? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

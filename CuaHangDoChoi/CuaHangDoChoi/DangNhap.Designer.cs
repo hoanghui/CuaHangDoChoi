@@ -64,7 +64,7 @@
             this.txtPassword.PasswordChar = '♥';
             this.txtPassword.Size = new System.Drawing.Size(209, 30);
             this.txtPassword.TabIndex = 0;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+   
             // 
             // pictureBox1
             // 
@@ -129,7 +129,7 @@
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.Form1_Load);
+     
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).EndInit();
