@@ -59,5 +59,15 @@ namespace CuaHangDoChoi
             tk.Show();
             this.Dispose(false);
         }
+
+        private void DanhSachKhachHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void DanhSachKhachHang_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

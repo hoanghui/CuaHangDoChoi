@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachKhachHang));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lvDanhSachKhachHang = new System.Windows.Forms.ListView();
@@ -54,19 +54,19 @@
             this.txtSex = new System.Windows.Forms.TextBox();
             this.txtBirthDay = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbNhanVien
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(901, 183);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 196);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.pbNhanVien.Location = new System.Drawing.Point(901, 183);
+            this.pbNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.pbNhanVien.Name = "pbNhanVien";
+            this.pbNhanVien.Size = new System.Drawing.Size(154, 196);
+            this.pbNhanVien.TabIndex = 31;
+            this.pbNhanVien.TabStop = false;
             // 
             // pbSearch
             // 
@@ -354,7 +354,6 @@
             // DanhSachKhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1441, 792);
             this.Controls.Add(this.txtBirthDay);
@@ -362,7 +361,7 @@
             this.Controls.Add(this.txtSex);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtNhanVienID);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbNhanVien);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.lvDanhSachKhachHang);
@@ -385,7 +384,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DanhSachKhachHang";
             this.Text = "Danh Sách Khách Hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachKhachHang_FormClosing);
+            this.Load += new System.EventHandler(this.DanhSachKhachHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -394,7 +395,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbNhanVien;
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.ListView lvDanhSachKhachHang;

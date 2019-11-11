@@ -40,7 +40,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbNhanVien = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,8 +56,9 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lbUserName = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,16 +182,17 @@
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(205, 32);
+            this.txtTimKiem.Size = new System.Drawing.Size(222, 32);
             this.txtTimKiem.TabIndex = 9;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.txtTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimKiem_KeyPress);
             // 
             // pbSearch
             // 
             this.pbSearch.BackColor = System.Drawing.Color.Transparent;
             this.pbSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
-            this.pbSearch.Location = new System.Drawing.Point(750, 169);
+            this.pbSearch.Location = new System.Drawing.Point(770, 169);
             this.pbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(31, 31);
@@ -210,14 +212,14 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Thông tin nhân viên";
             // 
-            // pictureBox1
+            // pbNhanVien
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(808, 204);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 207);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.pbNhanVien.Location = new System.Drawing.Point(808, 204);
+            this.pbNhanVien.Name = "pbNhanVien";
+            this.pbNhanVien.Size = new System.Drawing.Size(159, 207);
+            this.pbNhanVien.TabIndex = 11;
+            this.pbNhanVien.TabStop = false;
             // 
             // label3
             // 
@@ -273,7 +275,7 @@
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCapNhat.Location = new System.Drawing.Point(976, 554);
+            this.btnCapNhat.Location = new System.Drawing.Point(1109, 535);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(171, 53);
@@ -308,6 +310,7 @@
             // 
             // txtBirthDay
             // 
+            this.txtBirthDay.Enabled = false;
             this.txtBirthDay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthDay.Location = new System.Drawing.Point(1067, 314);
             this.txtBirthDay.Multiline = true;
@@ -319,6 +322,7 @@
             // 
             // txtCMND
             // 
+            this.txtCMND.Enabled = false;
             this.txtCMND.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(1067, 362);
             this.txtCMND.Multiline = true;
@@ -330,6 +334,7 @@
             // 
             // txtSex
             // 
+            this.txtSex.Enabled = false;
             this.txtSex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSex.Location = new System.Drawing.Point(1067, 407);
             this.txtSex.Multiline = true;
@@ -341,6 +346,7 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(1067, 225);
             this.txtName.Multiline = true;
@@ -352,6 +358,7 @@
             // 
             // txtNhanVienID
             // 
+            this.txtNhanVienID.Enabled = false;
             this.txtNhanVienID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhanVienID.Location = new System.Drawing.Point(808, 422);
             this.txtNhanVienID.Multiline = true;
@@ -359,16 +366,20 @@
             this.txtNhanVienID.Size = new System.Drawing.Size(159, 44);
             this.txtNhanVienID.TabIndex = 37;
             this.txtNhanVienID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNhanVienID.TextChanged += new System.EventHandler(this.txtNhanVienID_TextChanged);
             // 
             // dtpNgaySinh
             // 
+            this.dtpNgaySinh.Enabled = false;
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(1079, 278);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(193, 20);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(220, 20);
             this.dtpNgaySinh.TabIndex = 38;
             // 
             // txtUserName
             // 
+            this.txtUserName.Enabled = false;
             this.txtUserName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(1146, 451);
             this.txtUserName.Multiline = true;
@@ -391,6 +402,21 @@
             this.lbUserName.Text = "Tên đăng nhập:";
             this.lbUserName.Click += new System.EventHandler(this.lbUserName_Click);
             // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSua.Location = new System.Drawing.Point(934, 535);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(171, 53);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // DanhSachNhanVien_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,7 +432,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtNhanVienID);
             this.Controls.Add(this.dgvNhanVien);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbNhanVien);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.lbUserName);
@@ -418,6 +444,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btXoaNV);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btThemNV);
             this.Controls.Add(this.btnDangXuat);
@@ -431,7 +458,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachNhanVien_QuanLy_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachNhanVien_QuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -451,7 +478,7 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbNhanVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -464,8 +491,9 @@
         private System.Windows.Forms.TextBox txtSex;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtNhanVienID;
-        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lbUserName;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.Button btnSua;
     }
 }

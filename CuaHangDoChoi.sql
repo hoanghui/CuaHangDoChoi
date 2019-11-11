@@ -114,3 +114,22 @@ INSERT INTO KhachHang VALUES (7, N'Nguyễn Trấn Thành', 123456789, 032166549
 INSERT INTO KhachHang VALUES (8, N'Noo Phước Thịnh', 123456789, 0321665499, '3/9/1999','Nu',N'Quận 9')
 INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999','Nu',N'Quận 8')
 
+-- sua --
+SELECT *
+FROM NhanVien 
+IF EXISTS (
+	SELECT maNhanVien
+	FROM NhanVien
+	WHERE maNhanVien = 111
+	)	
+	BEGIN
+		INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('kaka',1,1)
+		INSERT INTO NhanVien VALUES(119, N'newbie', 415481561,'09/29/1999','Nam', 'kaka')
+	END
+ELSE
+	BEGIN
+		UPDATE  dbo.NhanVien SET  hoTen = N'cc', gioiTinh = 'Nu' 
+		WHERE maNhanVien = 111
+	END
+
+
