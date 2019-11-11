@@ -49,23 +49,23 @@ namespace CuaHangDoChoi
             dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
         }
 
-        void HienThiDanhSach2(object bd)
-        {
-            dgvNhanVien.DataSource = bd;
+        //void HienThiDanhSach2(object bd)
+        //{
+        //    dgvNhanVien.DataSource = bd;
 
-            // set tên cột
-            dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
+        //    // set tên cột
+        //    dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
 
-            dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
+        //    dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
 
-            dgvNhanVien.Columns[2].HeaderText = "CMND";
+        //    dgvNhanVien.Columns[2].HeaderText = "CMND";
 
-            dgvNhanVien.Columns[3].HeaderText = "Ngày sinh";
+        //    dgvNhanVien.Columns[3].HeaderText = "Ngày sinh";
 
-            dgvNhanVien.Columns[4].HeaderText = "Giới tính";
+        //    dgvNhanVien.Columns[4].HeaderText = "Giới tính";
 
-            dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
-        }
+        //    dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
+        //}
 
         void GanDuLieu()
         {
@@ -133,7 +133,7 @@ namespace CuaHangDoChoi
             if (ketqua)
             {
                 bd.DataSource = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
-                HienThiDanhSach2(bd);
+                //HienThiDanhSach2(bd);
                 MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
@@ -167,6 +167,12 @@ namespace CuaHangDoChoi
         {
             if (MessageBox.Show("Bạn có chắc muốn đăng xuất? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            //(dgvNhanVien.DataSource as BindingSource)..RowFilter = string.Format("Name='{0}'", txtTimKiem.Text);
+            (dgvNhanVien.DataSource as DataTable).DefaultView.RowFilter = string.Format("Name LIKE '%{0}%' OR ID LIKE '%{0}%'", txtTimKiem.Text);
         }
     }
 }

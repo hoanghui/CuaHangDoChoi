@@ -12,6 +12,9 @@ namespace CuaHangDoChoi
 {
     public partial class DanhSachHangHoa_QuanLy : Form
     {
+       
+
+
         public DanhSachHangHoa_QuanLy()
         {
             InitializeComponent();

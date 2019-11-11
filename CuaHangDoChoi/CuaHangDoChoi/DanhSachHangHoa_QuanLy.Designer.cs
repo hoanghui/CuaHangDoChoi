@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachHangHoa_QuanLy));
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.lvDanhSachNhanVien = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.btXoaNV = new System.Windows.Forms.Button();
             this.btThemNV = new System.Windows.Forms.Button();
@@ -49,31 +48,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.dgvSanPham = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(594, 192);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(238, 32);
             this.txtTimKiem.TabIndex = 31;
-            // 
-            // lvDanhSachNhanVien
-            // 
-            this.lvDanhSachNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lvDanhSachNhanVien.HideSelection = false;
-            this.lvDanhSachNhanVien.Location = new System.Drawing.Point(244, 227);
-            this.lvDanhSachNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lvDanhSachNhanVien.Name = "lvDanhSachNhanVien";
-            this.lvDanhSachNhanVien.Size = new System.Drawing.Size(627, 288);
-            this.lvDanhSachNhanVien.TabIndex = 30;
-            this.lvDanhSachNhanVien.UseCompatibleStateImageBehavior = false;
-            this.lvDanhSachNhanVien.View = System.Windows.Forms.View.Details;
             // 
             // label1
             // 
@@ -94,7 +83,7 @@
             this.btXoaNV.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btXoaNV.Location = new System.Drawing.Point(726, 533);
-            this.btXoaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btXoaNV.Margin = new System.Windows.Forms.Padding(2);
             this.btXoaNV.Name = "btXoaNV";
             this.btXoaNV.Size = new System.Drawing.Size(145, 46);
             this.btXoaNV.TabIndex = 22;
@@ -109,7 +98,7 @@
             this.btThemNV.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNV.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btThemNV.Location = new System.Drawing.Point(557, 533);
-            this.btThemNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btThemNV.Margin = new System.Windows.Forms.Padding(2);
             this.btThemNV.Name = "btThemNV";
             this.btThemNV.Size = new System.Drawing.Size(165, 46);
             this.btThemNV.TabIndex = 23;
@@ -124,7 +113,7 @@
             this.btDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangXuat.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btDangXuat.Location = new System.Drawing.Point(23, 533);
-            this.btDangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btDangXuat.Name = "btDangXuat";
             this.btDangXuat.Size = new System.Drawing.Size(166, 46);
             this.btDangXuat.TabIndex = 24;
@@ -139,7 +128,7 @@
             this.btThongKe.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btThongKe.Location = new System.Drawing.Point(23, 422);
-            this.btThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.btThongKe.Name = "btThongKe";
             this.btThongKe.Size = new System.Drawing.Size(217, 50);
             this.btThongKe.TabIndex = 25;
@@ -154,7 +143,7 @@
             this.btListHangHoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btListHangHoa.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btListHangHoa.Location = new System.Drawing.Point(23, 358);
-            this.btListHangHoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btListHangHoa.Margin = new System.Windows.Forms.Padding(2);
             this.btListHangHoa.Name = "btListHangHoa";
             this.btListHangHoa.Size = new System.Drawing.Size(217, 50);
             this.btListHangHoa.TabIndex = 26;
@@ -169,7 +158,7 @@
             this.bbtListKhachHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bbtListKhachHang.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bbtListKhachHang.Location = new System.Drawing.Point(23, 294);
-            this.bbtListKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bbtListKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.bbtListKhachHang.Name = "bbtListKhachHang";
             this.bbtListKhachHang.Size = new System.Drawing.Size(217, 50);
             this.bbtListKhachHang.TabIndex = 27;
@@ -184,7 +173,7 @@
             this.btListNhanVien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btListNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btListNhanVien.Location = new System.Drawing.Point(23, 228);
-            this.btListNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btListNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.btListNhanVien.Name = "btListNhanVien";
             this.btListNhanVien.Size = new System.Drawing.Size(217, 50);
             this.btListNhanVien.TabIndex = 28;
@@ -197,7 +186,7 @@
             this.pbSearch.BackColor = System.Drawing.Color.Transparent;
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
             this.pbSearch.Location = new System.Drawing.Point(838, 192);
-            this.pbSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(33, 31);
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -223,7 +212,7 @@
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Location = new System.Drawing.Point(352, 533);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 46);
             this.button1.TabIndex = 23;
@@ -312,7 +301,15 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "#MÃ SẢN PHẨM";
             // 
-            // DanhSachHangHoa
+            // dgvSanPham
+            // 
+            this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSanPham.Location = new System.Drawing.Point(258, 233);
+            this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.Size = new System.Drawing.Size(623, 300);
+            this.dgvSanPham.TabIndex = 34;
+            // 
+            // DanhSachHangHoa_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -320,10 +317,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1437, 673);
+            this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.lvDanhSachNhanVien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -342,12 +339,13 @@
             this.Controls.Add(this.btListNhanVien);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "DanhSachHangHoa";
+            this.Name = "DanhSachHangHoa_QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Hàng Hóa";
             this.Load += new System.EventHandler(this.DanhSachHangHoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +355,6 @@
 
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.ListView lvDanhSachNhanVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btXoaNV;
         private System.Windows.Forms.Button btThemNV;
@@ -375,5 +372,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dgvSanPham;
     }
 }

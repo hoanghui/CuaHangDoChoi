@@ -67,7 +67,7 @@ namespace DAO
         {
             // kiểm tra xem người dùng có nhập rỗng hay không
 
-            if(manv.ToString() != "" && hoten != "" && cmnd.ToString() != "" && ngaysinh != "" && gioitinh != "" && tendangnhap != "")
+            if (manv.ToString() != "" && hoten != "" && cmnd.ToString() != "" && ngaysinh != "" && gioitinh != "" && tendangnhap != "")
             {
                 return true;
             }
@@ -75,8 +75,12 @@ namespace DAO
             {
                 return false;
             }
+
+
+        }
+        public void XoaNhanVien(DataException dgv)
+        {
             
-                
         }
 
         
