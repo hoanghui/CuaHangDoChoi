@@ -36,6 +36,18 @@ namespace DAO
         //    return null;
         //}
 
+        public List<NhanVien> Lay1nhanvien (string username)
+        {
+            List<NhanVien> nv = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + username + "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                nv.Add(new NhanVien(row));
+            }
+            return nv;
+        }
+
         public List<NhanVien> laynhanvien()
         {
             List<NhanVien> ds = new List<NhanVien>();
@@ -47,6 +59,8 @@ namespace DAO
             }
             return ds;
         }
+
+      
 
         public List<NhanVien> CapNhat(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
         {

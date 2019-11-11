@@ -36,6 +36,7 @@ namespace CuaHangDoChoi
 
         private void SignIn()
         {
+           
             string tenDangNhap = txtUsername.Text;
             string matKhau = txtPassword.Text;
             TaiKhoan taikhoan = TaiKhoanDAO.Instance.layTaiKhoan(tenDangNhap);
@@ -45,9 +46,11 @@ namespace CuaHangDoChoi
                 {
                     if (taikhoan.LoaiTaiKhoan == 1)
                     {
-                        TrangChu_QuanLy tc = new TrangChu_QuanLy();
-                        tc.Show();
+                        TrangChu_QuanLy home = new TrangChu_QuanLy();
+                        home.funData(this.txtUsername);
+                        home.Show();
                         this.Dispose(false);
+                        
                     }
                     else
                     {
@@ -121,5 +124,7 @@ namespace CuaHangDoChoi
             }
             return false;
         }
+
+
     }
 }

@@ -16,6 +16,10 @@ namespace DTO
         private string gioiTinh;
         private string tenDangNhap;
 
+        public NhanVien()
+        {
+        }
+
         public NhanVien(DataRow row)
         {
             this.maNhanVien = (int)row["maNhanVien"];
