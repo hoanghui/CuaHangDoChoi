@@ -28,14 +28,7 @@ namespace CuaHangDoChoi
         {
             InitializeComponent();
             HienThiDanhSach();
-            //txtBirthDay.Enabled = false;
-            //txtCMND.Enabled = false;
-            //txtSex.Enabled = false;
-            //txtNhanVienID.Enabled = false;
-            //dtpNgaySinh.Enabled = false;
-            //txtUserName.Enabled = false;
-            
-            
+           
         }
 
         void HienThiDanhSach()
@@ -47,6 +40,7 @@ namespace CuaHangDoChoi
             dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
             
             dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
+
             dgvNhanVien.Columns[1].Width = 150; // set độ rộng cho cột
 
             dgvNhanVien.Columns[2].HeaderText = "CMND";
@@ -60,45 +54,6 @@ namespace CuaHangDoChoi
             GanDuLieu();
         }
 
-        //void HienThiDanhSach2(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
-        //{
-        //    bd.DataSource = NhanVienDAO.Instance.CapNhat(manv,hoten,cmnd,ngaysinh,gioitinh,tendangnhap);
-        //    dgvNhanVien.DataSource = bd;
-
-        //    // set tên cột
-        //    dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
-
-        //    dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
-        //    dgvNhanVien.Columns[1].Width = 150; // set độ rộng cho cột
-
-        //    dgvNhanVien.Columns[2].HeaderText = "CMND";
-
-        //    dgvNhanVien.Columns[4].HeaderText = "Ngày sinh";
-
-        //    dgvNhanVien.Columns[3].HeaderText = "Giới tính";
-
-        //    dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
-        //}
-
-        void HienThiDanhSach2(BindingSource bd)
-        {
-
-            dgvNhanVien.DataSource = bd;
-
-            // set tên cột
-            dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
-
-            dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
-
-            dgvNhanVien.Columns[2].HeaderText = "CMND";
-
-            dgvNhanVien.Columns[3].HeaderText = "Ngày sinh";
-
-            dgvNhanVien.Columns[4].HeaderText = "Giới tính";
-
-            dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
-        }
-
         void GanDuLieu()
         {
             txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
@@ -108,14 +63,6 @@ namespace CuaHangDoChoi
             dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
-
-           
-
-        }
-
-        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void DanhSachNhanVien_QuanLy_Load(object sender, EventArgs e)
@@ -129,29 +76,10 @@ namespace CuaHangDoChoi
             txtUserName.Enabled = false;
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBirthDay_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSex_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCMND_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-                // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
+            
+            // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
             try
             {
                 manv = int.Parse(txtNhanVienID.Text);
@@ -167,19 +95,21 @@ namespace CuaHangDoChoi
                 return;
             }
 
-            bool ketqua = NhanVienDAO.Instance.SuaThongTinNhanVien(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
-            if (ketqua)
+            
+            bool result = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
+            if (result)
             {
-                bd.DataSource = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
-                
-                MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                    MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //dgvNhanVien.DataBindings.Clear();
+                    HienThiDanhSach();
             }
             else
             {
-                MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                    MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
             }
+            
+            
             txtName.Enabled = false;
             txtBirthDay.Enabled = false;
             txtCMND.Enabled = false;
@@ -187,9 +117,7 @@ namespace CuaHangDoChoi
             txtNhanVienID.Enabled = false;
             dtpNgaySinh.Enabled = false;
             txtUserName.Enabled = false;
-            HienThiDanhSach2(bd);
-                
-
+            
         }
 
         private void lbUserName_Click(object sender, EventArgs e)
@@ -199,9 +127,19 @@ namespace CuaHangDoChoi
 
         private void btXoaNV_Click(object sender, EventArgs e)
         {
-            if (this.dgvNhanVien.SelectedRows.Count > 0)
+            //if (this.dgvNhanVien.SelectedRows.Count > 0)
+            //{
+            //    dgvNhanVien.Rows.RemoveAt(this.dgvNhanVien.SelectedRows[0].Index);
+            //}
+            bool result = NhanVienDAO.Instance.XoaNV(int.Parse(txtNhanVienID.Text));
+            if(result)
             {
-                dgvNhanVien.Rows.RemoveAt(this.dgvNhanVien.SelectedRows[0].Index);
+                MessageBox.Show("Xóa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                HienThiDanhSach();
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -220,48 +158,45 @@ namespace CuaHangDoChoi
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            //(dgvNhanVien.DataSource as BindingSource)..RowFilter = string.Format("Name='{0}'", txtTimKiem.Text);
-            //(dgvNhanVien.DataSource as DataTable).DefaultView.RowFilter = string.Format("Name LIKE '%{0}%' OR ID LIKE '%{0}%'", txtTimKiem.Text);
+            
         }
 
         private void txtNhanVienID_TextChanged(object sender, EventArgs e)
         {
-            if (int.Parse(txtNhanVienID.Text) != 0)
+            if(txtNhanVienID.Enabled == false)
             {
-                txtName.Visible = true;
-                pbNhanVien.Visible = true;
-                txtBirthDay.Visible = true;
-                txtCMND.Visible = true;
-                txtSex.Visible = true;
-                txtNhanVienID.Visible = true;
-                dtpNgaySinh.Visible = true;
-                txtUserName.Visible = true;
-                pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
-                pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-            else
-            {
-                if (int.Parse(txtNhanVienID.Text) == 0)
+                if (int.Parse(txtNhanVienID.Text.ToString()) != 0)
                 {
-                    txtName.Visible = false;
-                    pbNhanVien.Visible = false;
-                    txtBirthDay.Visible = false;
-                    txtCMND.Visible = false;
-                    txtSex.Visible = false;
-                    txtNhanVienID.Visible = false;
-                    dtpNgaySinh.Visible = false;
-                    txtUserName.Visible = false;
+                    txtName.Visible = true;
+                    pbNhanVien.Visible = true;
+                    txtBirthDay.Visible = true;
+                    txtCMND.Visible = true;
+                    txtSex.Visible = true;
+                    txtNhanVienID.Visible = true;
+                    dtpNgaySinh.Visible = true;
+                    txtUserName.Visible = true;
+                    pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
+                    pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    if (int.Parse(txtNhanVienID.Text.ToString()) == 0)
+                    {
+                        txtName.Visible = false;
+                        pbNhanVien.Visible = false;
+                        txtBirthDay.Visible = false;
+                        txtCMND.Visible = false;
+                        txtSex.Visible = false;
+                        txtNhanVienID.Visible = false;
+                        dtpNgaySinh.Visible = false;
+                        txtUserName.Visible = false;
+                    }
                 }
             }
+            
         }
 
-        private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == (char)13)
-            {
-               
-            }
-        }
+        
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -276,14 +211,27 @@ namespace CuaHangDoChoi
 
         void Refresh()
         {
-            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
-            nv.Show();
-            this.Dispose(false);
+            //DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
+            //nv.Show();
+            //this.Dispose(false);
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
-            Refresh();
+            //Refresh();
+        }
+
+        private void pbSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bd.DataSource = NhanVienDAO.Instance.TimNV(int.Parse(txtTimKiem.Text.ToString()));
+            }
+            catch
+            {
+                MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

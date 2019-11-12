@@ -10,7 +10,7 @@ namespace DAO
 {
     public class NhanVienDAO
     {
-        
+        // nonquery: thêm, sửa, xóa
         //biến singleton, khởi tạo 1 lần duy nhất
         //biến instance để lấy dữ liệu từ csdl lên từ lần đầu, những lần sau khỏi phải xuống csdl nữa
 
@@ -36,17 +36,17 @@ namespace DAO
         //    return null;
         //}
 
-        public List<NhanVien> Lay1nhanvien (string username)
-        {
-            List<NhanVien> nv = new List<NhanVien>();
-            string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + username + "'";
-            DataTable table = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow row in table.Rows)
-            {
-                nv.Add(new NhanVien(row));
-            }
-            return nv;
-        }
+        //public List<NhanVien> Lay1nhanvien (string username)
+        //{
+        //    List<NhanVien> nv = new List<NhanVien>();
+        //    string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + username + "'";
+        //    DataTable table = DataProvider.Instance.ExecuteQuery(query);
+        //    foreach (DataRow row in table.Rows)
+        //    {
+        //        nv.Add(new NhanVien(row));
+        //    }
+        //    return nv;
+        //}
 
         public List<NhanVien> laynhanvien()
         {
@@ -62,17 +62,12 @@ namespace DAO
 
       
 
-        public List<NhanVien> CapNhat(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
+        public bool CapNhat(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
         {
-            List<NhanVien> ds = new List<NhanVien>();
-
-            string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = " + manv + ") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "' END" ;
-            DataTable table = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow row in table.Rows)
-            {
-                ds.Add(new NhanVien(row));
-            }
-            return ds;
+            //string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = " + manv + ") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "' END" ;
+            string query = "UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "'" ;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
 
         public bool SuaThongTinNhanVien(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
@@ -87,14 +82,27 @@ namespace DAO
             {
                 return false;
             }
-
-
         }
-        public void XoaNhanVien(DataException dgv)
+        public List<NhanVien> TimNV(int manv)
         {
-            
+            List<NhanVien> nv = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = '" +manv+ "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                nv.Add(new NhanVien(row));
+            }
+            return nv;
         }
 
+        public bool XoaNV(int manv)
+        {
+            string query = "DELETE FROM dbo.NhanVien WHERE maNhanVien = '" + manv + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        
         
     }
 }
