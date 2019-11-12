@@ -135,4 +135,5 @@ INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999
 
 --DELETE FROM NhanVien
 
-
+INSERT INTO dbo.NhanVien VALUES(119,N'Minh hoàng Hahahaha',485156156,'11/11/1999', 'nam','hahaha')
+INSERT INTO dbo.TaiKhoan ( tenDangNhap, matKhau, loaiTaiKhoan) VALUES('hahaha',1,1)
