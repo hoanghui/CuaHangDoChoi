@@ -15,7 +15,7 @@ namespace CuaHangDoChoi
 {
     public partial class DanhSachNhanVien_QuanLy : Form
     {
-        BindingSource bd = new BindingSource();
+        static BindingSource bd = new BindingSource();
 
         public int manv { get; private set; }
         public string hoten { get; private set; }
@@ -27,8 +27,6 @@ namespace CuaHangDoChoi
         public DanhSachNhanVien_QuanLy()
         {
             InitializeComponent();
-            HienThiDanhSach();
-           
         }
 
         void HienThiDanhSach()
@@ -74,6 +72,7 @@ namespace CuaHangDoChoi
             txtNhanVienID.Enabled = false;
             dtpNgaySinh.Enabled = false;
             txtUserName.Enabled = false;
+            HienThiDanhSach();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -96,20 +95,28 @@ namespace CuaHangDoChoi
             }
 
             
-            bool result = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
-            if (result)
-            {
+                bool result = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
+                if (result)
+                {
                     MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //dgvNhanVien.DataBindings.Clear();
+                    txtNhanVienID.DataBindings.Clear();
+                    txtName.DataBindings.Clear();
+                    txtBirthDay.DataBindings.Clear();
+                    txtSex.DataBindings.Clear();
+                    txtUserName.DataBindings.Clear();
+                    dtpNgaySinh.DataBindings.Clear();
+                    txtCMND.DataBindings.Clear();
+
                     HienThiDanhSach();
-            }
-            else
-            {
+                }
+                else
+                {
                     MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
-            }
+
+                }
             
             
+
             txtName.Enabled = false;
             txtBirthDay.Enabled = false;
             txtCMND.Enabled = false;
@@ -120,10 +127,7 @@ namespace CuaHangDoChoi
             
         }
 
-        private void lbUserName_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btXoaNV_Click(object sender, EventArgs e)
         {
@@ -211,9 +215,9 @@ namespace CuaHangDoChoi
 
         void Refresh()
         {
-            //DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
-            //nv.Show();
-            //this.Dispose(false);
+            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
+            nv.Show();
+            this.Dispose(false);
         }
 
         private void btnReload_Click(object sender, EventArgs e)

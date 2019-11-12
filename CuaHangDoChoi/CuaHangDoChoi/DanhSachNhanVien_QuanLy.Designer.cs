@@ -381,7 +381,7 @@
             this.lbUserName.Size = new System.Drawing.Size(171, 44);
             this.lbUserName.TabIndex = 7;
             this.lbUserName.Text = "Tên đăng nhập:";
-            this.lbUserName.Click += new System.EventHandler(this.lbUserName_Click);
+
             // 
             // btnSua
             // 

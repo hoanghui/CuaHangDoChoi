@@ -36,17 +36,17 @@ namespace DAO
         //    return null;
         //}
 
-        //public List<NhanVien> Lay1nhanvien (string username)
-        //{
-        //    List<NhanVien> nv = new List<NhanVien>();
-        //    string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + username + "'";
-        //    DataTable table = DataProvider.Instance.ExecuteQuery(query);
-        //    foreach (DataRow row in table.Rows)
-        //    {
-        //        nv.Add(new NhanVien(row));
-        //    }
-        //    return nv;
-        //}
+        public List<NhanVien> Lay1nhanvien(string username)
+        {
+            List<NhanVien> nv = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + username + "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                nv.Add(new NhanVien(row));
+            }
+            return nv;
+        }
 
         public List<NhanVien> laynhanvien()
         {
@@ -60,8 +60,6 @@ namespace DAO
             return ds;
         }
 
-      
-
         public bool CapNhat(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
         {
             //string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = " + manv + ") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "' END" ;
@@ -69,20 +67,7 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
-        public bool SuaThongTinNhanVien(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
-        {
-            // kiểm tra xem người dùng có nhập rỗng hay không
-
-            if (manv.ToString() != "" && hoten != "" && cmnd.ToString() != "" && ngaysinh != "" && gioitinh != "" && tendangnhap != "")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+     
         public List<NhanVien> TimNV(int manv)
         {
             List<NhanVien> nv = new List<NhanVien>();
