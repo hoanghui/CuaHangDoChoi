@@ -87,7 +87,7 @@ namespace DAO
             return result > 0;
         }
 
-        public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
+        public bool ThemNV(int manv, string hoten, int cmnd, DateTime ngaysinh, string gioitinh, string tendangnhap)
         {
             string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "',1,1)" +
                 "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','"+tendangnhap+"')";

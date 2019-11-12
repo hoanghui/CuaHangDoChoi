@@ -47,7 +47,6 @@
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.txtBirthDay = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtSex = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -202,7 +201,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(222, 32);
             this.txtTimKiem.TabIndex = 9;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            
             // 
             // label2
             // 
@@ -310,16 +309,6 @@
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(581, 327);
             this.dgvNhanVien.TabIndex = 12;
-            // 
-            // txtBirthDay
-            // 
-            this.txtBirthDay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthDay.Location = new System.Drawing.Point(1067, 314);
-            this.txtBirthDay.Multiline = true;
-            this.txtBirthDay.Name = "txtBirthDay";
-            this.txtBirthDay.Size = new System.Drawing.Size(232, 38);
-            this.txtBirthDay.TabIndex = 33;
-            this.txtBirthDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCMND
             // 
@@ -627,7 +616,6 @@
             this.ClientSize = new System.Drawing.Size(1924, 779);
             this.Controls.Add(this.panelThemNhanVien);
             this.Controls.Add(this.dtpNgaySinh);
-            this.Controls.Add(this.txtBirthDay);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtSex);
@@ -691,7 +679,6 @@
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.TextBox txtBirthDay;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtSex;
         private System.Windows.Forms.TextBox txtName;

@@ -24,6 +24,8 @@ namespace CuaHangDoChoi
         public string gioitinh { get; private set; }
         public string tendangnhap { get; private set; }
 
+        public DateTime BirthDay { get; private set; }
+
         public DanhSachNhanVien_QuanLy()
         {
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace CuaHangDoChoi
             txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
             txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
             txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
-            txtBirthDay.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
+            
             dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
@@ -66,7 +68,7 @@ namespace CuaHangDoChoi
         private void DanhSachNhanVien_QuanLy_Load(object sender, EventArgs e)
         {
             txtName.Enabled = false;
-            txtBirthDay.Enabled = false;
+            
             txtCMND.Enabled = false;
             txtSex.Enabled = false;
             txtNhanVienID.Enabled = false;
@@ -101,7 +103,7 @@ namespace CuaHangDoChoi
                     MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNhanVienID.DataBindings.Clear();
                     txtName.DataBindings.Clear();
-                    txtBirthDay.DataBindings.Clear();
+                   
                     txtSex.DataBindings.Clear();
                     txtUserName.DataBindings.Clear();
                     dtpNgaySinh.DataBindings.Clear();
@@ -118,7 +120,7 @@ namespace CuaHangDoChoi
             
 
             txtName.Enabled = false;
-            txtBirthDay.Enabled = false;
+            
             txtCMND.Enabled = false;
             txtSex.Enabled = false;
             txtNhanVienID.Enabled = false;
@@ -138,7 +140,13 @@ namespace CuaHangDoChoi
             bool result = NhanVienDAO.Instance.XoaNV(int.Parse(txtNhanVienID.Text));
             if(result)
             {
-                MessageBox.Show("Xóa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information); txtNhanVienID.DataBindings.Clear();
+                txtName.DataBindings.Clear();
+               
+                txtSex.DataBindings.Clear();
+                txtUserName.DataBindings.Clear();
+                dtpNgaySinh.DataBindings.Clear();
+                txtCMND.DataBindings.Clear();
                 HienThiDanhSach();
             }
             else
@@ -156,48 +164,51 @@ namespace CuaHangDoChoi
 
         private void DanhSachNhanVien_QuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc muốn đăng xuất? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Bạn có chắc muốn thoat? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
                 e.Cancel = true;
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            
+                
+            }
         }
 
         private void txtNhanVienID_TextChanged(object sender, EventArgs e)
         {
-            if(txtNhanVienID.Enabled == false)
+            //if(txtNhanVienID.Enabled == false)
+            //{
+            if (txtNhanVienID.Text != "")
             {
                 if (int.Parse(txtNhanVienID.Text.ToString()) != 0)
-                {
-                    txtName.Visible = true;
-                    pbNhanVien.Visible = true;
-                    txtBirthDay.Visible = true;
-                    txtCMND.Visible = true;
-                    txtSex.Visible = true;
-                    txtNhanVienID.Visible = true;
-                    dtpNgaySinh.Visible = true;
-                    txtUserName.Visible = true;
-                    pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
-                    pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                else
-                {
-                    if (int.Parse(txtNhanVienID.Text.ToString()) == 0)
                     {
-                        txtName.Visible = false;
-                        pbNhanVien.Visible = false;
-                        txtBirthDay.Visible = false;
-                        txtCMND.Visible = false;
-                        txtSex.Visible = false;
-                        txtNhanVienID.Visible = false;
-                        dtpNgaySinh.Visible = false;
-                        txtUserName.Visible = false;
+                        txtName.Visible = true;
+                        pbNhanVien.Visible = true;
+
+                        txtCMND.Visible = true;
+                        txtSex.Visible = true;
+                        txtNhanVienID.Visible = true;
+                        dtpNgaySinh.Visible = true;
+                        txtUserName.Visible = true;
+                        //pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
+                        //pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
-                }
+                    else
+                    {
+                        if (int.Parse(txtNhanVienID.Text.ToString()) == 0)
+                        {
+                            txtNhanVienID.Clear();
+                            txtName.Visible = false;
+                            pbNhanVien.Visible = false;
+
+                            txtCMND.Visible = false;
+                            txtSex.Visible = false;
+                            txtNhanVienID.Visible = false;
+                            dtpNgaySinh.Visible = false;
+                            txtUserName.Visible = false;
+                        }
+                    }
             }
-            
+
+            //}
+
         }
 
         
@@ -205,7 +216,7 @@ namespace CuaHangDoChoi
         private void btnSua_Click(object sender, EventArgs e)
         {
             txtName.Enabled = true;
-            txtBirthDay.Enabled = true;
+            
             txtCMND.Enabled = true;
             txtSex.Enabled = true;
             txtNhanVienID.Enabled = true;
@@ -217,7 +228,8 @@ namespace CuaHangDoChoi
         {
             DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
             nv.Show();
-            this.Dispose(false);
+            this.Close();
+            
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -227,15 +239,11 @@ namespace CuaHangDoChoi
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bd.DataSource = NhanVienDAO.Instance.TimNV(int.Parse(txtTimKiem.Text.ToString()));
-            }
-            catch
+            bd.DataSource = NhanVienDAO.Instance.TimNV(int.Parse(txtTimKiem.Text.ToString()));
+            if (bd.Count == 0)
             {
                 MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btThemNV_Click(object sender, EventArgs e)
@@ -248,7 +256,8 @@ namespace CuaHangDoChoi
             try
             {
                 manv = int.Parse(txtNhanVienIDNew.Text);
-                ngaysinh = dtpBirthdayNew.Value.Day + "-" + dtpNgaySinh.Value.Month + "-" + dtpNgaySinh.Value.Year;
+                ngaysinh = dtpBirthdayNew.Value.Day + "-" + dtpBirthdayNew.Value.Month + "-" + dtpBirthdayNew.Value.Year;
+                BirthDay = dtpBirthdayNew.Value;
                 hoten = txtNameNew.Text;
                 cmnd = int.Parse(txtCMNDNew.Text);
                 gioitinh = txtSexNew.Text;
@@ -260,25 +269,38 @@ namespace CuaHangDoChoi
                 return;
             }
 
-
-            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
+            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, BirthDay, gioitinh, tendangnhap);
             if (result)
             {
-                MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //txtNhanVienIDNew.DataBindings.Clear();
+                //txtNameNew.DataBindings.Clear();
+                //txtSexNew.DataBindings.Clear();
+                //dtpBirthdayNew.DataBindings.Clear();
+                //txtCMNDNew.DataBindings.Clear();
+                //txtNhanVienIDNew.DataBindings.Clear();
+
                 txtNhanVienID.DataBindings.Clear();
                 txtName.DataBindings.Clear();
-                txtBirthDay.DataBindings.Clear();
                 txtSex.DataBindings.Clear();
                 txtUserName.DataBindings.Clear();
                 dtpNgaySinh.DataBindings.Clear();
                 txtCMND.DataBindings.Clear();
+
+                
+                MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtNhanVienIDNew.Clear();
+                txtNameNew.Clear();
+                txtSexNew.Clear();
+                dtpBirthdayNew.Visible = false;
+                txtCMNDNew.Clear();
+                txtUserNameNew.Clear();
+
+
                 HienThiDanhSach();
-            }
-            else
-            {
-                MessageBox.Show("Thêm nhân viên không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+            
         }
     }
 }
