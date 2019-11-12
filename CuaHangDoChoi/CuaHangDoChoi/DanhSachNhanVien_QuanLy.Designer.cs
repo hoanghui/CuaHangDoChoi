@@ -215,7 +215,7 @@
             // 
             this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
             this.pbNhanVien.Location = new System.Drawing.Point(1077, 251);
-            this.pbNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.pbNhanVien.Name = "pbNhanVien";
             this.pbNhanVien.Size = new System.Drawing.Size(212, 255);
             this.pbNhanVien.TabIndex = 11;
@@ -305,10 +305,9 @@
             // 
             // txtBirthDay
             // 
-            this.txtBirthDay.Enabled = false;
             this.txtBirthDay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthDay.Location = new System.Drawing.Point(1423, 386);
-            this.txtBirthDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBirthDay.Margin = new System.Windows.Forms.Padding(4);
             this.txtBirthDay.Multiline = true;
             this.txtBirthDay.Name = "txtBirthDay";
             this.txtBirthDay.Size = new System.Drawing.Size(308, 46);
@@ -318,10 +317,9 @@
             // 
             // txtCMND
             // 
-            this.txtCMND.Enabled = false;
             this.txtCMND.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(1423, 446);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(308, 46);
@@ -331,10 +329,9 @@
             // 
             // txtSex
             // 
-            this.txtSex.Enabled = false;
             this.txtSex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSex.Location = new System.Drawing.Point(1423, 501);
-            this.txtSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSex.Margin = new System.Windows.Forms.Padding(4);
             this.txtSex.Multiline = true;
             this.txtSex.Name = "txtSex";
             this.txtSex.Size = new System.Drawing.Size(308, 46);
@@ -344,10 +341,9 @@
             // 
             // txtName
             // 
-            this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(1423, 277);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(308, 46);
@@ -357,10 +353,9 @@
             // 
             // txtNhanVienID
             // 
-            this.txtNhanVienID.Enabled = false;
             this.txtNhanVienID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhanVienID.Location = new System.Drawing.Point(1077, 519);
-            this.txtNhanVienID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhanVienID.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhanVienID.Multiline = true;
             this.txtNhanVienID.Name = "txtNhanVienID";
             this.txtNhanVienID.Size = new System.Drawing.Size(211, 53);
@@ -370,20 +365,18 @@
             // 
             // dtpNgaySinh
             // 
-            this.dtpNgaySinh.Enabled = false;
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(1439, 342);
-            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(292, 22);
             this.dtpNgaySinh.TabIndex = 38;
             // 
             // txtUserName
             // 
-            this.txtUserName.Enabled = false;
             this.txtUserName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(1528, 555);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(308, 46);

@@ -65,7 +65,8 @@ namespace DAO
         public List<NhanVien> CapNhat(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
         {
             List<NhanVien> ds = new List<NhanVien>();
-            string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = "+ manv +") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'"+hoten+"', gioiTinh = '"+ gioitinh +"', CMND = "+cmnd+" WHERE maNhanVien = '"+manv+"' END ELSE BEGIN INSERT INTO TaiKhoan(tenDangNhap, matKhau, loaiTaiKhoan) VALUES('"+tendangnhap+"', 1, 1) INSERT INTO NhanVien VALUES("+manv+", N'"+hoten+"', "+cmnd+",'"+ngaysinh+"','"+gioitinh+"', '"+tendangnhap+"')  END";
+
+            string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = " + manv + ") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "' END" ;
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {

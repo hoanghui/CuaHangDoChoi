@@ -28,17 +28,17 @@ namespace CuaHangDoChoi
         {
             InitializeComponent();
             HienThiDanhSach();
-            txtBirthDay.Enabled = false;
-            txtCMND.Enabled = false;
-            txtSex.Enabled = false;
-            txtNhanVienID.Enabled = false;
-            dtpNgaySinh.Enabled = false;
-            txtUserName.Enabled = false;
-            GanDuLieu();
+            //txtBirthDay.Enabled = false;
+            //txtCMND.Enabled = false;
+            //txtSex.Enabled = false;
+            //txtNhanVienID.Enabled = false;
+            //dtpNgaySinh.Enabled = false;
+            //txtUserName.Enabled = false;
+            
             
         }
 
-       void HienThiDanhSach()
+        void HienThiDanhSach()
        {
             bd.DataSource = NhanVienDAO.Instance.laynhanvien();
             dgvNhanVien.DataSource = bd;
@@ -56,6 +56,8 @@ namespace CuaHangDoChoi
             dgvNhanVien.Columns[3].HeaderText = "Giới tính";
 
             dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
+
+            GanDuLieu();
         }
 
         //void HienThiDanhSach2(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap)
@@ -106,10 +108,9 @@ namespace CuaHangDoChoi
             dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
-            //pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
-            //pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            
+           
+
         }
 
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -119,12 +120,13 @@ namespace CuaHangDoChoi
 
         private void DanhSachNhanVien_QuanLy_Load(object sender, EventArgs e)
         {
-            //txtBirthDay.Enabled = false;
-            //txtCMND.Enabled = false;
-            //txtSex.Enabled = false;
-            //txtNhanVienID.Enabled = false;
-            //dtpNgaySinh.Enabled = false;
-            //txtUserName.Enabled = false;
+            txtName.Enabled = false;
+            txtBirthDay.Enabled = false;
+            txtCMND.Enabled = false;
+            txtSex.Enabled = false;
+            txtNhanVienID.Enabled = false;
+            dtpNgaySinh.Enabled = false;
+            txtUserName.Enabled = false;
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -171,26 +173,20 @@ namespace CuaHangDoChoi
                 bd.DataSource = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
                 
                 MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtName.Enabled = false;
-                txtBirthDay.Enabled = false;
-                txtCMND.Enabled = false;
-                txtSex.Enabled = false;
-                txtNhanVienID.Enabled = false;
-                dtpNgaySinh.Enabled = false;
-                txtUserName.Enabled = false;
+                
             }
             else
             {
                 MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtName.Enabled = false;
-                txtBirthDay.Enabled = false;
-                txtCMND.Enabled = false;
-                txtSex.Enabled = false;
-                txtNhanVienID.Enabled = false;
-                dtpNgaySinh.Enabled = false;
-                txtUserName.Enabled = false;
+                
             }
-            
+            txtName.Enabled = false;
+            txtBirthDay.Enabled = false;
+            txtCMND.Enabled = false;
+            txtSex.Enabled = false;
+            txtNhanVienID.Enabled = false;
+            dtpNgaySinh.Enabled = false;
+            txtUserName.Enabled = false;
             HienThiDanhSach2(bd);
                 
 
@@ -232,6 +228,7 @@ namespace CuaHangDoChoi
         {
             if (int.Parse(txtNhanVienID.Text) != 0)
             {
+                txtName.Visible = true;
                 pbNhanVien.Visible = true;
                 txtBirthDay.Visible = true;
                 txtCMND.Visible = true;
@@ -239,13 +236,14 @@ namespace CuaHangDoChoi
                 txtNhanVienID.Visible = true;
                 dtpNgaySinh.Visible = true;
                 txtUserName.Visible = true;
-                //pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
-                //pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
+                pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
             {
                 if (int.Parse(txtNhanVienID.Text) == 0)
                 {
+                    txtName.Visible = false;
                     pbNhanVien.Visible = false;
                     txtBirthDay.Visible = false;
                     txtCMND.Visible = false;
@@ -267,13 +265,13 @@ namespace CuaHangDoChoi
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-                txtNhanVienID.Enabled = true;
-                txtName.Enabled = true;
-                txtUserName.Enabled = true;
-                dtpNgaySinh.Enabled = true;
-                txtCMND.Enabled = true;
-                txtSex.Enabled = true;
-                txtBirthDay.Enabled = true; 
+            txtName.Enabled = true;
+            txtBirthDay.Enabled = true;
+            txtCMND.Enabled = true;
+            txtSex.Enabled = true;
+            txtNhanVienID.Enabled = true;
+            dtpNgaySinh.Enabled = true;
+            txtUserName.Enabled = true;
         }
 
         void Refresh()

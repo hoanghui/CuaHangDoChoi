@@ -186,7 +186,7 @@
             this.btXoaNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btXoaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btXoaNV.Location = new System.Drawing.Point(816, 595);
+            this.btXoaNV.Location = new System.Drawing.Point(730, 595);
             this.btXoaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btXoaNV.Name = "btXoaNV";
             this.btXoaNV.Size = new System.Drawing.Size(155, 39);
