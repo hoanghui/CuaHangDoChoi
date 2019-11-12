@@ -133,3 +133,6 @@ ELSE
 	END
 
 
+DELETE FROM NhanVien
+
+

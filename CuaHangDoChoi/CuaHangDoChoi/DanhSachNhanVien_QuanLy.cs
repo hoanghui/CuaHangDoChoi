@@ -169,7 +169,7 @@ namespace CuaHangDoChoi
             if (ketqua)
             {
                 bd.DataSource = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
-                HienThiDanhSach2(bd);
+                
                 MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtName.Enabled = false;
                 txtBirthDay.Enabled = false;
@@ -190,8 +190,9 @@ namespace CuaHangDoChoi
                 dtpNgaySinh.Enabled = false;
                 txtUserName.Enabled = false;
             }
-
-
+            
+            HienThiDanhSach2(bd);
+                
 
         }
 
@@ -273,6 +274,18 @@ namespace CuaHangDoChoi
                 txtCMND.Enabled = true;
                 txtSex.Enabled = true;
                 txtBirthDay.Enabled = true; 
+        }
+
+        void Refresh()
+        {
+            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
+            nv.Show();
+            this.Dispose(false);
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }
