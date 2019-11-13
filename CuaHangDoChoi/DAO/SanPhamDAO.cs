@@ -45,6 +45,17 @@ namespace DAO
             }
             return nv;
         }
+        public List<SanPham> TimSPtheoten(string tensanpham)
+        {
+            List<SanPham> nv = new List<SanPham>();
+            string query = "SELECT * FROM dbo.SanPham WHERE tenSanPham = '" + tensanpham + "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                nv.Add(new SanPham(row));
+            }
+            return nv;
+        }
 
         public bool CapNhatSanPham(int masp, string tensp, string xuatxu, DateTime ngaynhap, double giaban, int soluong)
         {
