@@ -39,7 +39,7 @@ namespace CuaHangDoChoi
                     }
                     else
                     {
-                        NhanVien nv = new NhanVien();
+                        ThanhToan nv = new ThanhToan();
                         nv.Show();
                         this.Dispose(false);
                     }
