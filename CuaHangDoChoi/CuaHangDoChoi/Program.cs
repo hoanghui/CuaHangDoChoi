@@ -16,7 +16,7 @@ namespace CuaHangDoChoi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DanhSachNhanVien_QuanLy());
+            Application.Run(new DanhSachHangHoa_QuanLy());
         }
     }
 }

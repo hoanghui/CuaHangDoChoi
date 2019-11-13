@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class SanPhamDAO
-    {
+        public class SanPhamDAO
+        {
         //biến singleton, khởi tạo 1 lần duy nhất
         private static SanPhamDAO instance;
 
@@ -22,16 +22,28 @@ namespace DAO
         private SanPhamDAO() { }
 
         // đổ data vào 
-        public SanPham layMaSanPham(string maSanPham)
+        public List<SanPham> LaySanPham()
         {
-            string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang= '" + maSanPham + "'";
+            List<SanPham> sp = new List<SanPham>();
+            string query = "SELECT * FROM dbo.SanPham";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
-                return new SanPham(row);
+                sp.Add(new SanPham(row));
             }
-            return null;
+            return sp;
         }
 
+        public List<SanPham> TimSP(int masanpham)
+        {
+            List<SanPham> nv = new List<SanPham>();
+            string query = "SELECT * FROM dbo.SanPham WHERE maSanPham = '" + masanpham + "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                nv.Add(new SanPham(row));
+            }
+            return nv;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,50 @@ namespace CuaHangDoChoi
 {
     public partial class DanhSachHangHoa_QuanLy : Form
     {
-       
 
 
+        BindingSource bd = new BindingSource();
         public DanhSachHangHoa_QuanLy()
         {
             InitializeComponent();
         }
 
+        void HienThiDanhSach()
+        {
+            bd.DataSource = SanPhamDAO.Instance.LaySanPham();
+            dgvSanPham.DataSource = bd;
+
+            // set tên cột
+            dgvSanPham.Columns[0].HeaderText = "Mã sản phẩm";
+
+            dgvSanPham.Columns[1].HeaderText = "Tên sản phẩm";
+
+            dgvSanPham.Columns[1].Width = 150; // set độ rộng cho cột
+
+            dgvSanPham.Columns[2].HeaderText = "Xuất xứ";
+
+            dgvSanPham.Columns[4].HeaderText = "Ngày nhập";
+
+            dgvSanPham.Columns[3].HeaderText = "Giá bán";
+
+            dgvSanPham.Columns[5].HeaderText = "Số lượng";
+
+            GanDuLieu();
+        }
+
+        void GanDuLieu()
+        {
+            txtMaSanPham.DataBindings.Add("Text", dgvSanPham.DataSource, "maSanPham", true, DataSourceUpdateMode.Never);
+            txtTenSanPham.DataBindings.Add("Text", dgvSanPham.DataSource, "tenSanPham", true, DataSourceUpdateMode.Never);
+            txtXuatXu.DataBindings.Add("Text", dgvSanPham.DataSource, "xuatxu", true, DataSourceUpdateMode.Never);
+            dtpNgayNhap.DataBindings.Add("Text", dgvSanPham.DataSource, "ngayNhap", true, DataSourceUpdateMode.Never);
+            txtGiaBan.DataBindings.Add("Text", dgvSanPham.DataSource, "giaBan", true, DataSourceUpdateMode.Never);
+            txtSoLuong.DataBindings.Add("Text", dgvSanPham.DataSource, "soLuong", true, DataSourceUpdateMode.Never);
+        }
+
         private void DanhSachHangHoa_Load(object sender, EventArgs e)
         {
-
+            HienThiDanhSach();
         }
 
         private void btnListNhanVien_Click(object sender, EventArgs e)
@@ -59,5 +93,16 @@ namespace CuaHangDoChoi
             dn.Show();
             this.Dispose(false);
         }
+
+        private void pbSearch_Click(object sender, EventArgs e)
+        {
+            bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
+            if (bd.Count == 0)
+            {
+                MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
+
+
 }

@@ -15,7 +15,7 @@ namespace CuaHangDoChoi
 {
     public partial class DanhSachNhanVien_QuanLy : Form
     {
-        static BindingSource bd = new BindingSource();
+        BindingSource bd = new BindingSource();
 
         public int manv { get; private set; }
         public string hoten { get; private set; }
@@ -32,7 +32,7 @@ namespace CuaHangDoChoi
         }
 
         void HienThiDanhSach()
-       {
+        {
             bd.DataSource = NhanVienDAO.Instance.laynhanvien();
             dgvNhanVien.DataSource = bd;
 
