@@ -80,8 +80,8 @@ namespace CuaHangDoChoi
                 txtHoTen.DataBindings.Add("Text", bd.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
                 txtNgaySinh.DataBindings.Add("Text", bd.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
                 txtChucVu.Text = "QUẢN LÝ";
-                pbQuanLy.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienId.Text.ToString() + ".jpg ");
-                pbQuanLy.SizeMode = PictureBoxSizeMode.StretchImage;
+                //pbQuanLy.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienId.Text.ToString() + ".jpg ");
+                //pbQuanLy.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             
         }
