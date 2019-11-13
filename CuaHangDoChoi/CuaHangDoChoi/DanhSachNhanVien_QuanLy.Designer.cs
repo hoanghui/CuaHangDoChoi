@@ -56,6 +56,7 @@
             this.btnReload = new System.Windows.Forms.Button();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.panelThemNhanVien = new System.Windows.Forms.Panel();
+            this.txtNhanVienIDNew = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpBirthdayNew = new System.Windows.Forms.DateTimePicker();
             this.txtNameNew = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtCMNDNew = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtNhanVienIDNew = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtUserNameNew = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.btnDSHoaDon = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
@@ -81,7 +82,7 @@
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnDangXuat.BackColor = System.Drawing.Color.Fuchsia;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -156,7 +157,7 @@
             // 
             // btThemNV
             // 
-            this.btThemNV.BackColor = System.Drawing.Color.Plum;
+            this.btThemNV.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btThemNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btThemNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNV.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -171,7 +172,7 @@
             // 
             // btXoaNV
             // 
-            this.btXoaNV.BackColor = System.Drawing.Color.Plum;
+            this.btXoaNV.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btXoaNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btXoaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -197,9 +198,9 @@
             // pbNhanVien
             // 
             this.pbNhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.pbNhanVien.Location = new System.Drawing.Point(728, 4);
+            this.pbNhanVien.Location = new System.Drawing.Point(419, 524);
             this.pbNhanVien.Name = "pbNhanVien";
-            this.pbNhanVien.Size = new System.Drawing.Size(159, 169);
+            this.pbNhanVien.Size = new System.Drawing.Size(157, 143);
             this.pbNhanVien.TabIndex = 11;
             this.pbNhanVien.TabStop = false;
             // 
@@ -208,7 +209,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(892, 5);
+            this.label3.Location = new System.Drawing.Point(583, 525);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 47);
@@ -220,7 +221,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(890, 52);
+            this.label4.Location = new System.Drawing.Point(581, 572);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 35);
@@ -232,7 +233,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(890, 101);
+            this.label5.Location = new System.Drawing.Point(581, 621);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 27);
@@ -244,7 +245,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(890, 136);
+            this.label7.Location = new System.Drawing.Point(581, 656);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 44);
@@ -257,7 +258,7 @@
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCapNhat.Location = new System.Drawing.Point(920, 266);
+            this.btnCapNhat.Location = new System.Drawing.Point(611, 760);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(106, 37);
@@ -292,7 +293,7 @@
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(972, 100);
+            this.txtCMND.Location = new System.Drawing.Point(663, 620);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(195, 27);
@@ -302,7 +303,7 @@
             // txtSex
             // 
             this.txtSex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSex.Location = new System.Drawing.Point(972, 136);
+            this.txtSex.Location = new System.Drawing.Point(663, 656);
             this.txtSex.Multiline = true;
             this.txtSex.Name = "txtSex";
             this.txtSex.Size = new System.Drawing.Size(195, 27);
@@ -312,7 +313,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(972, 4);
+            this.txtName.Location = new System.Drawing.Point(663, 524);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(195, 23);
@@ -322,7 +323,7 @@
             // txtNhanVienID
             // 
             this.txtNhanVienID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhanVienID.Location = new System.Drawing.Point(728, 200);
+            this.txtNhanVienID.Location = new System.Drawing.Point(417, 700);
             this.txtNhanVienID.Multiline = true;
             this.txtNhanVienID.Name = "txtNhanVienID";
             this.txtNhanVienID.Size = new System.Drawing.Size(159, 44);
@@ -333,15 +334,15 @@
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(987, 52);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(678, 572);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(220, 20);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(180, 20);
             this.dtpNgaySinh.TabIndex = 38;
             // 
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(1014, 175);
+            this.txtUserName.Location = new System.Drawing.Point(705, 695);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(153, 28);
@@ -353,7 +354,7 @@
             this.lbUserName.BackColor = System.Drawing.Color.Transparent;
             this.lbUserName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserName.ForeColor = System.Drawing.Color.White;
-            this.lbUserName.Location = new System.Drawing.Point(890, 176);
+            this.lbUserName.Location = new System.Drawing.Point(581, 696);
             this.lbUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(171, 44);
@@ -366,7 +367,7 @@
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSua.Location = new System.Drawing.Point(788, 266);
+            this.btnSua.Location = new System.Drawing.Point(505, 760);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(99, 37);
@@ -377,14 +378,14 @@
             // 
             // btnReload
             // 
-            this.btnReload.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnReload.BackColor = System.Drawing.Color.ForestGreen;
             this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReload.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReload.Location = new System.Drawing.Point(728, 368);
+            this.btnReload.Location = new System.Drawing.Point(75, 457);
             this.btnReload.Margin = new System.Windows.Forms.Padding(2);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(171, 53);
+            this.btnReload.Size = new System.Drawing.Size(198, 99);
             this.btnReload.TabIndex = 2;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = false;
@@ -425,11 +426,22 @@
             this.panelThemNhanVien.Controls.Add(this.btnXacNhan);
             this.panelThemNhanVien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelThemNhanVien.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panelThemNhanVien.Location = new System.Drawing.Point(515, 417);
+            this.panelThemNhanVien.Location = new System.Drawing.Point(788, 12);
             this.panelThemNhanVien.Name = "panelThemNhanVien";
             this.panelThemNhanVien.Size = new System.Drawing.Size(401, 390);
             this.panelThemNhanVien.TabIndex = 39;
             this.panelThemNhanVien.Visible = false;
+            // 
+            // txtNhanVienIDNew
+            // 
+            this.txtNhanVienIDNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhanVienIDNew.Location = new System.Drawing.Point(122, 69);
+            this.txtNhanVienIDNew.Multiline = true;
+            this.txtNhanVienIDNew.Name = "txtNhanVienIDNew";
+            this.txtNhanVienIDNew.Size = new System.Drawing.Size(232, 33);
+            this.txtNhanVienIDNew.TabIndex = 37;
+            this.txtNhanVienIDNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNhanVienIDNew.TextChanged += new System.EventHandler(this.txtNhanVienID_TextChanged);
             // 
             // label6
             // 
@@ -506,17 +518,6 @@
             this.label10.Size = new System.Drawing.Size(136, 35);
             this.label10.TabIndex = 7;
             this.label10.Text = "Ngày sinh:";
-            // 
-            // txtNhanVienIDNew
-            // 
-            this.txtNhanVienIDNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhanVienIDNew.Location = new System.Drawing.Point(122, 69);
-            this.txtNhanVienIDNew.Multiline = true;
-            this.txtNhanVienIDNew.Name = "txtNhanVienIDNew";
-            this.txtNhanVienIDNew.Size = new System.Drawing.Size(232, 33);
-            this.txtNhanVienIDNew.TabIndex = 37;
-            this.txtNhanVienIDNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNhanVienIDNew.TextChanged += new System.EventHandler(this.txtNhanVienID_TextChanged);
             // 
             // txtMatKhau
             // 
@@ -598,11 +599,11 @@
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.Plum;
+            this.btnXacNhan.BackColor = System.Drawing.Color.DarkRed;
             this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnXacNhan.Location = new System.Drawing.Point(153, 354);
+            this.btnXacNhan.Location = new System.Drawing.Point(156, 351);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(101, 35);
@@ -626,13 +627,25 @@
             this.btnDSHoaDon.UseVisualStyleBackColor = false;
             this.btnDSHoaDon.Click += new System.EventHandler(this.btnDSHoaDon_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Oswald", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(496, 457);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(306, 90);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Thông tin nhân viên";
+            // 
             // DanhSachNhanVien_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 819);
+            this.ClientSize = new System.Drawing.Size(1199, 819);
             this.Controls.Add(this.panelThemNhanVien);
             this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.txtCMND);
@@ -661,10 +674,10 @@
             this.Controls.Add(this.btnDSSanPham);
             this.Controls.Add(this.btnDSKhachHang);
             this.Controls.Add(this.btnDSNhanVien);
+            this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DanhSachNhanVien_QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachNhanVien_QuanLy_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachNhanVien_QuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
@@ -722,5 +735,6 @@
         private System.Windows.Forms.Button btnDSHoaDon;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label1;
     }
 }

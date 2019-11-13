@@ -59,7 +59,6 @@ namespace CuaHangDoChoi
             txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
             txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
             txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
-            
             dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
@@ -222,23 +221,53 @@ namespace CuaHangDoChoi
 
         void Refresh()
         {
-            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
-            nv.Show();
-            this.Close();
             
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
-            //Refresh();
+            //dgvNhanVien.DataSource = null ;
+            //txtNhanVienID.Clear();
+            //txtName.Clear();
+            //txtSex.Clear();
+            //dtpNgaySinh.Visible = false;
+            //txtCMND.Clear();
+            //txtUserName.Clear();
+            //HienThiDanhSach();
         }
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
-            bd.DataSource = NhanVienDAO.Instance.TimNV(int.Parse(txtTimKiem.Text.ToString()));
-            if (bd.Count == 0)
+            if (txtTimKiem.Text != "")
             {
-                MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    int.Parse(txtTimKiem.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng nhập mã nhân viên", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                {
+                    bd.DataSource = NhanVienDAO.Instance.TimNV(int.Parse(txtTimKiem.Text.ToString()));
+                    if (bd.Count == 0)
+                    {
+                        MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                txtNhanVienID.DataBindings.Clear();
+                txtName.DataBindings.Clear();
+                txtSex.DataBindings.Clear();
+                txtUserName.DataBindings.Clear();
+                dtpNgaySinh.DataBindings.Clear();
+                txtCMND.DataBindings.Clear();
+
+                HienThiDanhSach();
             }
         }
          
