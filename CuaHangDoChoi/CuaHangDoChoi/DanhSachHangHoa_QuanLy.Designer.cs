@@ -93,13 +93,14 @@
             this.btXoaSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btXoaSP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaSP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btXoaSP.Location = new System.Drawing.Point(726, 533);
+            this.btXoaSP.Location = new System.Drawing.Point(736, 538);
             this.btXoaSP.Margin = new System.Windows.Forms.Padding(2);
             this.btXoaSP.Name = "btXoaSP";
             this.btXoaSP.Size = new System.Drawing.Size(145, 46);
             this.btXoaSP.TabIndex = 22;
             this.btXoaSP.Text = "Xóa sản phẩm";
             this.btXoaSP.UseVisualStyleBackColor = false;
+            this.btXoaSP.Click += new System.EventHandler(this.btXoaSP_Click);
             // 
             // btThemSP
             // 
@@ -107,13 +108,14 @@
             this.btThemSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btThemSP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemSP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btThemSP.Location = new System.Drawing.Point(557, 533);
+            this.btThemSP.Location = new System.Drawing.Point(567, 538);
             this.btThemSP.Margin = new System.Windows.Forms.Padding(2);
             this.btThemSP.Name = "btThemSP";
             this.btThemSP.Size = new System.Drawing.Size(165, 46);
             this.btThemSP.TabIndex = 23;
             this.btThemSP.Text = "Thêm sản phẩm";
             this.btThemSP.UseVisualStyleBackColor = false;
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
             // 
             // btDangXuat
             // 

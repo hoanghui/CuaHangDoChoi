@@ -45,5 +45,12 @@ namespace DAO
             }
             return nv;
         }
+
+        public bool XoaSP(int masanpham)
+        {
+            string query = "DELETE FROM dbo.SanPham WHERE maSanPham = '" + masanpham + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

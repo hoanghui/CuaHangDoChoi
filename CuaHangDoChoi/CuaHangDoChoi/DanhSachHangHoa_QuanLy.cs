@@ -102,6 +102,32 @@ namespace CuaHangDoChoi
                 MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btThemSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btXoaSP_Click(object sender, EventArgs e)
+        {
+            bool result = SanPhamDAO.Instance.XoaSP(int.Parse(txtMaSanPham.Text));
+            if (result)
+            {
+                MessageBox.Show("Xóa sản phẩm thành công", "Xóa sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtMaSanPham.DataBindings.Clear();
+                txtTenSanPham.DataBindings.Clear();
+                txtXuatXu.DataBindings.Clear();
+                txtSoLuong.DataBindings.Clear();
+                dtpNgayNhap.DataBindings.Clear();
+                txtGiaBan.DataBindings.Clear();
+                HienThiDanhSach();
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 
 

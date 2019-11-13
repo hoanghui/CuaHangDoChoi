@@ -211,8 +211,6 @@ namespace CuaHangDoChoi
 
         }
 
-        
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             txtName.Enabled = true;
@@ -245,7 +243,7 @@ namespace CuaHangDoChoi
                 MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+         
         private void btThemNV_Click(object sender, EventArgs e)
         {
             panelThemNhanVien.Visible = true;
