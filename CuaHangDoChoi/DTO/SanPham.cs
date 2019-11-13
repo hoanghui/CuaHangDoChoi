@@ -24,7 +24,6 @@ namespace DTO
             this.giaBan = (double)row["giaBan"];
             this.ngayNhap = (DateTime)row["ngayNhap"];
             this.soLuong = (int)row["soLuong"];
-           
         }
 
         public int MaSanPham { get => maSanPham; set => maSanPham= value; }

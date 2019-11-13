@@ -23,7 +23,7 @@ namespace CuaHangDoChoi
         public string ngaysinh { get; private set; }
         public string gioitinh { get; private set; }
         public string tendangnhap { get; private set; }
-
+        public string matkhau { get; private set; }
         public DateTime BirthDay { get; private set; }
 
         public DanhSachNhanVien_QuanLy()
@@ -258,6 +258,7 @@ namespace CuaHangDoChoi
                 cmnd = int.Parse(txtCMNDNew.Text);
                 gioitinh = txtSexNew.Text;
                 tendangnhap = txtUserNameNew.Text;
+                matkhau = txtMatKhau.Text;
             }
             catch
             {
@@ -265,7 +266,7 @@ namespace CuaHangDoChoi
                 return;
             }
 
-            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, BirthDay, gioitinh, tendangnhap);
+            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, BirthDay, gioitinh, tendangnhap, matkhau);
             if (result)
             {
                 //txtNhanVienIDNew.DataBindings.Clear();

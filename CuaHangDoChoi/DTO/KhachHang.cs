@@ -21,10 +21,10 @@ namespace DTO
         {
             this.maKhachHang = row["maKhachHang"].ToString();
             this.hoTen = row["hoTen"].ToString();
-            this.soDienThoai = (int)row["soDienThoai"];
             this.cMND = (int)row["CMND"];
-            this.gioiTinh = row["gioiTinh"].ToString();
+            this.soDienThoai = (int)row["soDienThoai"];
             this.ngaySinh = (DateTime)row["ngaySinh"];
+            this.gioiTinh = row["gioiTinh"].ToString();
             this.diaChi = row["diaChi"].ToString();
         }
 
