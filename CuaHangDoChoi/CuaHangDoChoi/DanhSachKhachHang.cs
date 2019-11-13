@@ -62,12 +62,17 @@ namespace CuaHangDoChoi
 
         private void DanhSachKhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+           
         }
 
         private void DanhSachKhachHang_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnDSKhachHang_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

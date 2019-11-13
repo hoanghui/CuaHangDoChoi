@@ -25,44 +25,39 @@ namespace CuaHangDoChoi
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnListNhanVien_Click(object sender, EventArgs e)
         {
-
+            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
+            nv.Show();
+            this.Dispose(false);
         }
 
-        private void btListNhanVien_Click(object sender, EventArgs e)
+        private void btnListKhachHang_Click(object sender, EventArgs e)
         {
-
+            DanhSachKhachHang kh = new DanhSachKhachHang();
+            kh.Show();
+            this.Dispose(false);
         }
 
-        private void bbtListKhachHang_Click(object sender, EventArgs e)
+        private void btnDSHoaDon_Click(object sender, EventArgs e)
         {
-
+            DanhSachHoaDon_QuanLy hd = new DanhSachHoaDon_QuanLy();
+            hd.Show();
+            this.Dispose(false);
         }
 
-        private void btThongKe_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
-
+            ThongKe_QuanLy tk = new ThongKe_QuanLy();
+            tk.Show();
+            this.Dispose(false);
         }
 
         private void btDangXuat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btThemNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btListHangHoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btXoaNV_Click(object sender, EventArgs e)
-        {
-
+            DangNhap dn = new DangNhap();
+            dn.Show();
+            this.Dispose(false);
         }
     }
 }

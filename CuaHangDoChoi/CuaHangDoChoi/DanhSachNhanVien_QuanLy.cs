@@ -302,5 +302,33 @@ namespace CuaHangDoChoi
             }
             
         }
+
+        private void btnDSKhachHang_Click(object sender, EventArgs e)
+        {
+            DanhSachKhachHang kh = new DanhSachKhachHang();
+            kh.Show();
+            this.Dispose(false);
+        }
+
+        private void btnDSSanPham_Click(object sender, EventArgs e)
+        {
+            DanhSachHangHoa_QuanLy hh = new DanhSachHangHoa_QuanLy();
+            hh.Show();
+            this.Dispose(false);
+        }
+
+        private void btnDSHoaDon_Click(object sender, EventArgs e)
+        {
+            DanhSachHoaDon_QuanLy hd = new DanhSachHoaDon_QuanLy();
+            hd.Show();
+            this.Dispose(false);
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKe_QuanLy tk = new ThongKe_QuanLy();
+            tk.Show();
+            this.Dispose(false);
+        }
     }
 }

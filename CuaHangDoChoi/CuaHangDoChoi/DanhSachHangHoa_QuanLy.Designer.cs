@@ -34,10 +34,10 @@
             this.btXoaNV = new System.Windows.Forms.Button();
             this.btThemNV = new System.Windows.Forms.Button();
             this.btDangXuat = new System.Windows.Forms.Button();
-            this.btThongKe = new System.Windows.Forms.Button();
-            this.btListHangHoa = new System.Windows.Forms.Button();
-            this.bbtListKhachHang = new System.Windows.Forms.Button();
-            this.btListNhanVien = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnListHangHoa = new System.Windows.Forms.Button();
+            this.btnListKhachHang = new System.Windows.Forms.Button();
+            this.btnListNhanVien = new System.Windows.Forms.Button();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,6 +49,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
+            this.btnDSHoaDon = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -89,7 +91,6 @@
             this.btXoaNV.TabIndex = 22;
             this.btXoaNV.Text = "Xóa sản phẩm";
             this.btXoaNV.UseVisualStyleBackColor = false;
-            this.btXoaNV.Click += new System.EventHandler(this.btXoaNV_Click);
             // 
             // btThemNV
             // 
@@ -104,7 +105,6 @@
             this.btThemNV.TabIndex = 23;
             this.btThemNV.Text = "Thêm sản phẩm";
             this.btThemNV.UseVisualStyleBackColor = false;
-            this.btThemNV.Click += new System.EventHandler(this.btThemNV_Click);
             // 
             // btDangXuat
             // 
@@ -112,7 +112,7 @@
             this.btDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangXuat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btDangXuat.Location = new System.Drawing.Point(23, 533);
+            this.btDangXuat.Location = new System.Drawing.Point(11, 616);
             this.btDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btDangXuat.Name = "btDangXuat";
             this.btDangXuat.Size = new System.Drawing.Size(166, 46);
@@ -121,65 +121,64 @@
             this.btDangXuat.UseVisualStyleBackColor = false;
             this.btDangXuat.Click += new System.EventHandler(this.btDangXuat_Click);
             // 
-            // btThongKe
+            // btnThongKe
             // 
-            this.btThongKe.BackColor = System.Drawing.Color.LightPink;
-            this.btThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btThongKe.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btThongKe.Location = new System.Drawing.Point(23, 422);
-            this.btThongKe.Margin = new System.Windows.Forms.Padding(2);
-            this.btThongKe.Name = "btThongKe";
-            this.btThongKe.Size = new System.Drawing.Size(217, 50);
-            this.btThongKe.TabIndex = 25;
-            this.btThongKe.Text = "Thống kê";
-            this.btThongKe.UseVisualStyleBackColor = false;
-            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
+            this.btnThongKe.BackColor = System.Drawing.Color.LightPink;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThongKe.Location = new System.Drawing.Point(23, 483);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(217, 50);
+            this.btnThongKe.TabIndex = 25;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // btListHangHoa
+            // btnListHangHoa
             // 
-            this.btListHangHoa.BackColor = System.Drawing.Color.LightPink;
-            this.btListHangHoa.Enabled = false;
-            this.btListHangHoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btListHangHoa.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btListHangHoa.Location = new System.Drawing.Point(23, 358);
-            this.btListHangHoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btListHangHoa.Name = "btListHangHoa";
-            this.btListHangHoa.Size = new System.Drawing.Size(217, 50);
-            this.btListHangHoa.TabIndex = 26;
-            this.btListHangHoa.Text = "Danh sách hàng hóa";
-            this.btListHangHoa.UseVisualStyleBackColor = false;
-            this.btListHangHoa.Click += new System.EventHandler(this.btListHangHoa_Click);
+            this.btnListHangHoa.BackColor = System.Drawing.Color.LightPink;
+            this.btnListHangHoa.Enabled = false;
+            this.btnListHangHoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListHangHoa.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnListHangHoa.Location = new System.Drawing.Point(23, 358);
+            this.btnListHangHoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListHangHoa.Name = "btnListHangHoa";
+            this.btnListHangHoa.Size = new System.Drawing.Size(217, 50);
+            this.btnListHangHoa.TabIndex = 26;
+            this.btnListHangHoa.Text = "Danh sách hàng hóa";
+            this.btnListHangHoa.UseVisualStyleBackColor = false;
             // 
-            // bbtListKhachHang
+            // btnListKhachHang
             // 
-            this.bbtListKhachHang.BackColor = System.Drawing.Color.LightPink;
-            this.bbtListKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bbtListKhachHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbtListKhachHang.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bbtListKhachHang.Location = new System.Drawing.Point(23, 294);
-            this.bbtListKhachHang.Margin = new System.Windows.Forms.Padding(2);
-            this.bbtListKhachHang.Name = "bbtListKhachHang";
-            this.bbtListKhachHang.Size = new System.Drawing.Size(217, 50);
-            this.bbtListKhachHang.TabIndex = 27;
-            this.bbtListKhachHang.Text = "Danh sách khách hàng";
-            this.bbtListKhachHang.UseVisualStyleBackColor = false;
-            this.bbtListKhachHang.Click += new System.EventHandler(this.bbtListKhachHang_Click);
+            this.btnListKhachHang.BackColor = System.Drawing.Color.LightPink;
+            this.btnListKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListKhachHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListKhachHang.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnListKhachHang.Location = new System.Drawing.Point(23, 294);
+            this.btnListKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListKhachHang.Name = "btnListKhachHang";
+            this.btnListKhachHang.Size = new System.Drawing.Size(217, 50);
+            this.btnListKhachHang.TabIndex = 27;
+            this.btnListKhachHang.Text = "Danh sách khách hàng";
+            this.btnListKhachHang.UseVisualStyleBackColor = false;
+            this.btnListKhachHang.Click += new System.EventHandler(this.btnListKhachHang_Click);
             // 
-            // btListNhanVien
+            // btnListNhanVien
             // 
-            this.btListNhanVien.BackColor = System.Drawing.Color.LightPink;
-            this.btListNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btListNhanVien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btListNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btListNhanVien.Location = new System.Drawing.Point(23, 228);
-            this.btListNhanVien.Margin = new System.Windows.Forms.Padding(2);
-            this.btListNhanVien.Name = "btListNhanVien";
-            this.btListNhanVien.Size = new System.Drawing.Size(217, 50);
-            this.btListNhanVien.TabIndex = 28;
-            this.btListNhanVien.Text = "Danh sách nhân viên";
-            this.btListNhanVien.UseVisualStyleBackColor = false;
-            this.btListNhanVien.Click += new System.EventHandler(this.btListNhanVien_Click);
+            this.btnListNhanVien.BackColor = System.Drawing.Color.LightPink;
+            this.btnListNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListNhanVien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnListNhanVien.Location = new System.Drawing.Point(23, 228);
+            this.btnListNhanVien.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListNhanVien.Name = "btnListNhanVien";
+            this.btnListNhanVien.Size = new System.Drawing.Size(217, 50);
+            this.btnListNhanVien.TabIndex = 28;
+            this.btnListNhanVien.Text = "Danh sách nhân viên";
+            this.btnListNhanVien.UseVisualStyleBackColor = false;
+            this.btnListNhanVien.Click += new System.EventHandler(this.btnListNhanVien_Click);
             // 
             // pbSearch
             // 
@@ -211,14 +210,13 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(352, 533);
+            this.button1.Location = new System.Drawing.Point(965, 533);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 46);
             this.button1.TabIndex = 23;
             this.button1.Text = "Chỉnh sửa sản phẩm";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbThongTin
             // 
@@ -309,12 +307,40 @@
             this.dgvSanPham.Size = new System.Drawing.Size(623, 300);
             this.dgvSanPham.TabIndex = 34;
             // 
+            // btnDSHoaDon
+            // 
+            this.btnDSHoaDon.BackColor = System.Drawing.Color.LightPink;
+            this.btnDSHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDSHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSHoaDon.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDSHoaDon.Location = new System.Drawing.Point(23, 421);
+            this.btnDSHoaDon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDSHoaDon.Name = "btnDSHoaDon";
+            this.btnDSHoaDon.Size = new System.Drawing.Size(217, 50);
+            this.btnDSHoaDon.TabIndex = 25;
+            this.btnDSHoaDon.Text = "Danh sách hóa đơn";
+            this.btnDSHoaDon.UseVisualStyleBackColor = false;
+            this.btnDSHoaDon.Click += new System.EventHandler(this.btnDSHoaDon_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightPink;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Location = new System.Drawing.Point(1170, 533);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(201, 46);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Cập nhật";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // DanhSachHangHoa_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightPink;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1437, 673);
             this.Controls.Add(this.dgvSanPham);
@@ -330,13 +356,15 @@
             this.Controls.Add(this.lbThongTin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btXoaNV);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btThemNV);
             this.Controls.Add(this.btDangXuat);
-            this.Controls.Add(this.btThongKe);
-            this.Controls.Add(this.btListHangHoa);
-            this.Controls.Add(this.bbtListKhachHang);
-            this.Controls.Add(this.btListNhanVien);
+            this.Controls.Add(this.btnDSHoaDon);
+            this.Controls.Add(this.btnThongKe);
+            this.Controls.Add(this.btnListHangHoa);
+            this.Controls.Add(this.btnListKhachHang);
+            this.Controls.Add(this.btnListNhanVien);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "DanhSachHangHoa_QuanLy";
@@ -359,10 +387,10 @@
         private System.Windows.Forms.Button btXoaNV;
         private System.Windows.Forms.Button btThemNV;
         private System.Windows.Forms.Button btDangXuat;
-        private System.Windows.Forms.Button btThongKe;
-        private System.Windows.Forms.Button btListHangHoa;
-        private System.Windows.Forms.Button bbtListKhachHang;
-        private System.Windows.Forms.Button btListNhanVien;
+        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnListHangHoa;
+        private System.Windows.Forms.Button btnListKhachHang;
+        private System.Windows.Forms.Button btnListNhanVien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbThongTin;
@@ -373,5 +401,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvSanPham;
+        private System.Windows.Forms.Button btnDSHoaDon;
+        private System.Windows.Forms.Button button2;
     }
 }
