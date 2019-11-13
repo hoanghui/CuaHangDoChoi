@@ -23,17 +23,27 @@ namespace DAO
         private KhachHangDAO() {}
 
         // đổ data vào 
-        public KhachHang layMaKhachHang(string maKhachHang)
+       
+
+        public List<KhachHang> LayDSKhachHang()
         {
-            string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang= '" + maKhachHang + "'";
+            List<KhachHang> kh = new List<KhachHang>();
+            string query = "SELECT * FROM dbo.KhachHang";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
-                return new KhachHang(row);
+                kh.Add(new KhachHang(row));
             }
-            return null;
+            return kh;
         }
 
+        public bool SuaKH(int makhachhang, string hoten, int cmnd, int sdt, DateTime ngaysinh, string gioitinh, string diachi)
+        {
+            string query = "UPDATE dbo.KhachHang SET maKhachHang = " + makhachhang + ", hoTen = N'" + hoten + "', " +
+                           "CMND = " + cmnd + ", soDienThoai = " + sdt + ", ngaySinh = '" + ngaysinh + "', gioiTinh = '" + gioitinh + "', diaChi = N'" + diachi + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
 
     }
 }

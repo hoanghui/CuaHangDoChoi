@@ -73,6 +73,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.btnDSHoaDon = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
@@ -439,10 +441,12 @@
             this.panelThemNhanVien.Controls.Add(this.txtCMNDNew);
             this.panelThemNhanVien.Controls.Add(this.label10);
             this.panelThemNhanVien.Controls.Add(this.txtNhanVienIDNew);
+            this.panelThemNhanVien.Controls.Add(this.txtMatKhau);
             this.panelThemNhanVien.Controls.Add(this.txtUserNameNew);
             this.panelThemNhanVien.Controls.Add(this.label11);
             this.panelThemNhanVien.Controls.Add(this.txtSexNew);
             this.panelThemNhanVien.Controls.Add(this.label12);
+            this.panelThemNhanVien.Controls.Add(this.label15);
             this.panelThemNhanVien.Controls.Add(this.label13);
             this.panelThemNhanVien.Controls.Add(this.btnXacNhan);
             this.panelThemNhanVien.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -601,7 +605,7 @@
             this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnXacNhan.Location = new System.Drawing.Point(194, 493);
+            this.btnXacNhan.Location = new System.Drawing.Point(194, 529);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(171, 46);
@@ -624,6 +628,28 @@
             this.btnDSHoaDon.Text = "Danh sách hóa đơn";
             this.btnDSHoaDon.UseVisualStyleBackColor = false;
             this.btnDSHoaDon.Click += new System.EventHandler(this.btnDSHoaDon_Click);
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(65, 453);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 44);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Mật khẩu:";
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(194, 453);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(232, 38);
+            this.txtMatKhau.TabIndex = 35;
+            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DanhSachNhanVien_QuanLy
             // 
@@ -724,5 +750,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Button btnDSHoaDon;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.Label label15;
     }
 }

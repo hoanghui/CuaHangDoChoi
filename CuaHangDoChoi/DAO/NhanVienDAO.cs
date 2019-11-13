@@ -87,9 +87,9 @@ namespace DAO
             return result > 0;
         }
 
-        public bool ThemNV(int manv, string hoten, int cmnd, DateTime ngaysinh, string gioitinh, string tendangnhap)
+        public bool ThemNV(int manv, string hoten, int cmnd, DateTime ngaysinh, string gioitinh, string tendangnhap, string matkhau)
         {
-            string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "',1,1)" +
+            string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','"+matkhau+"',1)" +
                 "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','"+tendangnhap+"')";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;

@@ -37,7 +37,7 @@ namespace DAO
         public List<SanPham> TimSP(int masanpham)
         {
             List<SanPham> nv = new List<SanPham>();
-            string query = "SELECT * FROM dbo.SanPham WHERE maSanPham = '" + masanpham + "'";
+            string query = "SELECT * FROM dbo.SanPham WHERE maSanPham = " + masanpham + "";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
