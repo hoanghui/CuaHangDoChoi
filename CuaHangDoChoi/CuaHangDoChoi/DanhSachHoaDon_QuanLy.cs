@@ -31,5 +31,40 @@ namespace CuaHangDoChoi
         {
 
         }
+
+        private void btListNhanVien_Click(object sender, EventArgs e)
+        {
+            DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
+            nv.Show();
+            this.Dispose(false);
+        }
+
+        private void btListKhachHang_Click(object sender, EventArgs e)
+        {
+            DanhSachKhachHang kh = new DanhSachKhachHang();
+            kh.Show();
+            this.Dispose(false);
+        }
+
+        private void btListHangHoa_Click(object sender, EventArgs e)
+        {
+            DanhSachHangHoa_QuanLy hh = new DanhSachHangHoa_QuanLy();
+            hh.Show();
+            this.Dispose(false);
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKe_QuanLy tk = new ThongKe_QuanLy();
+            tk.Show();
+            this.Dispose(false);
+        }
+
+        private void btDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
+            this.Dispose(false);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,14 @@ namespace CuaHangDoChoi
 {
     public partial class TrangChu_QuanLy : Form
     {
+        BindingSource bd = new BindingSource();
         public TrangChu_QuanLy()
         {
             InitializeComponent();
+           
         }
 
-       
+        
 
         private void btKhachHang_Click(object sender, EventArgs e)
         {
@@ -59,6 +62,39 @@ namespace CuaHangDoChoi
             DangNhap dn = new DangNhap();
             dn.Show();
             this.Dispose(false);
+        }
+
+        // lấy dữ liệu username từ Form DangNhap truyền qua Form này
+
+        public void funData(TextBox txtName)
+        {
+            txtUserName.Text = txtName.Text;
+        }
+
+        void GanDuLieu()
+        {
+            if(txtUserName.Text != "")
+            {
+                bd.DataSource = NhanVienDAO.Instance.Lay1nhanvien(txtUserName.Text.ToString());
+                txtNhanVienId.DataBindings.Add("Text", bd.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
+                txtHoTen.DataBindings.Add("Text", bd.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
+                txtNgaySinh.DataBindings.Add("Text", bd.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
+                txtChucVu.Text = "QUẢN LÝ";
+                pbQuanLy.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienId.Text.ToString() + ".jpg ");
+                pbQuanLy.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            
+        }
+
+        private void TrangChu_QuanLy_Load(object sender, EventArgs e)
+        {
+            GanDuLieu();
+        }
+
+        private void TrangChu_QuanLy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn đăng xuất? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }
