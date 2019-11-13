@@ -129,8 +129,6 @@ namespace CuaHangDoChoi
             
         }
 
-        
-
         private void btXoaNV_Click(object sender, EventArgs e)
         {
             //if (this.dgvNhanVien.SelectedRows.Count > 0)

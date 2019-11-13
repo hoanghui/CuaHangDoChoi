@@ -46,11 +46,21 @@ namespace DAO
             return nv;
         }
 
+        public bool CapNhatSanPham(int masp, string tensp, string xuatxu, DateTime ngaynhap, double giaban, int soluong)
+        {
+            //string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = " + manv + ") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "' END" ;
+            string query = "UPDATE  dbo.SanPham SET  maSanPham = " + masp + ", tenSanPham = N'" + tensp + "', xuatXu= '" + xuatxu + "',ngayNhap ='"+ngaynhap+"', giaBan = "+giaban+", soLuong ="+soluong+" WHERE maSanPham = " + masp + "";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
         public bool XoaSP(int masanpham)
         {
             string query = "DELETE FROM dbo.SanPham WHERE maSanPham = '" + masanpham + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+
     }
 }

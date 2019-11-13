@@ -13,9 +13,14 @@ namespace CuaHangDoChoi
 {
     public partial class DanhSachHangHoa_QuanLy : Form
     {
-
-
         BindingSource bd = new BindingSource();
+
+        public int masanpham { get; private set; }
+        public string tensanpham { get; private set; } 
+        public string xuatxu { get; private set; }
+        public double giaban { get; private set; }
+        public int soluong { get; private set; }
+        public DateTime ngaynhap { get; private set; }
         public DanhSachHangHoa_QuanLy()
         {
             InitializeComponent();
@@ -56,6 +61,12 @@ namespace CuaHangDoChoi
 
         private void DanhSachHangHoa_Load(object sender, EventArgs e)
         {
+            txtMaSanPham.Enabled = false;
+            txtTenSanPham.Enabled = false;
+            txtXuatXu.Enabled = false;
+            txtGiaBan.Enabled = false;
+            dtpNgayNhap.Enabled = false;
+            txtSoLuong.Enabled = false;
             HienThiDanhSach();
         }
 
@@ -127,6 +138,65 @@ namespace CuaHangDoChoi
             {
                 MessageBox.Show("Xóa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
+        {
+            txtMaSanPham.Enabled = true;
+            txtTenSanPham.Enabled = true;
+            txtXuatXu.Enabled = true;
+            txtGiaBan.Enabled = true;
+            dtpNgayNhap.Enabled = true;
+            txtSoLuong.Enabled = true;
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
+            try
+            {
+                masanpham = int.Parse(txtMaSanPham.Text);
+                tensanpham = txtTenSanPham.Text;
+                soluong = int.Parse(txtSoLuong.Text);
+                giaban = double.Parse(txtGiaBan.Text);
+                xuatxu = txtXuatXu.Text;
+                ngaynhap = dtpNgayNhap.Value;
+            }
+            catch
+            {
+                MessageBox.Show("Nhập chưa đúng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool result = SanPhamDAO.Instance.CapNhatSanPham(masanpham, tensanpham, xuatxu,ngaynhap,giaban,soluong);
+            if (result)
+            {
+                MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaSanPham.DataBindings.Clear();
+                txtTenSanPham.DataBindings.Clear();
+
+                txtXuatXu.DataBindings.Clear();
+                txtSoLuong.DataBindings.Clear();
+                dtpNgayNhap.DataBindings.Clear();
+                txtGiaBan.DataBindings.Clear();
+
+                HienThiDanhSach();
+            }
+            else
+            {
+                MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
+            txtMaSanPham.Enabled = false;
+
+            txtTenSanPham.Enabled = false;
+            txtXuatXu.Enabled = false;
+            txtSoLuong.Enabled = false;
+            dtpNgayNhap.Enabled = false;
+            txtGiaBan.Enabled = false;
         }
     }
 
