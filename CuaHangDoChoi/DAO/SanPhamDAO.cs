@@ -61,6 +61,11 @@ namespace DAO
             return result > 0;
         }
 
-
+        public bool ThemSP(int masp, string tensp, string xuatxu, DateTime ngaynhap, double giaban, int soluong)
+        {
+            string query = "INSERT INTO dbo.SanPham VALUES(" + masp + ",N'" + tensp + "','" + xuatxu + "','" + ngaynhap + "', " + giaban + "," + soluong+")";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

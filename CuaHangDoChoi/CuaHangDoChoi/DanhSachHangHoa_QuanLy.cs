@@ -116,7 +116,7 @@ namespace CuaHangDoChoi
 
         private void btThemSP_Click(object sender, EventArgs e)
         {
-
+            panelThemSanPham.Visible = true;
         }
 
         private void btXoaSP_Click(object sender, EventArgs e)
@@ -197,6 +197,58 @@ namespace CuaHangDoChoi
             txtSoLuong.Enabled = false;
             dtpNgayNhap.Enabled = false;
             txtGiaBan.Enabled = false;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                masanpham = int.Parse(txtMaSanPham_New.Text);
+                tensanpham = txtTenSanPham_New.Text;
+                soluong = int.Parse(txtSoLuong_New.Text);
+                giaban = double.Parse(txtGiaBan_New.Text);
+                xuatxu = txtXuatXu_New.Text;
+                ngaynhap = dtpNgayNhap_New.Value;
+            }
+            catch
+            {
+                MessageBox.Show("Nhập chưa đúng định dạng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool result = SanPhamDAO.Instance.ThemSP(masanpham, tensanpham, xuatxu, ngaynhap, giaban, soluong);
+            if (result)
+            {
+                //txtNhanVienIDNew.DataBindings.Clear();
+                //txtNameNew.DataBindings.Clear();
+                //txtSexNew.DataBindings.Clear();
+                //dtpBirthdayNew.DataBindings.Clear();
+                //txtCMNDNew.DataBindings.Clear();
+                //txtNhanVienIDNew.DataBindings.Clear();
+
+                txtMaSanPham.DataBindings.Clear();
+                txtTenSanPham.DataBindings.Clear();
+
+                txtXuatXu.DataBindings.Clear();
+                txtSoLuong.DataBindings.Clear();
+                dtpNgayNhap.DataBindings.Clear();
+                txtGiaBan.DataBindings.Clear();
+
+
+                MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtMaSanPham_New.DataBindings.Clear();
+                txtTenSanPham_New.DataBindings.Clear();
+
+                txtXuatXu_New.DataBindings.Clear();
+                txtSoLuong_New.DataBindings.Clear();
+                dtpNgayNhap_New.DataBindings.Clear();
+                txtGiaBan_New.DataBindings.Clear();
+
+
+                HienThiDanhSach();
+                panelThemSanPham.Visible = false;
+            }
         }
     }
 
