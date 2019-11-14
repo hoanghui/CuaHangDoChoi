@@ -37,20 +37,21 @@ namespace CuaHangDoChoi
 
             dgvSanPham.Columns[3].HeaderText = "Giá Bán";
 
-            dgvSanPham.Columns[5].HeaderText = "Số Lượng";
+            dgvSanPham.Columns[5].Visible = false;
         }
         private void btTimKiem_Click(object sender, EventArgs e)
         {
             bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text));
             if (bd.Count == 0)
             {
-                MessageBox.Show("Tìm không có","", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            bd.DataSource = SanPhamDAO.Instance.TimSPtheoten(txtTimKiem.Text.ToString());
-            if (bd.Count == 0)
-            {
                 MessageBox.Show("Tìm không có", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            btThem.Visible = true;
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,12 +11,15 @@ namespace CuaHangDoChoi
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new DanhSachNhanVien_QuanLy());
+=======
+            Application.Run(new ThanhToan());
+>>>>>>> 92320bcb580f54099934ada847dacce0d5083382
         }
     }
 }
