@@ -30,7 +30,6 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -45,11 +44,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btThem = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -73,20 +72,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "THANH TOÁN";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(799, 201);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(278, 394);
-            this.listBox1.TabIndex = 1;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(812, 601);
+            this.button1.Location = new System.Drawing.Point(812, 615);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(245, 40);
             this.button1.TabIndex = 3;
@@ -98,7 +89,7 @@
             this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(812, 638);
+            this.button2.Location = new System.Drawing.Point(812, 651);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(245, 40);
             this.button2.TabIndex = 3;
@@ -107,11 +98,15 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(46, 151);
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtTimKiem.HideSelection = false;
+            this.txtTimKiem.Location = new System.Drawing.Point(46, 155);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(570, 40);
+            this.txtTimKiem.Size = new System.Drawing.Size(570, 36);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.UseWaitCursor = true;
             // 
             // button3
             // 
@@ -120,7 +115,7 @@
             this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(1014, 151);
+            this.button3.Location = new System.Drawing.Point(1014, 153);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(63, 40);
             this.button3.TabIndex = 3;
@@ -150,10 +145,10 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(799, 151);
+            this.textBox1.Location = new System.Drawing.Point(799, 155);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 40);
+            this.textBox1.Size = new System.Drawing.Size(214, 36);
             this.textBox1.TabIndex = 2;
             // 
             // label5
@@ -194,9 +189,9 @@
             this.btTimKiem.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btTimKiem.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btTimKiem.Location = new System.Drawing.Point(622, 151);
+            this.btTimKiem.Location = new System.Drawing.Point(622, 155);
             this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(139, 40);
+            this.btTimKiem.Size = new System.Drawing.Size(144, 36);
             this.btTimKiem.TabIndex = 3;
             this.btTimKiem.Text = "   Tìm Kiếm";
             this.btTimKiem.UseVisualStyleBackColor = false;
@@ -217,48 +212,39 @@
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPham.Location = new System.Drawing.Point(46, 201);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(715, 477);
+            this.dgvSanPham.Size = new System.Drawing.Size(720, 477);
             this.dgvSanPham.TabIndex = 9;
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button7.Location = new System.Drawing.Point(701, 108);
+            this.button7.Location = new System.Drawing.Point(701, 221);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 41);
+            this.button7.Size = new System.Drawing.Size(60, 25);
             this.button7.TabIndex = 6;
             this.button7.Text = "Xóa";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Visible = false;
             // 
-            // button6
+            // btThem
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button6.Location = new System.Drawing.Point(635, 108);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 41);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Thêm ";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btThem.Location = new System.Drawing.Point(638, 221);
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(60, 24);
+            this.btThem.TabIndex = 6;
+            this.btThem.Text = "Thêm ";
+            this.btThem.UseVisualStyleBackColor = false;
+            this.btThem.Visible = false;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
-            // button5
+            // dataGridView1
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button5.Location = new System.Drawing.Point(587, 108);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 41);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.Location = new System.Drawing.Point(511, 108);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 41);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(772, 201);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(311, 408);
+            this.dataGridView1.TabIndex = 9;
             // 
             // ThanhToan
             // 
@@ -268,14 +254,11 @@
             this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._7d1d31c51d236bbda42b0ab01a6688be;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1095, 691);
-            this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btThem);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btTimKiem);
@@ -283,15 +266,17 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSanPham);
             this.Name = "ThanhToan";
             this.Text = "NhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +286,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -316,8 +300,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btThem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
