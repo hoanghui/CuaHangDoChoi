@@ -68,5 +68,14 @@ namespace UnitTestCuaHangDoChoi
             int actual = kh.Count;
             Assert.AreEqual(expected, actual);
         }
+
+        //[TestMethod]
+        //public void TestTimKhachHang()
+        //{
+        //    List<KhachHang> kh = KhachHangDAO.Instance.SuaKH();
+        //    int expected = 9;
+        //    int actual = kh.Count;
+        //    Assert.AreEqual(expected, actual);
+        //}
     }
 }

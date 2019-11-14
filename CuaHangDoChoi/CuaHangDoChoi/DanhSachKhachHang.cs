@@ -28,6 +28,7 @@ namespace CuaHangDoChoi
         public DanhSachKhachHang()
         {
             InitializeComponent();
+            HienThiDanhSach();
         }
 
         void HienThiDanhSach()
@@ -52,7 +53,16 @@ namespace CuaHangDoChoi
 
             dgvKhachHang.Columns[6].HeaderText = "Địa chỉ";
 
+            txtMaKhachHang.DataBindings.Clear();
+            txtTenKhachHang.DataBindings.Clear();
+            txtSDT.DataBindings.Clear();
+            txtSex.DataBindings.Clear();
+            txtDiaChi.DataBindings.Clear();
+            dtpNgaySinh.DataBindings.Clear();
+            txtCMND.DataBindings.Clear();
+
             GanDuLieu();
+
         }
 
         void GanDuLieu()
@@ -66,12 +76,7 @@ namespace CuaHangDoChoi
             txtDiaChi.DataBindings.Add("Text", dgvKhachHang.DataSource, "diaChi", true, DataSourceUpdateMode.Never);
         }
 
-        //hàm xử lý người dùng chọn một dòng
-        private void lvDanhSachKhachHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+     
         private void btnDSNhanVien_Click(object sender, EventArgs e)
         {
             DanhSachNhanVien_QuanLy nv = new DanhSachNhanVien_QuanLy();
@@ -114,6 +119,7 @@ namespace CuaHangDoChoi
             txtDiaChi.Enabled = false;
             txtSDT.Enabled = false;
             dgvKhachHang.Enabled = false;
+
             HienThiDanhSach();
         }
 

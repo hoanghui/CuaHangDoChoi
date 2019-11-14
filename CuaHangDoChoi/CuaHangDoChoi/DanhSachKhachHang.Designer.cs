@@ -54,7 +54,6 @@
             this.txtBirthDay = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnCapNhat = new System.Windows.Forms.Button();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -372,15 +372,6 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "KHÁCH HÀNG";
             // 
-            // dgvKhachHang
-            // 
-            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Location = new System.Drawing.Point(268, 169);
-            this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKhachHang.Size = new System.Drawing.Size(617, 421);
-            this.dgvKhachHang.TabIndex = 33;
-            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
@@ -458,14 +449,24 @@
             this.btnCapNhat.Visible = false;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
+            // dgvKhachHang
+            // 
+            this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvKhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvKhachHang.Location = new System.Drawing.Point(273, 171);
+            this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKhachHang.Size = new System.Drawing.Size(634, 390);
+            this.dgvKhachHang.TabIndex = 35;
+            // 
             // DanhSachKhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1441, 792);
-            this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.dgvKhachHang);
+            this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.txtBirthDay);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.txtDiaChi);
@@ -537,7 +538,6 @@
         private System.Windows.Forms.TextBox txtBirthDay;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label10;
@@ -545,5 +545,6 @@
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.DataGridView dgvKhachHang;
     }
 }
