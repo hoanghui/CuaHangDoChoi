@@ -55,22 +55,22 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.panelThemNhanVien = new System.Windows.Forms.Panel();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtCMNDNew = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtNhanVienIDNew = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.dtpBirthdayNew = new System.Windows.Forms.DateTimePicker();
             this.txtNameNew = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCMNDNew = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtUserNameNew = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtSexNew = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnDSHoaDon = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).BeginInit();
@@ -201,6 +201,7 @@
             this.pbNhanVien.Location = new System.Drawing.Point(464, 457);
             this.pbNhanVien.Name = "pbNhanVien";
             this.pbNhanVien.Size = new System.Drawing.Size(103, 113);
+            this.pbNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNhanVien.TabIndex = 11;
             this.pbNhanVien.TabStop = false;
             // 
@@ -418,6 +419,65 @@
             this.panelThemNhanVien.TabIndex = 39;
             this.panelThemNhanVien.Visible = false;
             // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(122, 273);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(148, 26);
+            this.txtMatKhau.TabIndex = 35;
+            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.BackColor = System.Drawing.Color.DarkRed;
+            this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXacNhan.Location = new System.Drawing.Point(105, 304);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(101, 35);
+            this.btnXacNhan.TabIndex = 2;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(30, 276);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 44);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Mật khẩu:";
+            // 
+            // txtCMNDNew
+            // 
+            this.txtCMNDNew.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMNDNew.Location = new System.Drawing.Point(122, 174);
+            this.txtCMNDNew.Multiline = true;
+            this.txtCMNDNew.Name = "txtCMNDNew";
+            this.txtCMNDNew.Size = new System.Drawing.Size(148, 27);
+            this.txtCMNDNew.TabIndex = 34;
+            this.txtCMNDNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(55, 177);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 27);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "CMND:";
+            // 
             // txtNhanVienIDNew
             // 
             this.txtNhanVienIDNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,18 +488,6 @@
             this.txtNhanVienIDNew.TabIndex = 37;
             this.txtNhanVienIDNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNhanVienIDNew.TextChanged += new System.EventHandler(this.txtNhanVienID_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Oswald", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(49, -2);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(306, 90);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Thêm nhân viên";
             // 
             // dtpBirthdayNew
             // 
@@ -471,28 +519,6 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "ID:";
             // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(42, 119);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 47);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Họ tên:";
-            // 
-            // txtCMNDNew
-            // 
-            this.txtCMNDNew.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMNDNew.Location = new System.Drawing.Point(122, 174);
-            this.txtCMNDNew.Multiline = true;
-            this.txtCMNDNew.Name = "txtCMNDNew";
-            this.txtCMNDNew.Size = new System.Drawing.Size(148, 27);
-            this.txtCMNDNew.TabIndex = 34;
-            this.txtCMNDNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
@@ -505,16 +531,6 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "Ngày sinh:";
             // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(122, 273);
-            this.txtMatKhau.Multiline = true;
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(148, 26);
-            this.txtMatKhau.TabIndex = 35;
-            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtUserNameNew
             // 
             this.txtUserNameNew.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -524,18 +540,6 @@
             this.txtUserNameNew.Size = new System.Drawing.Size(148, 28);
             this.txtUserNameNew.TabIndex = 35;
             this.txtUserNameNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(55, 177);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 27);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "CMND:";
             // 
             // txtSexNew
             // 
@@ -559,18 +563,6 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Giới tính:";
             // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(30, 276);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 44);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Mật khẩu:";
-            // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
@@ -583,20 +575,29 @@
             this.label13.TabIndex = 7;
             this.label13.Text = "Tên đăng nhập:";
             // 
-            // btnXacNhan
+            // label9
             // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.DarkRed;
-            this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnXacNhan.Location = new System.Drawing.Point(105, 304);
-            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(101, 35);
-            this.btnXacNhan.TabIndex = 2;
-            this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = false;
-            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(42, 119);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 47);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Họ tên:";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Oswald", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(49, -2);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(306, 90);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Thêm nhân viên";
             // 
             // btnDSHoaDon
             // 

@@ -56,18 +56,21 @@ namespace CuaHangDoChoi
 
         void GanDuLieu()
         {
+
             txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
             txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
             txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
             dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
+
+            
         }
 
         private void DanhSachNhanVien_QuanLy_Load(object sender, EventArgs e)
         {
             txtName.Enabled = false;
-            
+
             txtCMND.Enabled = false;
             txtSex.Enabled = false;
             txtNhanVienID.Enabled = false;
@@ -184,13 +187,20 @@ namespace CuaHangDoChoi
                         txtNhanVienID.Visible = true;
                         dtpNgaySinh.Visible = true;
                         txtUserName.Visible = true;
-                        //pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + txtNhanVienID.Text.ToString() + ".jpg ");
-                        //pbNhanVien.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                    else
-                    {
-                        if (int.Parse(txtNhanVienID.Text.ToString()) == 0)
+                        try
                         {
+                            pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\" + int.Parse(txtNhanVienID.Text) + ".jpg");
+
+                        }
+                        catch
+                        {
+                            pbNhanVien.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachNhanVien\default.jpg");
+                        }
+                }
+                else
+                {
+                    if (int.Parse(txtNhanVienID.Text.ToString()) == 0)
+                    {
                             txtNhanVienID.Clear();
                             txtName.Visible = false;
                             pbNhanVien.Visible = false;
@@ -200,8 +210,8 @@ namespace CuaHangDoChoi
                             txtNhanVienID.Visible = false;
                             dtpNgaySinh.Visible = false;
                             txtUserName.Visible = false;
-                        }
                     }
+                }
             }
 
             //}
@@ -211,12 +221,11 @@ namespace CuaHangDoChoi
         private void btnSua_Click(object sender, EventArgs e)
         {
             txtName.Enabled = true;
-            
             txtCMND.Enabled = true;
             txtSex.Enabled = true;
-            txtNhanVienID.Enabled = true;
+            //txtNhanVienID.Enabled = true;
             dtpNgaySinh.Enabled = true;
-            txtUserName.Enabled = true;
+            //txtUserName.Enabled = true;
         }
 
         private void btnReload_Click(object sender, EventArgs e)
