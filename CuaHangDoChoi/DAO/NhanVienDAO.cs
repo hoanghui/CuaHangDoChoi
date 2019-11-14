@@ -55,7 +55,7 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-     
+        
         public List<NhanVien> TimNV(int manv)
         {
             List<NhanVien> nv = new List<NhanVien>();
@@ -68,12 +68,15 @@ namespace DAO
             return nv;
         }
 
-        public bool XoaNV(int manv)
+        public bool XoaNV(int manv, string tendangnhap)
         {
-            string query = "DELETE FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
-            //"DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'"; 
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result > 0;
+            string query1 = "DELETE FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
+            string query2 = "DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
+            string query3 = "UPDATE dbo.HoaDon SET maNhanVien = null WHERE maNhanVien = " + manv + "";
+            DataProvider.Instance.ExecuteNonQuery(query3);
+            int result1 = DataProvider.Instance.ExecuteNonQuery(query1);
+            DataProvider.Instance.ExecuteNonQuery(query2);
+            return result1 > 0;
         }
 
         public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
@@ -83,6 +86,6 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-        
+       
     }
 }

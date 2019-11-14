@@ -79,17 +79,17 @@ GO
 --Thêm dữ liệu vào bảng TaiKhoan --
 
 INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('admin', 1, 1),
-																 ('hoanghuy',1,0),
+																 ('hoangyen',1,0),
 																 ('giahuy',1,0),
-																 ('anhkhoa',1,0)
-INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtu',1,1)
-INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtung',1,1)
+																 ('anhkhoa',1,1)
+INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtu',1,0)
+INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtung',1,0)
 --Thêm dữ liệu vào bảng NhanVien --
-INSERT INTO NhanVien VALUES (111, N'Nguyễn Hoàng Huy', 321764933,'11/19/1999','Nam', 'hoanghuy')
+INSERT INTO NhanVien VALUES (111, N'Nguyễn Hoàng Huy', 321764933,'11/19/1999','Nam', 'admin')
 INSERT INTO NhanVien VALUES (112, N'Nguyễn Gia Huy', 845156151,'10/06/1999','Nam', 'giahuy')
 INSERT INTO NhanVien VALUES(113, N'Phan Anh Khoa', 465151551,'10/22/1999','Nam', 'anhkhoa')
-INSERT INTO NhanVien VALUES(114, N'Trịnh Hoàng Yến', 846813565,'11/12/1999','Nu', 'admin')
-INSERT INTO NhanVien VALUES(115, N'Nguyễn Thanh Tú', 123456789,'09/29/1999','Nam', 'admin')
+INSERT INTO NhanVien VALUES(114, N'Trịnh Hoàng Yến', 846813565,'11/12/1999','Nu', 'hoangyen')
+INSERT INTO NhanVien VALUES(115, N'Nguyễn Thanh Tú', 123456789,'09/29/1999','Nam', 'thanhtu')
 INSERT INTO NhanVien VALUES(116, N'Nguyễn Thanh Tùng', 415481561,'09/29/1999','Nam', 'thanhtung')
 --Thêm dữ liệu vào bảng SanPham --
 INSERT INTO SanPham VALUES (1001, N'Xe đẩy', 'China', '10/11/2018',200000,50)
@@ -116,9 +116,9 @@ INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999
 
 --Thêm dữ liệu vào bảng hóa đơn--
 
-INSERT INTO HoaDon VALUES (101,1,112,'1/1/2018')
-INSERT INTO HoaDon VALUES (102,7,112,'1/1/2018')
-INSERT INTO HoaDon VALUES (103,6,116,'1/1/2018')
+INSERT INTO HoaDon VALUES (101,1,112,'11/10/2018')
+INSERT INTO HoaDon VALUES (102,7,112,'8/1/2018')
+INSERT INTO HoaDon VALUES (103,6,116,'9/1/2018')
 
 -- Thêm dữ liệu vào bảng chi tiết hóa đơn --
 

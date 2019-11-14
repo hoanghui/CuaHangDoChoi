@@ -134,7 +134,7 @@ namespace CuaHangDoChoi
             //{
             //    dgvNhanVien.Rows.RemoveAt(this.dgvNhanVien.SelectedRows[0].Index);
             //}
-            bool result = NhanVienDAO.Instance.XoaNV(int.Parse(txtNhanVienID.Text));
+            bool result = NhanVienDAO.Instance.XoaNV(int.Parse(txtNhanVienID.Text), txtUserName.Text);
             if(result)
             {
                 MessageBox.Show("Xóa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information); txtNhanVienID.DataBindings.Clear();
@@ -276,7 +276,7 @@ namespace CuaHangDoChoi
             try
             {
                 manv = int.Parse(txtNhanVienIDNew.Text);
-                ngaysinh = dtpBirthdayNew.Value.Day + "-" + dtpBirthdayNew.Value.Month + "-" + dtpBirthdayNew.Value.Year;
+                ngaysinh = dtpBirthdayNew.Value.Month + "/" + dtpBirthdayNew.Value.Day + "/" + dtpBirthdayNew.Value.Year;
                 BirthDay = dtpBirthdayNew.Value;
                 hoten = txtNameNew.Text;
                 cmnd = int.Parse(txtCMNDNew.Text);
@@ -309,11 +309,12 @@ namespace CuaHangDoChoi
 
                 
                 MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                panelThemNhanVien.Visible = false;
                 txtNhanVienIDNew.Clear();
                 txtNameNew.Clear();
                 txtSexNew.Clear();
-                dtpBirthdayNew.Visible = false;
+                //dtpBirthdayNew.Visible = false;
+                dtpBirthdayNew.ResetText();
                 txtCMNDNew.Clear();
                 txtUserNameNew.Clear();
 
@@ -350,6 +351,16 @@ namespace CuaHangDoChoi
             ThongKe_QuanLy tk = new ThongKe_QuanLy();
             tk.Show();
             this.Dispose(false);
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

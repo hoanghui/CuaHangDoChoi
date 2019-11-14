@@ -36,5 +36,6 @@ namespace DTO
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
+        
     }
 }

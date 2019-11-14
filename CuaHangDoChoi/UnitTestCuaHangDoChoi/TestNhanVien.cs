@@ -91,7 +91,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestThemNhanVien()
         {
             bool expected = true;
-            bool actual = NhanVienDAO.Instance.ThemNV(55555, "Only C", 123456123, "7/7/1997", "Nam", "matday", "daonhac");
+            bool actual = NhanVienDAO.Instance.ThemNV(77, "Only C", 123456123, "7/7/1997", "Nam", "ada", "daonhac");
             Assert.AreEqual(expected, actual);
         }
 
@@ -108,7 +108,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestXoaNhanVien()
         {
             bool expected = true;
-            bool actual = NhanVienDAO.Instance.XoaNV(999);
+            bool actual = NhanVienDAO.Instance.XoaNV(111);
             Assert.AreEqual(expected, actual);
         }
 
