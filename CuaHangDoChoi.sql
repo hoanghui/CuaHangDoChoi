@@ -79,10 +79,10 @@ GO
 --Thêm dữ liệu vào bảng TaiKhoan --
 
 INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('admin', 1, 1),
-																 ('hoangyen',1,0),
 																 ('giahuy',1,0),
 																 ('anhkhoa',1,1)
-INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtu',1,0)
+INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtu',1,0),
+																 ('hoangyen',1,0)
 INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtung',1,0)
 --Thêm dữ liệu vào bảng NhanVien --
 INSERT INTO NhanVien VALUES (111, N'Nguyễn Hoàng Huy', 321764933,'11/19/1999','Nam', 'admin')

@@ -28,9 +28,9 @@ namespace CuaHangDoChoi
             // set tên cột
             dgvHoaDon.Columns[0].HeaderText = "Mã hóa đơn";
             dgvHoaDon.Columns[0].Width = 100;
-            dgvHoaDon.Columns[1].HeaderText = "Mã khách hàng";
+            dgvHoaDon.Columns[1].HeaderText = "Mã nhân viên";
 
-            dgvHoaDon.Columns[2].HeaderText = "Mã nhân viên";
+            dgvHoaDon.Columns[2].HeaderText = "Mã khách hàng";
 
             dgvHoaDon.Columns[3].HeaderText = "Ngày tạo hóa đơn";
             dgvHoaDon.Columns[0].Width = 150;

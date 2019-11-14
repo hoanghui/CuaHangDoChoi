@@ -20,7 +20,10 @@ namespace DAO
             private set => instance = value;
         }
 
-        private KhachHangDAO() {}
+        private KhachHangDAO()
+        {
+
+        }
 
         // đổ data vào 
        

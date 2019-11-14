@@ -56,6 +56,7 @@
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.panelThemNhanVien = new System.Windows.Forms.Panel();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCMNDNew = new System.Windows.Forms.TextBox();
@@ -284,9 +285,11 @@
             // dgvNhanVien
             // 
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvNhanVien.Location = new System.Drawing.Point(113, 46);
             this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(490, 265);
@@ -396,6 +399,7 @@
             // 
             this.panelThemNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelThemNhanVien.Controls.Add(this.txtMatKhau);
+            this.panelThemNhanVien.Controls.Add(this.btnThoat);
             this.panelThemNhanVien.Controls.Add(this.btnXacNhan);
             this.panelThemNhanVien.Controls.Add(this.label15);
             this.panelThemNhanVien.Controls.Add(this.txtCMNDNew);
@@ -429,13 +433,28 @@
             this.txtMatKhau.TabIndex = 35;
             this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.DarkRed;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThoat.Location = new System.Drawing.Point(163, 304);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(101, 35);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // btnXacNhan
             // 
             this.btnXacNhan.BackColor = System.Drawing.Color.DarkRed;
             this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnXacNhan.Location = new System.Drawing.Point(105, 304);
+            this.btnXacNhan.Location = new System.Drawing.Point(58, 304);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(101, 35);
@@ -721,5 +740,6 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnThoat;
     }
 }

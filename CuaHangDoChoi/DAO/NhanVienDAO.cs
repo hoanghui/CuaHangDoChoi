@@ -76,6 +76,7 @@ namespace DAO
             DataProvider.Instance.ExecuteNonQuery(query3);
             int result1 = DataProvider.Instance.ExecuteNonQuery(query1);
             DataProvider.Instance.ExecuteNonQuery(query2);
+
             return result1 > 0;
         }
 

@@ -60,14 +60,7 @@ namespace UnitTestCuaHangDoChoi
         //
         #endregion
 
-        [TestMethod]
-        public void TestDangNhapBinhThuong()
-        {
-            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("admin");
-            TaiKhoan expected = tk;
-            TaiKhoan actual = tk;
-            Assert.AreEqual(expected, actual);
-        }
+        
         [TestMethod]
         public void TestDangNhapVoiTenDangNhapKhongTonTai()
         {

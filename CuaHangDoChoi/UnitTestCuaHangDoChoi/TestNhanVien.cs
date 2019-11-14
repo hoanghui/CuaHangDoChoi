@@ -58,7 +58,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestLayDanhSachNhanVien()
         {
             List<NhanVien> nv = NhanVienDAO.Instance.laynhanvien();
-            int expected = 7;
+            int expected = 4;
             int actual = nv.Count;
             Assert.AreEqual(expected, actual);
         }
@@ -108,7 +108,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestXoaNhanVien()
         {
             bool expected = true;
-            bool actual = NhanVienDAO.Instance.XoaNV(111);
+            bool actual = NhanVienDAO.Instance.XoaNV(111,"admin");
             Assert.AreEqual(expected, actual);
         }
 
@@ -116,7 +116,15 @@ namespace UnitTestCuaHangDoChoi
         public void TestXoaNhanVienKhongTonTai()
         {
             bool expected = false;
-            bool actual = NhanVienDAO.Instance.XoaNV(48561186);
+            bool actual = NhanVienDAO.Instance.XoaNV(48561186,"xamqua");
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestXoaNhanVienSaiMaNhanVien()
+        {
+            bool expected = false;
+            bool actual = NhanVienDAO.Instance.XoaNV(48851, "aaaaa");
             Assert.AreEqual(expected, actual);
         }
 
@@ -141,7 +149,7 @@ namespace UnitTestCuaHangDoChoi
         [TestMethod]
         public void TestLayThongTinMotNhanVien()
         {
-            List<NhanVien> nv = NhanVienDAO.Instance.Lay1nhanvien("hoanghuy");
+            List<NhanVien> nv = NhanVienDAO.Instance.Lay1nhanvien("admin");
             int expected = 1;
             int actual = nv.Count;
             Assert.AreEqual(expected, actual);
