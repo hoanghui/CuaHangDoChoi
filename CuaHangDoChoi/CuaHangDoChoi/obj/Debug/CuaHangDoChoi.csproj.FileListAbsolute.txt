@@ -62,7 +62,6 @@ D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangD
 D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachKhachHang.resources
 D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachNhanVien_QuanLy.resources
 D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DangNhap.resources
-D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.NhanVien.resources
 D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.Properties.Resources.resources
 D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.ThongKe_QuanLy.resources
 D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.TrangChu_QuanLy.resources
@@ -94,3 +93,8 @@ C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\MySq
 C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csprojAssemblyReference.cache
 C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.CopyComplete
 C:\Users\lenovo\Desktop\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.ThanhToan.resources
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\Google.Protobuf.dll
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\BouncyCastle.Crypto.dll
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\Renci.SshNet.dll
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\bin\Debug\MySql.Data.xml
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.ThanhToan.resources

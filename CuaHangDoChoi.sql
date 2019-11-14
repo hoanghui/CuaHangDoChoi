@@ -113,6 +113,8 @@ INSERT INTO KhachHang VALUES (6, N'Nguyễn Quốc Huy', 123456789, 0321665499, 
 INSERT INTO KhachHang VALUES (7, N'Nguyễn Trấn Thành', 123456789, 0321665499, '11/6/1999','Nam',N'Quận 10')
 INSERT INTO KhachHang VALUES (8, N'Noo Phước Thịnh', 123456789, 0321665499, '3/9/1999','Nu',N'Quận 9')
 INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999','Nu',N'Quận 8')
+--
+
 
 -- sua --
 --SELECT *
@@ -135,8 +137,8 @@ INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999
 
 --DELETE FROM NhanVien
 
-INSERT INTO dbo.NhanVien VALUES(119,N'Minh hoàng Hahahaha',485156156,'11/11/1999', 'nam','hahaha')
-INSERT INTO dbo.TaiKhoan ( tenDangNhap, matKhau, loaiTaiKhoan) VALUES('hahaha',1,1)
+--INSERT INTO dbo.NhanVien VALUES(119,N'Minh hoàng Hahahaha',485156156,'11/11/1999', 'nam','hahaha')
+--INSERT INTO dbo.TaiKhoan ( tenDangNhap, matKhau, loaiTaiKhoan) VALUES('hahaha',1,1)
 
 --xóa bảng--
 --DROP TABLE dbo.SanPham

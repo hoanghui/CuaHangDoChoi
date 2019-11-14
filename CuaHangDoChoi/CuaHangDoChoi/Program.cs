@@ -16,11 +16,7 @@ namespace CuaHangDoChoi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new ThanhToan());
-=======
-            Application.Run(new DangNhap());
->>>>>>> 821c205db07a44f4b978fd2d0cbf6d2e8b3e83c7
+            Application.Run(new DanhSachNhanVien_QuanLy());
         }
     }
 }

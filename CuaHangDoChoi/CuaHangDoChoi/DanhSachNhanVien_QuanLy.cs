@@ -219,11 +219,6 @@ namespace CuaHangDoChoi
             txtUserName.Enabled = true;
         }
 
-        void Refresh()
-        {
-            
-        }
-
         private void btnReload_Click(object sender, EventArgs e)
         {
             //dgvNhanVien.DataSource = null ;

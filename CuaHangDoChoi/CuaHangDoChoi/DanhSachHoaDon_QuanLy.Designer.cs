@@ -390,6 +390,7 @@
             this.Controls.Add(this.btListNhanVien);
             this.Name = "DanhSachHoaDon_QuanLy";
             this.Text = "DanhSachHoaDon_QuanLy";
+            this.Load += new System.EventHandler(this.DanhSachHoaDon_QuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -66,5 +66,10 @@ namespace CuaHangDoChoi
             dn.Show();
             this.Dispose(false);
         }
+
+        private void DanhSachHoaDon_QuanLy_Load(object sender, EventArgs e)
+        {
+             
+        }
     }
 }
