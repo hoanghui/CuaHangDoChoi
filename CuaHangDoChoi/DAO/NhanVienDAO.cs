@@ -24,18 +24,6 @@ namespace DAO
 
         private NhanVienDAO() { }
 
-        // đổ data vào 
-        //public NhanVien layMaNhanVien(string maNhanVien)
-        //{
-        //    string query = "SELECT * FROM dbo.NhanVien WHERE ma= '" + maNhanVien+ "'";
-        //    DataTable table = DataProvider.Instance.ExecuteQuery(query);
-        //    foreach (DataRow row in table.Rows)
-        //    {
-        //        return new NhanVien(row);
-        //    }
-        //    return null;
-        //}
-
         public List<NhanVien> Lay1nhanvien(string username)
         {
             List<NhanVien> nv = new List<NhanVien>();
@@ -82,12 +70,13 @@ namespace DAO
 
         public bool XoaNV(int manv)
         {
-            string query = "DELETE FROM dbo.NhanVien WHERE maNhanVien = '" + manv + "'";
+            string query = "DELETE FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
+            //"DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'"; 
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool ThemNV(int manv, string hoten, int cmnd, DateTime ngaysinh, string gioitinh, string tendangnhap, string matkhau)
+        public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
         {
             string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','"+matkhau+"',1)" +
                 "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','"+tendangnhap+"')";

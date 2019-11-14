@@ -219,11 +219,6 @@ namespace CuaHangDoChoi
             txtUserName.Enabled = true;
         }
 
-        void Refresh()
-        {
-            
-        }
-
         private void btnReload_Click(object sender, EventArgs e)
         {
             //dgvNhanVien.DataSource = null ;
@@ -295,7 +290,7 @@ namespace CuaHangDoChoi
                 return;
             }
 
-            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, BirthDay, gioitinh, tendangnhap, matkhau);
+            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap, matkhau);
             if (result)
             {
                 //txtNhanVienIDNew.DataBindings.Clear();

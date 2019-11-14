@@ -114,6 +114,18 @@ INSERT INTO KhachHang VALUES (7, N'Nguyễn Trấn Thành', 123456789, 032166549
 INSERT INTO KhachHang VALUES (8, N'Noo Phước Thịnh', 123456789, 0321665499, '3/9/1999','Nu',N'Quận 9')
 INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999','Nu',N'Quận 8')
 
+--Thêm dữ liệu vào bảng hóa đơn--
+
+INSERT INTO HoaDon VALUES (101,1,112,'1/1/2018')
+INSERT INTO HoaDon VALUES (102,7,112,'1/1/2018')
+INSERT INTO HoaDon VALUES (103,6,116,'1/1/2018')
+
+-- Thêm dữ liệu vào bảng chi tiết hóa đơn --
+
+INSERT INTO ChiTietHoaDon VALUES (101,1001,400000,2)
+INSERT INTO ChiTietHoaDon VALUES (102,1002,20000,2)
+INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
+
 -- sua --
 --SELECT *
 --FROM NhanVien 
@@ -135,8 +147,8 @@ INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999
 
 --DELETE FROM NhanVien
 
-INSERT INTO dbo.NhanVien VALUES(119,N'Minh hoàng Hahahaha',485156156,'11/11/1999', 'nam','hahaha')
-INSERT INTO dbo.TaiKhoan ( tenDangNhap, matKhau, loaiTaiKhoan) VALUES('hahaha',1,1)
+--INSERT INTO dbo.NhanVien VALUES(119,N'Minh hoàng Hahahaha',485156156,'11/11/1999', 'nam','hahaha')
+--INSERT INTO dbo.TaiKhoan ( tenDangNhap, matKhau, loaiTaiKhoan) VALUES('hahaha',1,1)
 
 --xóa bảng--
 --DROP TABLE dbo.SanPham

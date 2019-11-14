@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class HoaDonDAO
+    public class HoaDonDAO
     {
         //biến singleton, khởi tạo 1 lần duy nhất
         private static HoaDonDAO instance;
@@ -22,15 +22,16 @@ namespace DAO
         private HoaDonDAO() { }
 
         // đổ data vào 
-        public HoaDon layHoaDon(string maHoaDon)
+        public List<HoaDon> LayDanhSachHoaDon()
         {
-            string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang= '" + maHoaDon + "'";
+            List<HoaDon> hd = new List<HoaDon>();
+            string query = "SELECT * FROM dbo.HoaDon";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
-                return new HoaDon(row);
+                hd.Add(new HoaDon(row));
             }
-            return null;
+            return hd;
         }
     }
 }

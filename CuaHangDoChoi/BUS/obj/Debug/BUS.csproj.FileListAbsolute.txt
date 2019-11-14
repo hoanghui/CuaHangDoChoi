@@ -1,0 +1,9 @@
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\bin\Debug\BUS.exe.config
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\bin\Debug\BUS.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\bin\Debug\BUS.pdb
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.exe
+D:\Kiemthu\official\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.pdb

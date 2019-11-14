@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,23 +11,41 @@ using System.Windows.Forms;
 
 namespace CuaHangDoChoi
 {
+    
     public partial class DanhSachHoaDon_QuanLy : Form
     {
+        BindingSource bd = new BindingSource();
         public DanhSachHoaDon_QuanLy()
         {
             InitializeComponent();
+            HienThiDanhSach();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        void HienThiDanhSach()
         {
+            bd.DataSource = HoaDonDAO.Instance.LayDanhSachHoaDon();
+            dgvHoaDon.DataSource = bd;
 
+            // set tên cột
+            dgvHoaDon.Columns[0].HeaderText = "Mã hóa đơn";
+            dgvHoaDon.Columns[0].Width = 100;
+            dgvHoaDon.Columns[1].HeaderText = "Mã khách hàng";
+
+            dgvHoaDon.Columns[2].HeaderText = "Mã nhân viên";
+
+            dgvHoaDon.Columns[3].HeaderText = "Ngày tạo hóa đơn";
+            dgvHoaDon.Columns[0].Width = 150;
+            //GanDuLieu();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //void GanDuLieu()
+        //{
+        //    txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
+        //    txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
+        //    txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
+        //    dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
+        //    txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
+        //    txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
+        //}
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -65,6 +84,26 @@ namespace CuaHangDoChoi
             DangNhap dn = new DangNhap();
             dn.Show();
             this.Dispose(false);
+        }
+
+        private void DanhSachHoaDon_QuanLy_Load(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
