@@ -47,11 +47,24 @@ namespace CuaHangDoChoi
                 MessageBox.Show("Tìm không có", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             btThem.Visible = true;
+            btXoa.Visible = true;
         }
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            bd.DataSource = SanPhamDAO.Instance.LaySanPham();
+            dgvThanhToan.DataSource = bd;
+            dgvThanhToan.Columns[0].HeaderText = "Mã Sản Phẩm";
+            dgvThanhToan.Columns[1].HeaderText = "Tên Sản Phẩm";
+            dgvThanhToan.Columns[2].HeaderText = "Xuất Xứ";
+            dgvThanhToan.Columns[3].HeaderText = "Giá Bán";
+        }
 
+        private void btDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
+            this.Dispose(false);
         }
     }
 }
