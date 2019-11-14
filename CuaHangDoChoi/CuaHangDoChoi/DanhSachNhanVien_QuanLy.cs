@@ -290,7 +290,7 @@ namespace CuaHangDoChoi
                 return;
             }
 
-            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, BirthDay, gioitinh, tendangnhap, matkhau);
+            bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap, matkhau);
             if (result)
             {
                 //txtNhanVienIDNew.DataBindings.Clear();

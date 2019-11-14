@@ -2,16 +2,18 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using DAO;
+using DTO;
 
 namespace UnitTestCuaHangDoChoi
 {
     /// <summary>
-    /// Summary description for NhanVienTest
+    /// Summary description for TestKhachHang
     /// </summary>
     [TestClass]
-    public class NhanVienTest
+    public class TestKhachHang
     {
-        public NhanVienTest()
+        public TestKhachHang()
         {
             //
             // TODO: Add constructor logic here
@@ -59,9 +61,12 @@ namespace UnitTestCuaHangDoChoi
         #endregion
 
         [TestMethod]
-        public void TestThemNhanVien()
+        public void TestLayDanhSachKhachHang()
         {
-            
-        }   
+            List<KhachHang> kh = KhachHangDAO.Instance.LayDSKhachHang();
+            int expected = 9;
+            int actual = kh.Count;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
