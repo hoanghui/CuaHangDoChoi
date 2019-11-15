@@ -451,12 +451,10 @@
             // 
             // dgvKhachHang
             // 
-            this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgvKhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgvKhachHang.Location = new System.Drawing.Point(273, 171);
+            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhachHang.Location = new System.Drawing.Point(259, 164);
             this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKhachHang.Size = new System.Drawing.Size(634, 390);
+            this.dgvKhachHang.Size = new System.Drawing.Size(590, 378);
             this.dgvKhachHang.TabIndex = 35;
             // 
             // DanhSachKhachHang

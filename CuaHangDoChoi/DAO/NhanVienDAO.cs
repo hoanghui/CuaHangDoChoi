@@ -59,17 +59,27 @@ namespace DAO
         public List<NhanVien> TimNV(int manv)
         {
             List<NhanVien> nv = new List<NhanVien>();
-            string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = '" +manv+ "'";
-            DataTable table = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow row in table.Rows)
+            if(manv > 0)
             {
-                nv.Add(new NhanVien(row));
+                
+                string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = '" + manv + "'";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    nv.Add(new NhanVien(row));
+                }
+                return nv;
             }
-            return nv;
+            else
+            {
+                return nv;
+            }
+           
         }
 
         public bool XoaNV(int manv, string tendangnhap)
         {
+
             string query1 = "DELETE FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
             string query2 = "DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
             string query3 = "UPDATE dbo.HoaDon SET maNhanVien = null WHERE maNhanVien = " + manv + "";
@@ -82,11 +92,43 @@ namespace DAO
 
         public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
         {
-            string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','"+matkhau+"',1)" +
-                "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','"+tendangnhap+"')";
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            if (manv <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',1)" +
+                "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','" + tendangnhap + "')";
+                int result = DataProvider.Instance.ExecuteNonQuery(query);
+                return result > 0;
+            }
+            
+        }
+
+        public bool KiemTraNhanVienTonTaiVoiMaNhanVien(int manv)
+        {
+            List<NhanVien> ds = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = "+manv+"";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                ds.Add(new NhanVien(row));
+            }
+            int result = ds.Count;
             return result > 0;
         }
-       
+        public bool KiemTraNhanVienTonTaiVoiTenDangNhap(string tendangnhap)
+        {
+            List<NhanVien> ds = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + tendangnhap + "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                ds.Add(new NhanVien(row));
+            }
+            int result = ds.Count;
+            return result > 0;
+        }
     }
 }

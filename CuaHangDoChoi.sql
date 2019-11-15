@@ -128,6 +128,9 @@ INSERT INTO ChiTietHoaDon VALUES (101,1001,400000,2)
 INSERT INTO ChiTietHoaDon VALUES (102,1002,20000,2)
 INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
 
+DELETE FROM dbo.NhanVien WHERE maNhanVien = '0'
+DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = 'r'		
+
 -- sua --
 --SELECT *
 --FROM NhanVien 

@@ -53,13 +53,13 @@ namespace CuaHangDoChoi
 
             dgvKhachHang.Columns[6].HeaderText = "Địa chỉ";
 
-            txtMaKhachHang.DataBindings.Clear();
-            txtTenKhachHang.DataBindings.Clear();
-            txtSDT.DataBindings.Clear();
-            txtSex.DataBindings.Clear();
-            txtDiaChi.DataBindings.Clear();
-            dtpNgaySinh.DataBindings.Clear();
-            txtCMND.DataBindings.Clear();
+            //txtMaKhachHang.DataBindings.Clear();
+            //txtTenKhachHang.DataBindings.Clear();
+            //txtSDT.DataBindings.Clear();
+            //txtSex.DataBindings.Clear();
+            //txtDiaChi.DataBindings.Clear();
+            //dtpNgaySinh.DataBindings.Clear();
+            //txtCMND.DataBindings.Clear();
 
             GanDuLieu();
 

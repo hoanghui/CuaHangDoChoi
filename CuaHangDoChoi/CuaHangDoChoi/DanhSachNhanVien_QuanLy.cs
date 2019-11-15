@@ -317,38 +317,69 @@ namespace CuaHangDoChoi
                     return;
                 }
 
-                bool result = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap, matkhau);
+                bool result = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiMaNhanVien(manv);
+                bool result1 = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiTenDangNhap(tendangnhap);
+                if(result && result1)
+                {
+                    MessageBox.Show("Mã nhân viên và tên đăng nhập đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (result)
                 {
-                    //txtNhanVienIDNew.DataBindings.Clear();
-                    //txtNameNew.DataBindings.Clear();
-                    //txtSexNew.DataBindings.Clear();
-                    //dtpBirthdayNew.DataBindings.Clear();
-                    //txtCMNDNew.DataBindings.Clear();
-                    //txtNhanVienIDNew.DataBindings.Clear();
-
-                    txtNhanVienID.DataBindings.Clear();
-                    txtName.DataBindings.Clear();
-                    txtSex.DataBindings.Clear();
-                    txtUserName.DataBindings.Clear();
-                    dtpNgaySinh.DataBindings.Clear();
-                    txtCMND.DataBindings.Clear();
-
-
-                    MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    panelThemNhanVien.Visible = false;
-                    txtNhanVienIDNew.Clear();
-                    txtNameNew.Clear();
-                    txtSexNew.Clear();
-                    //dtpBirthdayNew.Visible = false;
-                    dtpBirthdayNew.ResetText();
-                    txtCMNDNew.Clear();
-                    txtUserNameNew.Clear();
-
-
-                    HienThiDanhSach();
-
+                    MessageBox.Show("Mã nhân viên đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                else
+                {
+                    
+                    if (result1)
+                    {
+                        MessageBox.Show("Tên đăng nhập đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        bool result2 = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap, matkhau);
+                        if (result2)
+                        {
+                            //txtNhanVienIDNew.DataBindings.Clear();
+                            //txtNameNew.DataBindings.Clear();
+                            //txtSexNew.DataBindings.Clear();
+                            //dtpBirthdayNew.DataBindings.Clear();
+                            //txtCMNDNew.DataBindings.Clear();
+                            //txtNhanVienIDNew.DataBindings.Clear();
+
+                            txtNhanVienID.DataBindings.Clear();
+                            txtName.DataBindings.Clear();
+                            txtSex.DataBindings.Clear();
+                            txtUserName.DataBindings.Clear();
+                            dtpNgaySinh.DataBindings.Clear();
+                            txtCMND.DataBindings.Clear();
+
+
+                            MessageBox.Show("Thêm nhân viên thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            panelThemNhanVien.Visible = false;
+                            txtNhanVienIDNew.Clear();
+                            txtNameNew.Clear();
+                            txtSexNew.Clear();
+                            //dtpBirthdayNew.Visible = false;
+                            dtpBirthdayNew.ResetText();
+                            txtCMNDNew.Clear();
+                            txtUserNameNew.Clear();
+
+
+                            HienThiDanhSach();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã nhân viên phải lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+                
+                
             }
             
             
