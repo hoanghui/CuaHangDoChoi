@@ -32,7 +32,7 @@ CREATE TABLE KhachHang
 (
 	maKhachHang INT PRIMARY KEY,
 	hoTen NVARCHAR(50) NOT NULL,
-	CMND INT NOT NULL,
+	CMND INT NOT NULL, 
 	soDienThoai INT NOT NULL,
 	ngaySinh DATETIME,
 	gioiTinh VARCHAR(10),
@@ -107,14 +107,14 @@ INSERT INTO SanPham VALUES (1010, N'Thuyền', 'Korea', '6/11/2018',1500000,30)
 
 --Thêm dữ liệu vào bảng KhachHang --
 INSERT INTO KhachHang VALUES (1, N'Dương Trần Tử Minh', 123456789, 0321665499, '1/1/1999','Nam',N'Quận 7')
-INSERT INTO KhachHang VALUES (2, N'Đỗ Nguyên Thanh Tùng', 123456789, 0321665499, '1/11/1999','Nu',N'Quận Gò Vấp')
-INSERT INTO KhachHang VALUES (3, N'Nguyễn Thị Triệu', 123456789, 0321665499, '9/1/1999','Nu',N'Quận Gò Vấp')
-INSERT INTO KhachHang VALUES (4, N'Chị Dậu', 123456789, 0321665499, '8/1/1999','Nu',N'Quận 4')
-INSERT INTO KhachHang VALUES (5, N'Sơn Tùng MTP', 123456789, 0321665499, '3/2/1999','Nam',N'Thái Bình')
-INSERT INTO KhachHang VALUES (6, N'Nguyễn Quốc Huy', 123456789, 0321665499, '12/8/1999','Nam',N'Quận Bình Thạnh')
-INSERT INTO KhachHang VALUES (7, N'Nguyễn Trấn Thành', 123456789, 0321665499, '11/6/1999','Nam',N'Quận 10')
-INSERT INTO KhachHang VALUES (8, N'Noo Phước Thịnh', 123456789, 0321665499, '3/9/1999','Nu',N'Quận 9')
-INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 123456789, 0321665499, '11/4/1999','Nu',N'Quận 8')
+INSERT INTO KhachHang VALUES (2, N'Đỗ Nguyên Thanh Tùng', 321764933, 0321665499, '1/11/1999','Nu',N'Quận Gò Vấp')
+INSERT INTO KhachHang VALUES (3, N'Nguyễn Thị Triệu', 198765432, 0321665499, '9/1/1999','Nu',N'Quận Gò Vấp')
+INSERT INTO KhachHang VALUES (4, N'Chị Dậu', 326152565, 0321665499, '8/1/1999','Nu',N'Quận 4')
+INSERT INTO KhachHang VALUES (5, N'Sơn Tùng MTP', 159753468, 0321665499, '3/2/1999','Nam',N'Thái Bình')
+INSERT INTO KhachHang VALUES (6, N'Nguyễn Quốc Huy', 753456789 , 0321665499, '12/8/1999','Nam',N'Quận Bình Thạnh')
+INSERT INTO KhachHang VALUES (7, N'Nguyễn Trấn Thành', 741852963, 0321665499, '11/6/1999','Nam',N'Quận 10')
+INSERT INTO KhachHang VALUES (8, N'Noo Phước Thịnh', 451151555, 0321665499, '3/9/1999','Nu',N'Quận 9')
+INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 118877664, 0321665499, '11/4/1999','Nu',N'Quận 8')
 
 --Thêm dữ liệu vào bảng hóa đơn--
 
@@ -154,5 +154,11 @@ INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
 --INSERT INTO dbo.TaiKhoan ( tenDangNhap, matKhau, loaiTaiKhoan) VALUES('hahaha',1,1)
 
 --xóa bảng--
+--DROP TABLE dbo.TaiKhoan
+--DROP TABLE dbo.KhachHang
 --DROP TABLE dbo.SanPham
---DROP TABLE dbo.ChiTietHoaDon	
+--DROP TABLE dbo.ChiTietHoaDon
+--DROP TABLE dbo.NhanVien
+--DROP TABLE dbo.HoaDon
+
+	

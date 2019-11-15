@@ -133,6 +133,11 @@ namespace CuaHangDoChoi
                 txtNhanVienID.Enabled = false;
                 dtpNgaySinh.Enabled = false;
                 txtUserName.Enabled = false;
+
+                btXoaNV.Enabled = true;
+                btThemNV.Enabled = true;
+                btnSua.Enabled = true;
+                btnCapNhat.Enabled = true;
             }
            
             
@@ -237,6 +242,12 @@ namespace CuaHangDoChoi
             //txtNhanVienID.Enabled = true;
             dtpNgaySinh.Enabled = true;
             //txtUserName.Enabled = true;
+
+            // tắt các nút thêm, xóa, xác nhận, thoát
+            btThemNV.Enabled = false;
+            btXoaNV.Enabled = false;
+            btnXacNhan.Enabled = false;
+            btnThoat.Enabled = false;
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -289,6 +300,10 @@ namespace CuaHangDoChoi
         private void btThemNV_Click(object sender, EventArgs e)
         {
             panelThemNhanVien.Visible = true;
+            btThemNV.Enabled = false;
+            btXoaNV.Enabled = false;
+            btnSua.Enabled = false;
+            btnCapNhat.Enabled = false;
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -367,6 +382,11 @@ namespace CuaHangDoChoi
                             txtCMNDNew.Clear();
                             txtUserNameNew.Clear();
 
+                            // bật enabled các nút thêm, xóa, sửa, cập nhật
+                            btThemNV.Enabled = true;
+                            btXoaNV.Enabled = true;
+                            btnSua.Enabled = true;
+                            btnCapNhat.Enabled = true;
 
                             HienThiDanhSach();
 
@@ -431,6 +451,12 @@ namespace CuaHangDoChoi
             }
             else
             {
+                // bật enabled các nút thêm, xóa, sửa, cập nhật
+                btXoaNV.Enabled = true;
+                btThemNV.Enabled = true;
+                btnSua.Enabled = true;
+                btnCapNhat.Enabled = true;
+
                 panelThemNhanVien.Visible = false;
                 txtNhanVienIDNew.Clear();
                 txtNameNew.Clear();

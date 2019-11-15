@@ -92,7 +92,7 @@ namespace DAO
 
         public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
         {
-            if (manv <= 0)
+            if (manv <= 0 || cmnd <= 0)
             {
                 return false;
             }

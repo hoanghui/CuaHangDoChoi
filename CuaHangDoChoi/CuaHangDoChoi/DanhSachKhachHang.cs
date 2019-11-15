@@ -53,13 +53,7 @@ namespace CuaHangDoChoi
 
             dgvKhachHang.Columns[6].HeaderText = "Địa chỉ";
 
-            //txtMaKhachHang.DataBindings.Clear();
-            //txtTenKhachHang.DataBindings.Clear();
-            //txtSDT.DataBindings.Clear();
-            //txtSex.DataBindings.Clear();
-            //txtDiaChi.DataBindings.Clear();
-            //dtpNgaySinh.DataBindings.Clear();
-            //txtCMND.DataBindings.Clear();
+            
 
             GanDuLieu();
 
@@ -67,6 +61,14 @@ namespace CuaHangDoChoi
 
         void GanDuLieu()
         {
+            txtMaKhachHang.DataBindings.Clear();
+            txtTenKhachHang.DataBindings.Clear();
+            txtSDT.DataBindings.Clear();
+            txtSex.DataBindings.Clear();
+            txtDiaChi.DataBindings.Clear();
+            dtpNgaySinh.DataBindings.Clear();
+            txtCMND.DataBindings.Clear();
+
             txtMaKhachHang.DataBindings.Add("Text", dgvKhachHang.DataSource, "maKhachHang", true, DataSourceUpdateMode.Never);
             txtTenKhachHang.DataBindings.Add("Text", dgvKhachHang.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
             txtCMND.DataBindings.Add("Text", dgvKhachHang.DataSource, "CMND", true, DataSourceUpdateMode.Never);
@@ -74,6 +76,7 @@ namespace CuaHangDoChoi
             dtpNgaySinh.DataBindings.Add("Text", dgvKhachHang.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
             txtSex.DataBindings.Add("Text", dgvKhachHang.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
             txtDiaChi.DataBindings.Add("Text", dgvKhachHang.DataSource, "diaChi", true, DataSourceUpdateMode.Never);
+
         }
 
      
@@ -111,14 +114,7 @@ namespace CuaHangDoChoi
         }
 
         private void DanhSachKhachHang_Load(object sender, EventArgs e)
-        {
-            txtMaKhachHang.Enabled = false;
-            txtTenKhachHang.Enabled = false;
-            txtSex.Enabled = false;
-            txtCMND.Enabled = false;
-            txtDiaChi.Enabled = false;
-            txtSDT.Enabled = false;
-            dgvKhachHang.Enabled = false;
+        { 
 
             HienThiDanhSach();
         }
@@ -176,7 +172,6 @@ namespace CuaHangDoChoi
                 txtDiaChi.DataBindings.Clear();
                 dtpNgaySinh.DataBindings.Clear();
                 txtCMND.DataBindings.Clear();
-
                 HienThiDanhSach();
             }
             else
