@@ -34,18 +34,6 @@ namespace DAO
             return sp;
         }
 
-        public List<SanPham> Lay1SanPham(int masanpham, string tensanpham, string xuatxu, double giaban)
-        {
-            List<SanPham> sp1 = new List<SanPham>();
-            string query = "SELECT * FROM dbo.SanPham WHERE maSanPham = " + masanpham +", tenSanPham = " + tensanpham +", xuatXu = " + xuatxu +", giaBan = " + giaban + "";
-            DataTable table = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow row in table.Rows)
-            {
-                sp1.Add(new SanPham(row));
-            }
-            return sp1;
-        }
-
         public List<SanPham> TimSP(int masanpham)
         {
             List<SanPham> nv = new List<SanPham>();
