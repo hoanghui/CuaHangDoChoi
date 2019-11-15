@@ -101,9 +101,9 @@ namespace CuaHangDoChoi
                     lsvItem = new ListViewItem(row.Cells["maSanPham"].Value.ToString());
                     lsvItem.SubItems.Add(row.Cells["tenSanPham"].Value.ToString());
                     lsvItem.SubItems.Add(row.Cells["xuatXu"].Value.ToString());
-                    lsvItem.SubItems.Add(row.Cells["giaBan"].Value.ToString());
                     lsvItem.SubItems.Add(nudCount.Value.ToString());
-                    tongTien += (float)Convert.ToDouble(row.Cells["giaBan"].Value.ToString());
+                    lsvItem.SubItems.Add(row.Cells["giaBan"].Value.ToString());
+                    tongTien += float.Parse(row.Cells["giaBan"].Value.ToString());
                     lvThanhToan.Items.Add(lsvItem);
                 }
             }            

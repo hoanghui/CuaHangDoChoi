@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDonDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="HoaDonDAO.cs" />
     <Compile Include="KhachHangDAO.cs" />

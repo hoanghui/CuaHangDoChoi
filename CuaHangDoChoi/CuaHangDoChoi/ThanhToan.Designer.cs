@@ -86,9 +86,9 @@
             this.btThanhToan.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btThanhToan.Location = new System.Drawing.Point(619, 505);
+            this.btThanhToan.Location = new System.Drawing.Point(609, 541);
             this.btThanhToan.Name = "btThanhToan";
-            this.btThanhToan.Size = new System.Drawing.Size(334, 40);
+            this.btThanhToan.Size = new System.Drawing.Size(365, 50);
             this.btThanhToan.TabIndex = 3;
             this.btThanhToan.Text = "THANH TOÁN";
             this.btThanhToan.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@
             this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(619, 541);
+            this.button2.Location = new System.Drawing.Point(248, 435);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(334, 40);
+            this.button2.Size = new System.Drawing.Size(334, 59);
             this.button2.TabIndex = 3;
             this.button2.Text = "IN HÓA ĐƠN";
             this.button2.UseVisualStyleBackColor = false;
@@ -217,13 +217,13 @@
             this.maSP,
             this.tenSP,
             this.xuatXu,
-            this.giaBan,
-            this.soLuong});
+            this.soLuong,
+            this.giaBan});
             this.lvThanhToan.GridLines = true;
             this.lvThanhToan.HideSelection = false;
-            this.lvThanhToan.Location = new System.Drawing.Point(619, 157);
+            this.lvThanhToan.Location = new System.Drawing.Point(609, 157);
             this.lvThanhToan.Name = "lvThanhToan";
-            this.lvThanhToan.Size = new System.Drawing.Size(334, 272);
+            this.lvThanhToan.Size = new System.Drawing.Size(365, 272);
             this.lvThanhToan.TabIndex = 12;
             this.lvThanhToan.UseCompatibleStateImageBehavior = false;
             this.lvThanhToan.View = System.Windows.Forms.View.Details;
@@ -246,6 +246,7 @@
             // 
             // soLuong
             // 
+            this.soLuong.DisplayIndex = 3;
             this.soLuong.Text = "Số Lượng";
             // 
             // groupBox1
@@ -253,9 +254,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lbTongTien);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(619, 433);
+            this.groupBox1.Location = new System.Drawing.Point(609, 433);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(334, 66);
+            this.groupBox1.Size = new System.Drawing.Size(365, 102);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TỔNG TIỀN";
@@ -263,9 +264,9 @@
             // lbTongTien
             // 
             this.lbTongTien.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.Location = new System.Drawing.Point(7, 20);
+            this.lbTongTien.Location = new System.Drawing.Point(13, 26);
             this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(321, 50);
+            this.lbTongTien.Size = new System.Drawing.Size(352, 58);
             this.lbTongTien.TabIndex = 0;
             this.lbTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
