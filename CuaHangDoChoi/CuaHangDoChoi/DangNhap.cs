@@ -40,6 +40,7 @@ namespace CuaHangDoChoi
                     else
                     {
                         ThanhToan nv = new ThanhToan();
+                        nv.funData(this.txtUsername);
                         nv.Show();
                         this.Dispose(false);
                     }
