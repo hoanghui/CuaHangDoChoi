@@ -50,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CuaHangDoChoiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuaHangDoChoiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachHangHoa_QuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +139,17 @@
     <EmbeddedResource Include="TrangChu_QuanLy.resx">
       <DependentUpon>TrangChu_QuanLy.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CuaHangDoChoiDataSet.xsc">
+      <DependentUpon>CuaHangDoChoiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CuaHangDoChoiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CuaHangDoChoiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuaHangDoChoiDataSet.xss">
+      <DependentUpon>CuaHangDoChoiDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

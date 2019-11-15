@@ -76,6 +76,8 @@ CREATE TABLE ChiTietHoaDon
 )
 GO
 
+
+
 --Thêm dữ liệu vào bảng TaiKhoan --
 
 INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('admin', 1, 1),

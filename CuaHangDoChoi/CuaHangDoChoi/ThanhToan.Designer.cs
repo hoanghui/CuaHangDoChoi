@@ -30,7 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btThanhToan = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,13 +45,12 @@
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.btXoa = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
-            this.dgvThanhToan = new System.Windows.Forms.DataGridView();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lvThanhToan = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,17 +75,18 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "THANH TOÁN";
             // 
-            // button1
+            // btThanhToan
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(812, 615);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "THANH TOÁN";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btThanhToan.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btThanhToan.Location = new System.Drawing.Point(812, 615);
+            this.btThanhToan.Name = "btThanhToan";
+            this.btThanhToan.Size = new System.Drawing.Size(245, 40);
+            this.btThanhToan.TabIndex = 3;
+            this.btThanhToan.Text = "THANH TOÁN";
+            this.btThanhToan.UseVisualStyleBackColor = false;
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // button2
             // 
@@ -223,7 +223,7 @@
             // btXoa
             // 
             this.btXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btXoa.Location = new System.Drawing.Point(1068, 222);
+            this.btXoa.Location = new System.Drawing.Point(1073, 126);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(60, 23);
             this.btXoa.TabIndex = 6;
@@ -243,14 +243,6 @@
             this.btThem.Visible = false;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
-            // dgvThanhToan
-            // 
-            this.dgvThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThanhToan.Location = new System.Drawing.Point(738, 197);
-            this.dgvThanhToan.Name = "dgvThanhToan";
-            this.dgvThanhToan.Size = new System.Drawing.Size(402, 412);
-            this.dgvThanhToan.TabIndex = 9;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(236, 22);
@@ -269,10 +261,21 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(1014, 225);
+            this.numericUpDown1.Location = new System.Drawing.Point(1025, 99);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown1.TabIndex = 11;
+            // 
+            // lvThanhToan
+            // 
+            this.lvThanhToan.GridLines = true;
+            this.lvThanhToan.HideSelection = false;
+            this.lvThanhToan.Location = new System.Drawing.Point(739, 197);
+            this.lvThanhToan.Name = "lvThanhToan";
+            this.lvThanhToan.Size = new System.Drawing.Size(394, 412);
+            this.lvThanhToan.TabIndex = 12;
+            this.lvThanhToan.UseCompatibleStateImageBehavior = false;
+            this.lvThanhToan.View = System.Windows.Forms.View.List;
             // 
             // ThanhToan
             // 
@@ -282,6 +285,7 @@
             this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._7d1d31c51d236bbda42b0ab01a6688be;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1145, 691);
+            this.Controls.Add(this.lvThanhToan);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -294,20 +298,18 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btThanhToan);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvThanhToan);
             this.Controls.Add(this.dgvSanPham);
             this.Name = "ThanhToan";
             this.Text = "NhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,7 +320,7 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btThanhToan;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button button3;
@@ -333,9 +335,9 @@
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btThem;
-        private System.Windows.Forms.DataGridView dgvThanhToan;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ListView lvThanhToan;
     }
 }

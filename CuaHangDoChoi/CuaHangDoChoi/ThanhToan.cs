@@ -38,7 +38,11 @@ namespace CuaHangDoChoi
             dgvSanPham.Columns[3].HeaderText = "Giá Bán";
 
             dgvSanPham.Columns[5].Visible = false;
+
+            btThem.Click += btThem_Click;
         }
+         
+
         private void btTimKiem_Click(object sender, EventArgs e)
         {
             bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text));
@@ -50,21 +54,48 @@ namespace CuaHangDoChoi
             btXoa.Visible = true;
         }
 
+    //void showSanPham(int id)
+    //    {
+            
+    //    }
+
         private void btThem_Click(object sender, EventArgs e)
         {
             bd.DataSource = SanPhamDAO.Instance.LaySanPham();
-            dgvThanhToan.DataSource = bd;
-            dgvThanhToan.Columns[0].HeaderText = "Mã Sản Phẩm";
-            dgvThanhToan.Columns[1].HeaderText = "Tên Sản Phẩm";
-            dgvThanhToan.Columns[2].HeaderText = "Xuất Xứ";
-            dgvThanhToan.Columns[3].HeaderText = "Giá Bán";
-        }
+            dgvSanPham.DataSource = bd;
+            lvThanhToan.Items.Clear();
+
+            lvThanhToan.View = View.Details;
+
+            lvThanhToan.Columns.Add("masp");
+
+            lvThanhToan.Columns.Add("tensp");
+
+            lvThanhToan.Columns.Add("Gia");
+
+            lvThanhToan.FullRowSelect = true;
+
+            int i = 0;
+
+            foreach (DataRow row in bd)
+            {
+                lvThanhToan.Items.Add(row["productid"].ToString());
+                lvThanhToan.Items[i].SubItems.Add(row["productname"].ToString());
+                lvThanhToan.Items[i].SubItems.Add(row["unitprice"].ToString());
+                i++;
+            }
+    }
 
         private void btDangXuat_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap();
             dn.Show();
             this.Dispose(false);
+        }
+
+        private void btThanhToan_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
