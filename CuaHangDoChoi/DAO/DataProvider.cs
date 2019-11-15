@@ -22,7 +22,7 @@ namespace DAO
         }
         private DataProvider()
         {
-            string con = @"Data Source=DESKTOP-V53SL7S;Initial Catalog=CuaHangDoChoi;Integrated Security=True";
+            string con = @"Data Source=HOANGHUY\SQLEXPRESS;Initial Catalog=CuaHangDoChoi;Integrated Security=True";
             connection = new SqlConnection(con);
         }
 

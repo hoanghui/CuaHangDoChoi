@@ -59,17 +59,27 @@ namespace DAO
         public List<NhanVien> TimNV(int manv)
         {
             List<NhanVien> nv = new List<NhanVien>();
-            string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = '" +manv+ "'";
-            DataTable table = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow row in table.Rows)
+            if(manv > 0)
             {
-                nv.Add(new NhanVien(row));
+                
+                string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = '" + manv + "'";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    nv.Add(new NhanVien(row));
+                }
+                return nv;
             }
-            return nv;
+            else
+            {
+                return nv;
+            }
+           
         }
 
         public bool XoaNV(int manv, string tendangnhap)
         {
+
             string query1 = "DELETE FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
             string query2 = "DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
             string query3 = "UPDATE dbo.HoaDon SET maNhanVien = null WHERE maNhanVien = " + manv + "";
@@ -82,11 +92,70 @@ namespace DAO
 
         public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
         {
-            string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','"+matkhau+"',1)" +
-                "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','"+tendangnhap+"')";
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            if (manv <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                List<NhanVien> ds = new List<NhanVien>();
+                string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    ds.Add(new NhanVien(row));
+                }
+                int result = ds.Count;
+
+                List<NhanVien> ds1 = new List<NhanVien>();
+                string query1 = "SELECT * FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
+                DataTable table1 = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    ds1.Add(new NhanVien(row));
+                }
+
+                int result1 = ds.Count;
+                if (result == 0 && result1 == 0)
+                {
+                    string query2 = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',1)" +
+                "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','" + tendangnhap + "')";
+                    int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
+                    return result2 > 0;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+            
+        }
+
+        public bool KiemTraNhanVienTonTaiVoiMaNhanVien(int manv)
+        {
+            List<NhanVien> ds = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = "+manv+"";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                ds.Add(new NhanVien(row));
+            }
+            int result = ds.Count;
             return result > 0;
         }
-       
+
+        public bool KiemTraNhanVienTonTaiVoiTenDangNhap(string tendangnhap)
+        {
+            List<NhanVien> ds = new List<NhanVien>();
+            string query = "SELECT * FROM dbo.NhanVien WHERE tenDangNhap = '" + tendangnhap + "'";
+            DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                ds.Add(new NhanVien(row));
+            }
+            int result = ds.Count;
+            return result > 0;
+        }
     }
 }

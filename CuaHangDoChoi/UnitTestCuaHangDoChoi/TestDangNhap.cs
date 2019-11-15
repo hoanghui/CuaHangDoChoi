@@ -89,7 +89,7 @@ namespace UnitTestCuaHangDoChoi
         [TestMethod]
         public void TestDangNhapVoiTenDangNhapCoKhoangCachCuoi()
         {
-            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("admin ");
+            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("giahuy      ");
             TaiKhoan expected = null;
             TaiKhoan actual = tk;
             Assert.AreEqual(expected, actual);
@@ -107,7 +107,7 @@ namespace UnitTestCuaHangDoChoi
         [TestMethod]
         public void TestDangNhapVoiTenDangNhapInHoaKiTuDau()
         {
-            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("Admin");
+            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("Giahuy");
             TaiKhoan expected = null;
             TaiKhoan actual = tk;
             Assert.AreEqual(expected, actual);
@@ -116,7 +116,7 @@ namespace UnitTestCuaHangDoChoi
         [TestMethod]
         public void TestDangNhapVoiTenDangNhapInHoa()
         {
-            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("ADMIN");
+            TaiKhoan tk = TaiKhoanDAO.Instance.layTaiKhoan("GIAHUY");
             TaiKhoan expected = null;
             TaiKhoan actual = tk;
             Assert.AreEqual(expected, actual);

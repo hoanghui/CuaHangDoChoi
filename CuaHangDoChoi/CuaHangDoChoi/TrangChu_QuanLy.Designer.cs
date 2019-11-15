@@ -186,8 +186,6 @@
             this.lbHoten.Name = "lbHoten";
             this.lbHoten.Size = new System.Drawing.Size(415, 28);
             this.lbHoten.TabIndex = 1;
-            this.lbHoten.Text = "tên quản lý";
-            this.lbHoten.Click += new System.EventHandler(this.lbHoten_Click);
             // 
             // pbQuanLy
             // 
@@ -209,7 +207,6 @@
             this.lb1.Size = new System.Drawing.Size(164, 44);
             this.lb1.TabIndex = 1;
             this.lb1.Text = "Ngày sinh:";
-            this.lb1.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -222,7 +219,6 @@
             this.label3.Size = new System.Drawing.Size(135, 44);
             this.label3.TabIndex = 1;
             this.label3.Text = "Chức vụ:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -244,7 +240,6 @@
             this.txtHoTen.Size = new System.Drawing.Size(328, 39);
             this.txtHoTen.TabIndex = 3;
             this.txtHoTen.Visible = false;
-            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // txtNhanVienId
             // 
@@ -309,7 +304,6 @@
             this.label5.Size = new System.Drawing.Size(164, 39);
             this.label5.TabIndex = 1;
             this.label5.Text = "Họ tên:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lbNgaySinh
             // 
@@ -321,8 +315,6 @@
             this.lbNgaySinh.Name = "lbNgaySinh";
             this.lbNgaySinh.Size = new System.Drawing.Size(171, 35);
             this.lbNgaySinh.TabIndex = 1;
-            this.lbNgaySinh.Text = "tên quản lý";
-            this.lbNgaySinh.Click += new System.EventHandler(this.lbNgaySinh_Click);
             // 
             // label7
             // 
@@ -335,7 +327,6 @@
             this.label7.Size = new System.Drawing.Size(108, 34);
             this.label7.TabIndex = 1;
             this.label7.Text = "QUẢN LÝ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // lbMaNhanVien
             // 
@@ -347,7 +338,6 @@
             this.lbMaNhanVien.Name = "lbMaNhanVien";
             this.lbMaNhanVien.Size = new System.Drawing.Size(295, 44);
             this.lbMaNhanVien.TabIndex = 1;
-            this.lbMaNhanVien.Text = "tên quản lý";
             // 
             // lbTenDangNhap
             // 
@@ -359,7 +349,6 @@
             this.lbTenDangNhap.Name = "lbTenDangNhap";
             this.lbTenDangNhap.Size = new System.Drawing.Size(231, 44);
             this.lbTenDangNhap.TabIndex = 1;
-            this.lbTenDangNhap.Text = "tên quản lý";
             // 
             // label10
             // 
@@ -382,7 +371,6 @@
             this.dtpNgaySinh.Size = new System.Drawing.Size(167, 31);
             this.dtpNgaySinh.TabIndex = 4;
             this.dtpNgaySinh.Visible = false;
-            this.dtpNgaySinh.ValueChanged += new System.EventHandler(this.dtpNgaySinh_ValueChanged);
             // 
             // label1
             // 
@@ -395,7 +383,6 @@
             this.label1.Size = new System.Drawing.Size(135, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "CMND:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbCMND
             // 
@@ -407,8 +394,6 @@
             this.lbCMND.Name = "lbCMND";
             this.lbCMND.Size = new System.Drawing.Size(164, 28);
             this.lbCMND.TabIndex = 1;
-            this.lbCMND.Text = "CMND:";
-            this.lbCMND.Click += new System.EventHandler(this.lbCMND_Click);
             // 
             // txtCMND
             // 
@@ -418,7 +403,6 @@
             this.txtCMND.Size = new System.Drawing.Size(328, 39);
             this.txtCMND.TabIndex = 3;
             this.txtCMND.Visible = false;
-            this.txtCMND.TextChanged += new System.EventHandler(this.txtCMND_TextChanged);
             // 
             // lb2
             // 
@@ -431,7 +415,6 @@
             this.lb2.Size = new System.Drawing.Size(135, 44);
             this.lb2.TabIndex = 1;
             this.lb2.Text = "Giới tính:";
-            this.lb2.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtGioiTinh
             // 
@@ -441,7 +424,6 @@
             this.txtGioiTinh.Size = new System.Drawing.Size(328, 39);
             this.txtGioiTinh.TabIndex = 3;
             this.txtGioiTinh.Visible = false;
-            this.txtGioiTinh.TextChanged += new System.EventHandler(this.txtCMND_TextChanged);
             // 
             // lbGioiTinh
             // 
@@ -453,8 +435,6 @@
             this.lbGioiTinh.Name = "lbGioiTinh";
             this.lbGioiTinh.Size = new System.Drawing.Size(72, 26);
             this.lbGioiTinh.TabIndex = 1;
-            this.lbGioiTinh.Text = "CMND";
-            this.lbGioiTinh.Click += new System.EventHandler(this.label3_Click);
             // 
             // TrangChu_QuanLy
             // 

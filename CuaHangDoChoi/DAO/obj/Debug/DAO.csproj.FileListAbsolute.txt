@@ -36,3 +36,16 @@ E:\Kiemthutest\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.CoreCompileI
 E:\Kiemthutest\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.CopyComplete
 E:\Kiemthutest\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.exe
 E:\Kiemthutest\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.pdb
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.exe.config
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.exe
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DAO.pdb
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DTO.exe
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DTO.pdb
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\bin\Debug\DTO.exe.config
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.Properties.Resources.resources
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.csproj.CopyComplete
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.exe
+E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DAO\obj\Debug\DAO.pdb
