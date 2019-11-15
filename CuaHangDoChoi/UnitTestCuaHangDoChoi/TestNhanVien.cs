@@ -58,7 +58,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestLayDanhSachNhanVien()
         {
             List<NhanVien> nv = NhanVienDAO.Instance.laynhanvien();
-            int expected = 4;
+            int expected = 6;
             int actual = nv.Count;
             Assert.AreEqual(expected, actual);
         }
@@ -95,14 +95,13 @@ namespace UnitTestCuaHangDoChoi
             Assert.AreEqual(expected, actual);
         }
 
-        // cái này xử lý sau
-        //[TestMethod]
-        //public void TestThemNhanVienVoiMaNhanVienTrung()
-        //{
-        //    bool expected = false;
-        //    bool actual = NhanVienDAO.Instance.ThemNV(111, "Only C", 123456123, "7/7/1997", "Nam", "t", "hihi");
-        //    Assert.AreEqual(expected, actual);
-        //}
+        [TestMethod]
+        public void TestThemNhanVienVoiMaNhanVienTrung()
+        {
+            bool expected = false;
+            bool actual = NhanVienDAO.Instance.ThemNV(111, "Only C", 123456123, "7/7/1997", "Nam", "cvgbh", "ada");
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestMethod]
         public void TestXoaNhanVien()
@@ -131,7 +130,7 @@ namespace UnitTestCuaHangDoChoi
         [TestMethod]
         public void TestTimNhanVien()
         {
-            List<NhanVien> nv = NhanVienDAO.Instance.TimNV(111);
+            List<NhanVien> nv = NhanVienDAO.Instance.TimNV(112);
             int expected = 1;
             int actual = nv.Count;
             Assert.AreEqual(expected, actual);
@@ -149,7 +148,7 @@ namespace UnitTestCuaHangDoChoi
         [TestMethod]
         public void TestLayThongTinMotNhanVien()
         {
-            List<NhanVien> nv = NhanVienDAO.Instance.Lay1nhanvien("admin");
+            List<NhanVien> nv = NhanVienDAO.Instance.Lay1nhanvien("giahuy");
             int expected = 1;
             int actual = nv.Count;
             Assert.AreEqual(expected, actual);
@@ -164,6 +163,20 @@ namespace UnitTestCuaHangDoChoi
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void TestKiemTraNhanVienTonTaiVoiMaNhanVien()
+        {
+            bool expected = true;
+            bool actual = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiMaNhanVien(112);
+            Assert.AreEqual(expected, actual);
+        }
 
+        [TestMethod]
+        public void TestKiemTraNhanVienTonTaiVoiTenDangNhap()
+        {
+            bool expected = true;
+            bool actual = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiTenDangNhap("giahuy");
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

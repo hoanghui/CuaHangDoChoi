@@ -98,11 +98,37 @@ namespace DAO
             }
             else
             {
-                string query = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',1)" +
+                List<NhanVien> ds = new List<NhanVien>();
+                string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    ds.Add(new NhanVien(row));
+                }
+                int result = ds.Count;
+
+                List<NhanVien> ds1 = new List<NhanVien>();
+                string query1 = "SELECT * FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
+                DataTable table1 = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    ds1.Add(new NhanVien(row));
+                }
+
+                int result1 = ds.Count;
+                if (result == 0 && result1 == 0)
+                {
+                    string query2 = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',1)" +
                 "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','" + tendangnhap + "')";
-                int result = DataProvider.Instance.ExecuteNonQuery(query);
-                return result > 0;
+                    int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
+                    return result2 > 0;
+                }
+                else
+                {
+                    return false;
+                }
             }
+            
             
         }
 
@@ -118,6 +144,7 @@ namespace DAO
             int result = ds.Count;
             return result > 0;
         }
+
         public bool KiemTraNhanVienTonTaiVoiTenDangNhap(string tendangnhap)
         {
             List<NhanVien> ds = new List<NhanVien>();
