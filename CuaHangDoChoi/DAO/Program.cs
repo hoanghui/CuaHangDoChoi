@@ -15,8 +15,7 @@ namespace DAO
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-           
+            Application.SetCompatibleTextRenderingDefault(false);        
         }
     }
 }

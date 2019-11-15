@@ -106,7 +106,7 @@ namespace CuaHangDoChoi
                     tongTien += float.Parse(row.Cells["giaBan"].Value.ToString());
                     lvThanhToan.Items.Add(lsvItem);
                 }
-            }            
+            }
             CultureInfo culture = new CultureInfo("vi-VN");//chinh Currency ve dang VND
             lbTongTien.Text = tongTien.ToString("c", culture);//Hien thi string dang Currency
         }

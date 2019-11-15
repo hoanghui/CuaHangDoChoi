@@ -55,6 +55,7 @@
             this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -331,6 +332,13 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Tên Đăng Nhập :";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(609, 131);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
             // ThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +347,7 @@
             this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._7d1d31c51d236bbda42b0ab01a6688be;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(998, 591);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbMaNhanVien);
             this.Controls.Add(this.lbUserName);
             this.Controls.Add(this.lbChucVu);
@@ -400,5 +409,6 @@
         private System.Windows.Forms.Label lbMaNhanVien;
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

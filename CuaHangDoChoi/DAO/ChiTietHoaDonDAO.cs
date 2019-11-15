@@ -23,7 +23,11 @@ namespace DAO
             }
         }
 
-        private ChiTietHoaDonDAO() { }
+        private ChiTietHoaDonDAO(DataRow item) { }
+
+        public ChiTietHoaDonDAO()
+        {
+        }
 
         public List<ChiTietHoaDonDAO> layChiTietHoaDon(int id)
         {

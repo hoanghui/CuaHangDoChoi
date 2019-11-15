@@ -105,6 +105,8 @@ namespace CuaHangDoChoi
 
 
                 bool result = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap);
+                bool sexNew;
+                
                 if (result)
                 {
                     MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -120,6 +122,15 @@ namespace CuaHangDoChoi
                 }
                 else
                 {
+                    if (txtSex.Text != "Nam")
+                    {
+                        sexNew = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nu", tendangnhap, matkhau);
+                    }
+                    else
+                    {
+                        sexNew = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nam", tendangnhap, matkhau);
+
+                    }
                     MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
@@ -307,6 +318,7 @@ namespace CuaHangDoChoi
                     BirthDay = dtpBirthdayNew.Value;
                     hoten = txtNameNew.Text;
                     cmnd = int.Parse(txtCMNDNew.Text);
+                    //Bắt lỗi giới tính
                     gioitinh = txtSexNew.Text;
                     tendangnhap = txtUserNameNew.Text;
                     matkhau = txtMatKhau.Text;
@@ -316,10 +328,15 @@ namespace CuaHangDoChoi
                     MessageBox.Show("Nhập chưa đúng định dạng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                
 
                 bool result = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiMaNhanVien(manv);
                 bool result1 = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiTenDangNhap(tendangnhap);
-                if(result && result1)
+                bool result2;
+
+
+
+                if (result && result1)
                 {
                     MessageBox.Show("Mã nhân viên và tên đăng nhập đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -339,7 +356,15 @@ namespace CuaHangDoChoi
                     }
                     else
                     {
-                        bool result2 = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, gioitinh, tendangnhap, matkhau);
+                        if (txtSexNew.Text != "Nam")
+                        {
+                            result2 = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nu", tendangnhap, matkhau);
+                        }
+                        else
+                        {
+                            result2 = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nam", tendangnhap, matkhau);
+                            
+                        }
                         if (result2)
                         {
                             //txtNhanVienIDNew.DataBindings.Clear();
@@ -376,6 +401,7 @@ namespace CuaHangDoChoi
                             MessageBox.Show("Mã nhân viên phải lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
+
                     }
                 }
                 
