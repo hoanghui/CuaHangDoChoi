@@ -64,8 +64,17 @@ namespace UnitTestCuaHangDoChoi
         public void TestLayDachSachHoaDon()
         {
             List<HoaDon> hd = HoaDonDAO.Instance.LayDanhSachHoaDon();
-            int expected = 3;
+            int expected = 4;
             int actual = hd.Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestLayDachSachHoaDonTheoThangNamNhapDung()
+        {
+            double hd = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(8,2018);
+            double expected = 700000;
+            double actual = hd;
             Assert.AreEqual(expected, actual);
         }
     }

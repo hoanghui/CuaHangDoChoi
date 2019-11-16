@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,36 @@ namespace CuaHangDoChoi
             DanhSachHoaDon_QuanLy hd = new DanhSachHoaDon_QuanLy();
             hd.Show();
             this.Dispose(false);
+        }
+
+        private void ThongKe_QuanLy_Load(object sender, EventArgs e)
+        {
+            for(int i = 1; i <= 12; i++)
+            {
+                cbThang.Items.Add(i);
+            }
+            for(int j = 1998; j <= DateTime.Now.Year;j++)
+            {
+                cbNam.Items.Add(j);
+            }
+             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            double thanhtien = 0; 
+            thanhtien = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(int.Parse(cbThang.Text), int.Parse(cbNam.Text));
+            lbDoanhThu.Text = String.Format("{0:0,0} VNĐ",thanhtien);
         }
     }
 }

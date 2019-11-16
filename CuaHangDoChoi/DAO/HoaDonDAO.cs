@@ -47,6 +47,7 @@ namespace DAO
             return hd;
         }
 
+<<<<<<< HEAD
         public bool ThemHD(int maHD, int maKH, int maNV, DateTime ngayTao )
         {
             if (maHD <= 0 || maNV <= 0)
@@ -87,6 +88,18 @@ namespace DAO
             {
                 return 1;
             }
+=======
+        public double LayDanhSachHoaDonTheoThangNam(int thang, int nam)
+        {
+            List<HoaDon> hd = new List<HoaDon>();
+            string query = "SELECT SUM(thanhTien) FROM dbo.HoaDon WHERE MONTH(ngayTao) = "+thang+" AND YEAR(ngayTao)= "+ nam ;
+            DataTable table= DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                return double.Parse(row[0].ToString());
+            }
+            return -1.0;
+>>>>>>> eb58b0835d9c68002f2dad916c625f3a592accd9
         }
     }
 }

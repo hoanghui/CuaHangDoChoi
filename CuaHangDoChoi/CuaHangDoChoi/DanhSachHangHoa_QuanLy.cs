@@ -16,7 +16,7 @@ namespace CuaHangDoChoi
         BindingSource bd = new BindingSource();
 
         public int masanpham { get; private set; }
-        public string tensanpham { get; private set; } 
+        public string tensanpham { get; private set; }
         public string xuatxu { get; private set; }
         public double giaban { get; private set; }
         public int soluong { get; private set; }
@@ -107,16 +107,52 @@ namespace CuaHangDoChoi
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
-            bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
-            if (bd.Count == 0)
+            if (txtTimKiem.Text != "")
             {
-                MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    int.Parse(txtTimKiem.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                {
+                    bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
+                    if (bd.Count == 0)
+                    {
+                        MessageBox.Show("Tìm không có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
+            else
+            {
+                txtMaSanPham.DataBindings.Clear();
+                txtTenSanPham.DataBindings.Clear();
+                txtSoLuong.DataBindings.Clear();
+                txtGiaBan.DataBindings.Clear();
+                dtpNgayNhap.DataBindings.Clear();
+                txtXuatXu.DataBindings.Clear();
+
+                HienThiDanhSach();
+            }
+            //bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
+            //if (bd.Count == 0)
+            //{
+            //    MessageBox.Show("Tìm không có", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btThemSP_Click(object sender, EventArgs e)
         {
             panelThemSanPham.Visible = true;
+            btnCapNhat.Enabled = false;
+            btnChinhSua.Enabled = false;
+            btThemSP.Enabled = false;
+            btXoaSP.Enabled = false;
+
         }
 
         private void btXoaSP_Click(object sender, EventArgs e)
@@ -148,6 +184,10 @@ namespace CuaHangDoChoi
             txtGiaBan.Enabled = true;
             dtpNgayNhap.Enabled = true;
             txtSoLuong.Enabled = true;
+
+            btnCapNhat.Visible = true;
+            btThemSP.Enabled = false;
+            btXoaSP.Enabled = false;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -168,7 +208,7 @@ namespace CuaHangDoChoi
                 return;
             }
 
-            bool result = SanPhamDAO.Instance.CapNhatSanPham(masanpham, tensanpham, xuatxu,ngaynhap,giaban,soluong);
+            bool result = SanPhamDAO.Instance.CapNhatSanPham(masanpham, tensanpham, xuatxu, ngaynhap, giaban, soluong);
             if (result)
             {
                 MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -188,10 +228,10 @@ namespace CuaHangDoChoi
 
             }
 
-
-
+            btnCapNhat.Visible = false;
+            btThemSP.Enabled = true;
+            btXoaSP.Enabled = true;
             txtMaSanPham.Enabled = false;
-
             txtTenSanPham.Enabled = false;
             txtXuatXu.Enabled = false;
             txtSoLuong.Enabled = false;
@@ -245,12 +285,92 @@ namespace CuaHangDoChoi
                 dtpNgayNhap_New.DataBindings.Clear();
                 txtGiaBan_New.DataBindings.Clear();
 
+                btThemSP.Enabled = true;
+                btXoaSP.Enabled = true;
+
 
                 HienThiDanhSach();
                 panelThemSanPham.Visible = false;
             }
         }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text == "Nhập mã sản phẩm...")
+                txtTimKiem.Clear();
+        }
+
+        private void DanhSachHangHoa_QuanLy_Click(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text == "")
+            {
+                txtTimKiem.Text = "Nhập mã sản phẩm...";
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn khỏi thêm sản phẩm? ", "Thoát khỏi thêm nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                // bật enabled các nút thêm, xóa, sửa, cập nhật
+                btXoaSP.Enabled = true;
+                btThemSP.Enabled = true;
+                btnChinhSua.Enabled = true;
+                btnCapNhat.Enabled = true;
+
+                panelThemSanPham.Visible = false;
+                txtTenSanPham_New.Clear();
+                txtMaSanPham_New.Clear();
+                txtXuatXu_New.Clear();
+                txtSoLuong_New.Clear();
+                txtGiaBan_New.Clear();
+                dtpNgayNhap_New.ResetText();
+            }
+        }
+
+        private void txtMaSanPham_New_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaSanPham_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaSanPham.Text != "")
+            {
+                try
+                {
+                    pbSanPham.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachHangHoa\" + int.Parse(txtMaSanPham.Text) + ".jpg");
+
+                }
+                catch
+                {
+                    pbSanPham.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachHangHoa\none.jpg");
+                }
+
+
+            }
+        }
     }
-
-
 }
+
+
+

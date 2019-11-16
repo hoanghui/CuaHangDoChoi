@@ -33,3 +33,12 @@ E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.cspr
 E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.exe
 E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.pdb
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\bin\Debug\DTO.exe.config
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\bin\Debug\DTO.exe
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\bin\Debug\DTO.pdb
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.Properties.Resources.resources
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.exe
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\DTO\obj\Debug\DTO.pdb

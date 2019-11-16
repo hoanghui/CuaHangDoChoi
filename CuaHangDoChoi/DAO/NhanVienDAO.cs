@@ -39,7 +39,7 @@ namespace DAO
         public List<NhanVien> laynhanvien()
         {
             List<NhanVien> ds = new List<NhanVien>();
-            string query = "SELECT * FROM dbo.NhanVien";
+            string query = "SELECT * FROM dbo.NhanVien WHERE trangThai = 1";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
@@ -77,17 +77,11 @@ namespace DAO
            
         }
 
-        public bool XoaNV(int manv, string tendangnhap)
+        public bool XoaNV(int manv)
         {
-
-            string query1 = "DELETE FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
-            string query2 = "DELETE FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
-            string query3 = "UPDATE dbo.HoaDon SET maNhanVien = null WHERE maNhanVien = " + manv + "";
-            DataProvider.Instance.ExecuteNonQuery(query3);
-            int result1 = DataProvider.Instance.ExecuteNonQuery(query1);
-            DataProvider.Instance.ExecuteNonQuery(query2);
-
-            return result1 > 0;
+            string query = "UPDATE dbo.NhanVien SET trangThai = 0 WHERE maNhanVien =" + manv;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
 
         public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)

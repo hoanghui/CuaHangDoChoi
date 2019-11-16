@@ -194,6 +194,8 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(222, 32);
             this.txtTimKiem.TabIndex = 9;
+            this.txtTimKiem.Text = "Nhập mã nhân viên...";
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // pbNhanVien
@@ -309,6 +311,7 @@
             // 
             this.txtSex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSex.Location = new System.Drawing.Point(654, 543);
+            this.txtSex.MaxLength = 3;
             this.txtSex.Multiline = true;
             this.txtSex.Name = "txtSex";
             this.txtSex.Size = new System.Drawing.Size(195, 27);
@@ -386,7 +389,7 @@
             this.pbSearch.BackColor = System.Drawing.Color.Transparent;
             this.pbSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
-            this.pbSearch.Location = new System.Drawing.Point(572, 12);
+            this.pbSearch.Location = new System.Drawing.Point(572, 10);
             this.pbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(31, 31);
@@ -566,6 +569,7 @@
             // 
             this.txtSexNew.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSexNew.Location = new System.Drawing.Point(122, 207);
+            this.txtSexNew.MaxLength = 3;
             this.txtSexNew.Multiline = true;
             this.txtSexNew.Name = "txtSexNew";
             this.txtSexNew.Size = new System.Drawing.Size(148, 26);
@@ -687,6 +691,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachNhanVien_QuanLy_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachNhanVien_QuanLy_Load);
+            this.Click += new System.EventHandler(this.DanhSachNhanVien_QuanLy_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();

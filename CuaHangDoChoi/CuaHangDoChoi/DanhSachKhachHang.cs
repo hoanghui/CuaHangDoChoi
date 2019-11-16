@@ -18,12 +18,12 @@ namespace CuaHangDoChoi
         public int makh { get; private set; }
         public string hoten { get; private set; }
         public int cmnd { get; private set; }
-        public DateTime ngaysinh { get; private set; }
+        public string ngaysinh { get; private set; }
         public string gioitinh { get; private set; }
         public string diachi { get; private set; }
         public int sodienthoai { get; private set; }
 
-    
+        public DateTime birthday { get; private set; }
 
         public DanhSachKhachHang()
         {
@@ -143,53 +143,68 @@ namespace CuaHangDoChoi
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
-            try
+            if (dtpNgaySinh.Value.Year > 2000)
             {
-                makh = int.Parse(txtMaKhachHang.Text);
-                ngaysinh = dtpNgaySinh.Value;
-                hoten = txtTenKhachHang.Text;
-                cmnd = int.Parse(txtCMND.Text);
-                gioitinh = txtSex.Text;
-                sodienthoai = int.Parse(txtSDT.Text);
-                diachi = txtDiaChi.Text;
-            }
-            catch
-            {
-                MessageBox.Show("Nhập chưa đúng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-
-            bool result = KhachHangDAO.Instance.SuaKH(makh, hoten, cmnd,sodienthoai, ngaysinh, gioitinh, diachi);
-            if (result)
-            {
-                MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMaKhachHang.DataBindings.Clear();
-                txtTenKhachHang.DataBindings.Clear();
-                txtSDT.DataBindings.Clear();
-                txtSex.DataBindings.Clear();
-                txtDiaChi.DataBindings.Clear();
-                dtpNgaySinh.DataBindings.Clear();
-                txtCMND.DataBindings.Clear();
-                HienThiDanhSach();
+                MessageBox.Show("Năm sinh không đúng, bạn chưa đủ tuổi!", "Lỗi năm sinh", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    makh = int.Parse(txtMaKhachHang.Text);
+                    ngaysinh = dtpNgaySinh.Value.Month + "-" + dtpNgaySinh.Value.Day + "-" + dtpNgaySinh.Value.Year;
+                    hoten = txtTenKhachHang.Text;
+                    cmnd = int.Parse(txtCMND.Text);
+                    gioitinh = txtSex.Text;
+                    sodienthoai = int.Parse(txtSDT.Text);
+                    diachi = txtDiaChi.Text;
+                }
+                catch
+                {
+                    MessageBox.Show("Nhập chưa đúng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                //bool sexNew;
+                bool result = KhachHangDAO.Instance.SuaKH(makh, hoten, cmnd, sodienthoai, ngaysinh, gioitinh, diachi);
+                if (result)
+                {
+                    MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtMaKhachHang.DataBindings.Clear();
+                    txtTenKhachHang.DataBindings.Clear();
+                    txtSDT.DataBindings.Clear();
+                    txtSex.DataBindings.Clear();
+                    txtDiaChi.DataBindings.Clear();
+                    dtpNgaySinh.DataBindings.Clear();
+                    txtCMND.DataBindings.Clear();
+                    HienThiDanhSach();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+                txtMaKhachHang.Enabled = false;
+                txtSDT.Enabled = false;
+                txtCMND.Enabled = false;
+                txtSex.Enabled = false;
+                txtTenKhachHang.Enabled = false;
+                dtpNgaySinh.Enabled = false;
+                txtDiaChi.Enabled = false;
+
+
 
             }
 
 
 
-            txtMaKhachHang.Enabled = false;
-            txtSDT.Enabled = false;
-            txtCMND.Enabled = false;
-            txtSex.Enabled = false;
-            txtTenKhachHang.Enabled = false;
-            dtpNgaySinh.Enabled = false;
-            txtDiaChi.Enabled = false;
-
         }
+            // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
+           
+
     }
 }
+

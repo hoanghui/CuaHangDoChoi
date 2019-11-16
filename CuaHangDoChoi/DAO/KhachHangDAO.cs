@@ -40,7 +40,7 @@ namespace DAO
             return kh;
         }
 
-        public bool SuaKH(int makhachhang, string hoten, int cmnd, int sdt, DateTime ngaysinh, string gioitinh, string diachi)
+        public bool SuaKH(int makhachhang, string hoten, int cmnd, int sdt, string ngaysinh, string gioitinh, string diachi)
         {
             string query = "UPDATE dbo.KhachHang SET maKhachHang = " + makhachhang + ", hoTen = N'" + hoten + "', " +
                            "CMND = " + cmnd + ", soDienThoai = " + sdt + ", ngaySinh = '" + ngaysinh + "', gioiTinh = '" + gioitinh + "', diaChi = N'" + diachi + "'";

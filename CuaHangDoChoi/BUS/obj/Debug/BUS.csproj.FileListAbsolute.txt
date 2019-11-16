@@ -25,3 +25,12 @@ E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.cspr
 E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.exe
 E:\Kiemthutest\newupdate_thu6\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.pdb
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\bin\Debug\BUS.exe.config
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\bin\Debug\BUS.exe
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\bin\Debug\BUS.pdb
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.Properties.Resources.resources
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.exe
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\BUS\obj\Debug\BUS.pdb
