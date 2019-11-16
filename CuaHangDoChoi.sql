@@ -79,7 +79,6 @@ GO
 
 
 
-
 --Thêm dữ liệu vào bảng TaiKhoan --
 
 INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('admin', 1, 1),
@@ -143,7 +142,7 @@ INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
 --		INSERT INTO NhanVien VALUES(119, N'newbie', 415481561,'09/29/1999','Nam', 'kaka')
 --	END
 --ELSE
---	BEGIN
+--,	BEGIN
 --		UPDATE  dbo.NhanVien SET  hoTen = N'cc', gioiTinh = 'Nu' 
 --		WHERE maNhanVien = 111
 --	END
@@ -163,3 +162,22 @@ INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
 --DROP TABLE dbo.HoaDon
 
 	
+CREATE PROC InsertHoaDon
+@maHoaDon INT, @maKhachHang INT, @maNhanVien INT
+AS
+BEGIN
+	INSERT dbo.HoaDon 
+	(maHoaDon,
+     maKhachHang,
+     maNhanVien,
+	 ngayTao
+	)
+	VALUES
+	(
+	@maHoaDon,
+	@maKhachHang,
+	@maNhanVien,
+	GETDATE()
+	)
+END
+GO

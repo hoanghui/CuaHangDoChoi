@@ -18,7 +18,7 @@ namespace DTO
         {
             this.maHoaDon = (int)row["maHoaDon"];
             this.maKhachHang = (int)row["maKhachHang"];
-            
+            this.maNhanVien = (int)row["maNhanVien"];
             this.ngayTao = (DateTime)row["ngayTao"];
         }
 
