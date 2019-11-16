@@ -397,7 +397,7 @@ namespace CuaHangDoChoi
                             txtCMND.DataBindings.Clear();
 
 
-                            MessageBox.Show("Thêm nhân viên thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Thêm nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             panelThemNhanVien.Visible = false;
                             txtNhanVienIDNew.Clear();
                             txtNameNew.Clear();
