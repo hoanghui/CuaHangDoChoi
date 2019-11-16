@@ -33,5 +33,17 @@ namespace DAO
             }
             return hd;
         }
+
+        public double LayDanhSachHoaDonTheoThangNam(int thang, int nam)
+        {
+            List<HoaDon> hd = new List<HoaDon>();
+            string query = "SELECT SUM(thanhTien) FROM dbo.HoaDon WHERE MONTH(ngayTao) = "+thang+" AND YEAR(ngayTao)= "+ nam ;
+            DataTable table= DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in table.Rows)
+            {
+                return double.Parse(row[0].ToString());
+            }
+            return -1.0;
+        }
     }
 }

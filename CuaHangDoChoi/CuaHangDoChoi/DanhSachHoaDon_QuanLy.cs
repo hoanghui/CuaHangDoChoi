@@ -33,6 +33,9 @@ namespace CuaHangDoChoi
             dgvHoaDon.Columns[2].HeaderText = "Mã khách hàng";
 
             dgvHoaDon.Columns[3].HeaderText = "Ngày tạo hóa đơn";
+
+            dgvHoaDon.Columns[4].HeaderText = "Thành tiền";
+                
             dgvHoaDon.Columns[0].Width = 150;
             //GanDuLieu();
         }

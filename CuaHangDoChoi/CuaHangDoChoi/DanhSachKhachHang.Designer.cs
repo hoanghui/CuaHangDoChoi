@@ -333,6 +333,7 @@
             this.txtSex.Enabled = false;
             this.txtSex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSex.Location = new System.Drawing.Point(941, 186);
+            this.txtSex.MaxLength = 3;
             this.txtSex.Multiline = true;
             this.txtSex.Name = "txtSex";
             this.txtSex.Size = new System.Drawing.Size(203, 27);
@@ -547,6 +548,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(153, 188);
+            this.textBox3.MaxLength = 3;
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(203, 27);
@@ -585,7 +587,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(63, 152);
+            this.label16.Location = new System.Drawing.Point(63, 160);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(61, 22);
             this.label16.TabIndex = 24;
@@ -596,7 +598,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(63, 183);
+            this.label17.Location = new System.Drawing.Point(63, 188);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(72, 26);
             this.label17.TabIndex = 25;
@@ -607,7 +609,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(63, 216);
+            this.label18.Location = new System.Drawing.Point(63, 224);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 24);
             this.label18.TabIndex = 25;

@@ -59,6 +59,7 @@ CREATE TABLE HoaDon
 	maKhachHang INT,
 	maNhanVien INT,
 	ngayTao DATETIME NOT NULL,
+	thanhTien FLOAT,
 	FOREIGN KEY (maKhachHang) REFERENCES dbo.KhachHang (maKhachHang),
 	FOREIGN KEY (maNhanVien) REFERENCES dbo.NhanVien (maNhanVien)
 )
@@ -120,9 +121,10 @@ INSERT INTO KhachHang VALUES (9, N'Mỹ Tâm', 118877664, 0321665499, '11/4/1999
 
 --Thêm dữ liệu vào bảng hóa đơn--
 
-INSERT INTO HoaDon VALUES (101,1,112,'11/10/2018')
-INSERT INTO HoaDon VALUES (102,7,112,'8/1/2018')
-INSERT INTO HoaDon VALUES (103,6,116,'9/1/2018')
+INSERT INTO HoaDon VALUES (101,1,112,'11/10/2018',400000)
+INSERT INTO HoaDon VALUES (102,7,112,'8/1/2018',700000)
+INSERT INTO HoaDon VALUES (103,6,116,'9/1/2018',0)
+INSERT INTO HoaDon VALUES (104,2,111,'9/12/2018',1500000)
 
 -- Thêm dữ liệu vào bảng chi tiết hóa đơn --
 
@@ -163,3 +165,5 @@ INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
 --DROP TABLE dbo.HoaDon
 
 	
+
+

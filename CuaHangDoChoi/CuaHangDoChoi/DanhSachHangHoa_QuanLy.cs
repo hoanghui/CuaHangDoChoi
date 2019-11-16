@@ -184,6 +184,10 @@ namespace CuaHangDoChoi
             txtGiaBan.Enabled = true;
             dtpNgayNhap.Enabled = true;
             txtSoLuong.Enabled = true;
+
+            btnCapNhat.Visible = true;
+            btThemSP.Enabled = false;
+            btXoaSP.Enabled = false;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -224,8 +228,9 @@ namespace CuaHangDoChoi
 
             }
 
-
-
+            btnCapNhat.Visible = false;
+            btThemSP.Enabled = true;
+            btXoaSP.Enabled = true;
             txtMaSanPham.Enabled = false;
             txtTenSanPham.Enabled = false;
             txtXuatXu.Enabled = false;
@@ -331,6 +336,34 @@ namespace CuaHangDoChoi
                 txtSoLuong_New.Clear();
                 txtGiaBan_New.Clear();
                 dtpNgayNhap_New.ResetText();
+            }
+        }
+
+        private void txtMaSanPham_New_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaSanPham_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaSanPham.Text != "")
+            {
+                try
+                {
+                    pbSanPham.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachHangHoa\" + int.Parse(txtMaSanPham.Text) + ".jpg");
+
+                }
+                catch
+                {
+                    pbSanPham.Image = Image.FromFile(Application.StartupPath + @"\Image\DanhSachHangHoa\none.jpg");
+                }
+
+
             }
         }
     }

@@ -495,5 +495,21 @@ namespace CuaHangDoChoi
             }
                 
         }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == "Nhập mã nhân viên...")
+            {
+                txtTimKiem.Clear();
+            }
+        }
+
+        private void DanhSachNhanVien_QuanLy_Click(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == "")
+            {
+                txtTimKiem.Text = "Nhập mã nhân viên...";
+            }
+        }
     }
 }
