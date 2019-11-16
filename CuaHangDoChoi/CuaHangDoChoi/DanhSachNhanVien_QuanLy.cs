@@ -51,6 +51,10 @@ namespace CuaHangDoChoi
 
             dgvNhanVien.Columns[5].HeaderText = "Tên đăng nhập";
 
+            dgvNhanVien.Columns[6].HeaderText = "Trạng thái";
+
+            
+
             GanDuLieu();
         }
 
@@ -70,7 +74,7 @@ namespace CuaHangDoChoi
         private void DanhSachNhanVien_QuanLy_Load(object sender, EventArgs e)
         {
             txtName.Enabled = false;
-
+            btnCapNhat.Visible = false;
             txtCMND.Enabled = false;
             txtSex.Enabled = false;
             txtNhanVienID.Enabled = false;
@@ -118,6 +122,11 @@ namespace CuaHangDoChoi
                     dtpNgaySinh.DataBindings.Clear();
                     txtCMND.DataBindings.Clear();
 
+                    btnXacNhan.Enabled = true;
+                    btnThoat.Enabled = true;
+                    
+
+
                     HienThiDanhSach();
                 }
                 else
@@ -163,7 +172,7 @@ namespace CuaHangDoChoi
             //}
             
             
-                bool result = NhanVienDAO.Instance.XoaNV(int.Parse(txtNhanVienID.Text), txtUserName.Text);
+                bool result = NhanVienDAO.Instance.XoaNV(int.Parse(txtNhanVienID.Text));
                 if (result)
                 {
                     MessageBox.Show("Xóa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information); txtNhanVienID.DataBindings.Clear();
@@ -247,6 +256,7 @@ namespace CuaHangDoChoi
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            btnCapNhat.Visible = true;
             txtName.Enabled = true;
             txtCMND.Enabled = true;
             txtSex.Enabled = true;

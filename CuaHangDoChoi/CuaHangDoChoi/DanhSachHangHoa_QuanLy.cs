@@ -285,6 +285,9 @@ namespace CuaHangDoChoi
                 dtpNgayNhap_New.DataBindings.Clear();
                 txtGiaBan_New.DataBindings.Clear();
 
+                btThemSP.Enabled = true;
+                btXoaSP.Enabled = true;
+
 
                 HienThiDanhSach();
                 panelThemSanPham.Visible = false;

@@ -45,12 +45,7 @@
             this.lbDoanhThu = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -58,7 +53,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(543, 9);
+            this.label2.Location = new System.Drawing.Point(591, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 47);
@@ -70,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Oswald", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(285, 9);
+            this.label1.Location = new System.Drawing.Point(270, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 82);
@@ -83,7 +78,7 @@
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDangXuat.Location = new System.Drawing.Point(11, 555);
+            this.btnDangXuat.Location = new System.Drawing.Point(11, 443);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(142, 46);
@@ -176,7 +171,7 @@
             this.panel1.Controls.Add(this.lbDoanhThu);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(243, 213);
+            this.panel1.Location = new System.Drawing.Point(259, 127);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 362);
             this.panel1.TabIndex = 22;
@@ -267,42 +262,13 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Doanh thu";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(656, 286);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(386, 362);
-            this.panel2.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Oswald", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(74, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 82);
-            this.label4.TabIndex = 20;
-            // 
-            // dgvHoaDon
-            // 
-            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Location = new System.Drawing.Point(410, 113);
-            this.dgvHoaDon.Name = "dgvHoaDon";
-            this.dgvHoaDon.Size = new System.Drawing.Size(172, 46);
-            this.dgvHoaDon.TabIndex = 23;
-            // 
             // ThongKe_QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1229, 612);
-            this.Controls.Add(this.dgvHoaDon);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1175, 499);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -317,8 +283,6 @@
             this.Load += new System.EventHandler(this.ThongKe_QuanLy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,9 +297,7 @@
         private System.Windows.Forms.Button btnDSNhanVien;
         private System.Windows.Forms.Button btnDSHoaDon;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbThang;
         private System.Windows.Forms.ComboBox cbNam;
         private System.Windows.Forms.Label label5;
@@ -343,6 +305,5 @@
         private System.Windows.Forms.Label lbDoanhThu;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnXem;
-        private System.Windows.Forms.DataGridView dgvHoaDon;
     }
 }

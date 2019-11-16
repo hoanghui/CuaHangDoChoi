@@ -15,7 +15,7 @@ namespace DTO
         private DateTime ngaySinh;
         private string gioiTinh;
         private string tenDangNhap;
-
+        private bool trangThai;
         public NhanVien()
         {
         }
@@ -28,6 +28,7 @@ namespace DTO
             this.ngaySinh = (DateTime)row["ngaySinh"];
             this.gioiTinh = row["gioiTinh"].ToString();
             this.tenDangNhap = row["tenDangNhap"].ToString();
+            this.trangThai = (bool)row["trangThai"];
         }
 
         public int MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
@@ -36,6 +37,7 @@ namespace DTO
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
+        public bool TrangThai { get => trangThai; set => trangThai = value; }
         
     }
 }

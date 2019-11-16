@@ -59,6 +59,7 @@
             this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panelThemSanPham = new System.Windows.Forms.Panel();
+            this.txtMaSanPham_New = new System.Windows.Forms.TextBox();
             this.txtGiaBan_New = new System.Windows.Forms.TextBox();
             this.txtXuatXu_New = new System.Windows.Forms.TextBox();
             this.dtpNgayNhap_New = new System.Windows.Forms.DateTimePicker();
@@ -68,12 +69,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lbThemSp = new System.Windows.Forms.Label();
             this.txtSoLuong_New = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtMaSanPham_New = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -407,6 +407,7 @@
             // 
             // dtpNgayNhap
             // 
+            this.dtpNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhap.Location = new System.Drawing.Point(829, 169);
             this.dtpNgayNhap.Name = "dtpNgayNhap";
             this.dtpNgayNhap.Size = new System.Drawing.Size(189, 20);
@@ -470,6 +471,18 @@
             this.panelThemSanPham.TabIndex = 36;
             this.panelThemSanPham.Visible = false;
             // 
+            // txtMaSanPham_New
+            // 
+            this.txtMaSanPham_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSanPham_New.Location = new System.Drawing.Point(205, 52);
+            this.txtMaSanPham_New.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaSanPham_New.Multiline = true;
+            this.txtMaSanPham_New.Name = "txtMaSanPham_New";
+            this.txtMaSanPham_New.Size = new System.Drawing.Size(114, 25);
+            this.txtMaSanPham_New.TabIndex = 31;
+            this.txtMaSanPham_New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaSanPham_New.TextChanged += new System.EventHandler(this.txtMaSanPham_New_TextChanged);
+            // 
             // txtGiaBan_New
             // 
             this.txtGiaBan_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -492,6 +505,7 @@
             // 
             // dtpNgayNhap_New
             // 
+            this.dtpNgayNhap_New.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhap_New.Location = new System.Drawing.Point(205, 148);
             this.dtpNgayNhap_New.Name = "dtpNgayNhap_New";
             this.dtpNgayNhap_New.Size = new System.Drawing.Size(203, 20);
@@ -565,6 +579,19 @@
             this.txtSoLuong_New.Size = new System.Drawing.Size(203, 25);
             this.txtSoLuong_New.TabIndex = 31;
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(109, 58);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 31);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Mã sản phẩm:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
@@ -576,18 +603,6 @@
             this.label10.Size = new System.Drawing.Size(104, 31);
             this.label10.TabIndex = 29;
             this.label10.Text = "Tên sản phẩm:";
-            // 
-            // txtMaSanPham_New
-            // 
-            this.txtMaSanPham_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSanPham_New.Location = new System.Drawing.Point(205, 52);
-            this.txtMaSanPham_New.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaSanPham_New.Multiline = true;
-            this.txtMaSanPham_New.Name = "txtMaSanPham_New";
-            this.txtMaSanPham_New.Size = new System.Drawing.Size(114, 25);
-            this.txtMaSanPham_New.TabIndex = 31;
-            this.txtMaSanPham_New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMaSanPham_New.TextChanged += new System.EventHandler(this.txtMaSanPham_New_TextChanged);
             // 
             // btnThoat
             // 
@@ -631,19 +646,6 @@
             this.label13.TabIndex = 29;
             this.label13.Text = "Ngày nhập :";
             this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(109, 58);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 31);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Mã sản phẩm:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // DanhSachHangHoa_QuanLy
             // 

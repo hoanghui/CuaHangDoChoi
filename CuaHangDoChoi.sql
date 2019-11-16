@@ -23,6 +23,7 @@ CREATE TABLE NhanVien
 	ngaySinh DATETIME,
 	gioiTinh VARCHAR(10),
 	tenDangNhap VARCHAR(20),
+	trangThai BIT,
 	FOREIGN KEY (tenDangNhap) REFERENCES dbo.TaiKhoan (tenDangNhap)
 )
 GO
@@ -90,12 +91,12 @@ INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtu',1,0)
 																 ('hoangyen',1,0)
 INSERT INTO TaiKhoan( tenDangNhap, matKhau, loaiTaiKhoan) VALUES ('thanhtung',1,0)
 --Thêm dữ liệu vào bảng NhanVien --
-INSERT INTO NhanVien VALUES (111, N'Nguyễn Hoàng Huy', 321764933,'11/19/1999','Nam', 'admin')
-INSERT INTO NhanVien VALUES (112, N'Nguyễn Gia Huy', 845156151,'10/06/1999','Nam', 'giahuy')
-INSERT INTO NhanVien VALUES(113, N'Phan Anh Khoa', 465151551,'10/22/1999','Nam', 'anhkhoa')
-INSERT INTO NhanVien VALUES(114, N'Trịnh Hoàng Yến', 846813565,'11/12/1999','Nu', 'hoangyen')
-INSERT INTO NhanVien VALUES(115, N'Nguyễn Thanh Tú', 123456789,'09/29/1999','Nam', 'thanhtu')
-INSERT INTO NhanVien VALUES(116, N'Nguyễn Thanh Tùng', 415481561,'09/29/1999','Nam', 'thanhtung')
+INSERT INTO NhanVien VALUES (111, N'Nguyễn Hoàng Huy', 321764933,'11/19/1999','Nam', 'admin', 1)
+INSERT INTO NhanVien VALUES (112, N'Nguyễn Gia Huy', 845156151,'10/06/1999','Nam', 'giahuy',1)
+INSERT INTO NhanVien VALUES(113, N'Phan Anh Khoa', 465151551,'10/22/1999','Nam', 'anhkhoa',1)
+INSERT INTO NhanVien VALUES(114, N'Trịnh Hoàng Yến', 846813565,'11/12/1999','Nu', 'hoangyen',1)
+INSERT INTO NhanVien VALUES(115, N'Nguyễn Thanh Tú', 123456789,'09/29/1999','Nam', 'thanhtu',1)
+INSERT INTO NhanVien VALUES(116, N'Nguyễn Thanh Tùng', 415481561,'09/29/1999','Nam', 'thanhtung',1)
 --Thêm dữ liệu vào bảng SanPham --
 INSERT INTO SanPham VALUES (1001, N'Xe đẩy', 'China', '10/11/2018',200000,50)
 INSERT INTO SanPham VALUES (1002, N'Búp bê', 'China', '01/11/2018',10000,20)
@@ -131,7 +132,7 @@ INSERT INTO HoaDon VALUES (104,2,111,'9/12/2018',1500000)
 INSERT INTO ChiTietHoaDon VALUES (101,1001,400000,2)
 INSERT INTO ChiTietHoaDon VALUES (102,1002,20000,2)
 INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
-
+go
 -- sua --
 --SELECT *
 --FROM NhanVien 
@@ -164,6 +165,13 @@ INSERT INTO ChiTietHoaDon VALUES (102,1003,50000,1)
 --DROP TABLE dbo.NhanVien
 --DROP TABLE dbo.HoaDon
 
-	
+--create proc xoa
+--@ma int
+--as
+--begin
+--	UPDATE dbo.NhanVien SET trangThai = 0 WHERE maNhanVien = @ma
+--end
+--go
 
+--select * from NhanVien
 

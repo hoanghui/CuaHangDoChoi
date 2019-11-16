@@ -13,7 +13,7 @@ namespace DTO
         private int maKhachHang;
         private int maNhanVien;
         private DateTime ngayTao;
-        private int thanhTien;
+        private double thanhTien;
 
         public HoaDon(DataRow row)
         {
@@ -21,13 +21,13 @@ namespace DTO
             this.maKhachHang = (int)row["maKhachHang"];
             this.maNhanVien = (int)row["maNhanVien"];
             this.ngayTao = (DateTime)row["ngayTao"];
-            this.thanhTien = (int)row["thanhTien"];
+            this.thanhTien = (double)row["thanhTien"];
         }
 
         public int MaHoaDon { get => maHoaDon; set => maHoaDon = value; }
         public int MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
         public int MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
         public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
-        public int ThanhTien { get => thanhTien; set => thanhTien = value; }
+        public double ThanhTien { get => thanhTien; set => thanhTien = value; }
     } 
 }
