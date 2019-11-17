@@ -45,10 +45,11 @@ namespace DAO
             }
             return nv;
         }
+
         public List<SanPham> TimSPtheoten(string tensanpham)
         {
             List<SanPham> nv = new List<SanPham>();
-            string query = "SELECT * FROM dbo.SanPham WHERE tenSanPham = '" + tensanpham + "'";
+            string query = "SELECT * FROM dbo.SanPham WHERE tenSanPham = N'" + tensanpham + "'";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
@@ -60,7 +61,7 @@ namespace DAO
         public bool CapNhatSanPham(int masp, string tensp, string xuatxu, DateTime ngaynhap, double giaban, int soluong)
         {
             //string query = "SELECT * FROM NhanVien IF EXISTS(SELECT maNhanVien FROM NhanVien WHERE maNhanVien = " + manv + ") BEGIN UPDATE  dbo.NhanVien SET  hoTen = N'" + hoten + "', gioiTinh = '" + gioitinh + "', CMND = " + cmnd + " WHERE maNhanVien = '" + manv + "' END" ;
-            string query = "UPDATE  dbo.SanPham SET  maSanPham = " + masp + ", tenSanPham = N'" + tensp + "', xuatXu= '" + xuatxu + "',ngayNhap ='"+ngaynhap+"', giaBan = "+giaban+", soLuong ="+soluong+" WHERE maSanPham = " + masp + "";
+            string query = "UPDATE  dbo.SanPham SET tenSanPham = N'" + tensp + "', xuatXu= '" + xuatxu + "',ngayNhap ='"+ngaynhap+"', giaBan = "+giaban+", soLuong ="+soluong+" WHERE maSanPham = " + masp + "";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -72,11 +73,30 @@ namespace DAO
             return result > 0;
         }
 
-        public bool ThemSP(int masp, string tensp, string xuatxu, DateTime ngaynhap, double giaban, int soluong)
+        public bool ThemSP( string tensp, string xuatxu, DateTime ngaynhap, double giaban, int soluong)
         {
-            string query = "INSERT INTO dbo.SanPham VALUES(" + masp + ",N'" + tensp + "','" + xuatxu + "','" + ngaynhap + "', " + giaban + "," + soluong+")";
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result > 0;
+            //List<SanPham> sp = new List<SanPham>();   
+            //string query = "SELECT * FROM dbo.SanPham WHERE maSanPham = " + masp + "";
+            //DataTable table = DataProvider.Instance.ExecuteQuery(query);
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    sp.Add(new SanPham(row));
+            //}
+            //if(sp.Count > 0)
+            //{
+            //    return false;
+            //}
+            if (giaban > 0 && soluong >0)
+            {
+                string query1 = "INSERT INTO dbo.SanPham (tenSanPham,xuatXu, ngayNhap,giaBan, soLuong) VALUES(N'" + tensp + "','" + xuatxu + "','" + ngaynhap + "', " + giaban + "," + soluong + ")";
+                int result = DataProvider.Instance.ExecuteNonQuery(query1);
+                return result > 0;
+            }
+            else
+            {
+                return false;
+            }
+                
         }
     }
 }

@@ -84,36 +84,36 @@ namespace DAO
             return result > 0;
         }
 
-        public bool ThemNV(int manv, string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
+        public bool ThemNV(/*int manv,*/ string hoten, int cmnd, string ngaysinh, string gioitinh, string tendangnhap, string matkhau)
         {
-            if (manv <= 0 || cmnd <= 0)
+            if (/*manv <= 0 ||*/ cmnd <= 0)
             {
                 return false;
             }
             else
             {
-                List<NhanVien> ds = new List<NhanVien>();
-                string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
-                DataTable table = DataProvider.Instance.ExecuteQuery(query);
-                foreach (DataRow row in table.Rows)
-                {
-                    ds.Add(new NhanVien(row));
-                }
-                int result = ds.Count;
+                //List<NhanVien> ds = new List<NhanVien>();
+                //string query = "SELECT * FROM dbo.NhanVien WHERE maNhanVien = " + manv + "";
+                //DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                //foreach (DataRow row in table.Rows)
+                //{
+                //    ds.Add(new NhanVien(row));
+                //}
+                //int result = ds.Count;
 
                 List<NhanVien> ds1 = new List<NhanVien>();
                 string query1 = "SELECT * FROM dbo.TaiKhoan WHERE tenDangNhap = '" + tendangnhap + "'";
-                DataTable table1 = DataProvider.Instance.ExecuteQuery(query);
-                foreach (DataRow row in table.Rows)
+                DataTable table1 = DataProvider.Instance.ExecuteQuery(query1);
+                foreach (DataRow row in table1.Rows)
                 {
                     ds1.Add(new NhanVien(row));
                 }
 
-                int result1 = ds.Count;
-                if (result == 0 && result1 == 0)
+                int result1 = ds1.Count;
+                if (/*result == 0 &&*/ result1 == 0)
                 {
                     string query2 = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',1)" +
-                "INSERT INTO dbo.NhanVien VALUES(" + manv + ",N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','" + tendangnhap + "')";
+                "INSERT INTO dbo.NhanVien (hoTen,CMND,ngaySinh,gioiTinh,tenDangNhap, trangThai) VALUES( N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','" + tendangnhap + "', 1)";
                     int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
                     return result2 > 0;
                 }

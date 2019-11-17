@@ -69,13 +69,43 @@ namespace UnitTestCuaHangDoChoi
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestMethod]
-        //public void TestTimKhachHang()
-        //{
-        //    List<KhachHang> kh = KhachHangDAO.Instance.SuaKH();
-        //    int expected = 9;
-        //    int actual = kh.Count;
-        //    Assert.AreEqual(expected, actual);
-        //}
+        [TestMethod]
+        public void TestTimKhachHang()
+        {
+            List<KhachHang> kh = KhachHangDAO.Instance.TimKH(1);
+            int expected = 1;
+            int actual = kh.Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestTimKhachHangVoiMaKhachHangKhongTonTai()
+        {
+            List<KhachHang> kh = KhachHangDAO.Instance.TimKH(4235);
+            int expected = 0;
+            int actual = kh.Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestTimKhachHangVoiMaKhachHangLaSoAm()
+        {
+            List<KhachHang> kh = KhachHangDAO.Instance.TimKH(-1);
+            int expected = 0;
+            int actual = kh.Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestTimKhachHangVoiMaKhachHangLaSo0()
+        {
+            List<KhachHang> kh = KhachHangDAO.Instance.TimKH(0);
+            int expected = 0;
+            int actual = kh.Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+        
+
     }
 }

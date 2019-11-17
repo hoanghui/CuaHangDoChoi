@@ -41,9 +41,17 @@ namespace DAO
             DataTable table= DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
-                return double.Parse(row[0].ToString());
+                if(table != null)
+                {
+                    return double.Parse(row[0].ToString());
+                }
+                else
+                {
+                    return -1.0;
+                }
             }
             return -1.0;
+          
         }
     }
 }

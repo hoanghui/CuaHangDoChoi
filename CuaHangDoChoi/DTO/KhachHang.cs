@@ -15,8 +15,9 @@ namespace DTO
         private int cMND;
         private string gioiTinh;
         private DateTime ngaySinh;
-        private string diaChi;
-    
+        private bool trangThai;
+
+
         public KhachHang(DataRow row)
         {
             this.maKhachHang = row["maKhachHang"].ToString();
@@ -25,7 +26,7 @@ namespace DTO
             this.soDienThoai = (int)row["soDienThoai"];
             this.ngaySinh = (DateTime)row["ngaySinh"];
             this.gioiTinh = row["gioiTinh"].ToString();
-            this.diaChi = row["diaChi"].ToString();
+            this.trangThai = (bool)row["trangThai"];
         }
 
         public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
@@ -34,7 +35,7 @@ namespace DTO
         public int CMND { get => cMND; set => cMND = value; }
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public bool TrangThai { get => trangThai; set => trangThai = value; }
 
     }
 }

@@ -107,7 +107,7 @@
             // 
             // btXoaSP
             // 
-            this.btXoaSP.BackColor = System.Drawing.Color.Black;
+            this.btXoaSP.BackColor = System.Drawing.Color.DarkRed;
             this.btXoaSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btXoaSP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaSP.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -122,7 +122,7 @@
             // 
             // btThemSP
             // 
-            this.btThemSP.BackColor = System.Drawing.Color.Black;
+            this.btThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btThemSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btThemSP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemSP.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -137,7 +137,7 @@
             // 
             // btDangXuat
             // 
-            this.btDangXuat.BackColor = System.Drawing.Color.Black;
+            this.btDangXuat.BackColor = System.Drawing.Color.Blue;
             this.btDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangXuat.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -152,7 +152,7 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.BackColor = System.Drawing.Color.LightPink;
+            this.btnThongKe.BackColor = System.Drawing.Color.MediumPurple;
             this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongKe.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -167,7 +167,7 @@
             // 
             // btnListHangHoa
             // 
-            this.btnListHangHoa.BackColor = System.Drawing.Color.LightPink;
+            this.btnListHangHoa.BackColor = System.Drawing.Color.MediumPurple;
             this.btnListHangHoa.Enabled = false;
             this.btnListHangHoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListHangHoa.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -181,7 +181,7 @@
             // 
             // btnListKhachHang
             // 
-            this.btnListKhachHang.BackColor = System.Drawing.Color.LightPink;
+            this.btnListKhachHang.BackColor = System.Drawing.Color.MediumPurple;
             this.btnListKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListKhachHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListKhachHang.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -196,7 +196,7 @@
             // 
             // btnListNhanVien
             // 
-            this.btnListNhanVien.BackColor = System.Drawing.Color.LightPink;
+            this.btnListNhanVien.BackColor = System.Drawing.Color.MediumPurple;
             this.btnListNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListNhanVien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -237,7 +237,7 @@
             // 
             // btnChinhSua
             // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.Black;
+            this.btnChinhSua.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChinhSua.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChinhSua.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -323,7 +323,7 @@
             // 
             // btnDSHoaDon
             // 
-            this.btnDSHoaDon.BackColor = System.Drawing.Color.LightPink;
+            this.btnDSHoaDon.BackColor = System.Drawing.Color.MediumPurple;
             this.btnDSHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDSHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSHoaDon.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -338,7 +338,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.Black;
+            this.btnCapNhat.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -354,7 +354,7 @@
             // 
             // txtTenSanPham
             // 
-            this.txtTenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSanPham.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSanPham.Location = new System.Drawing.Point(829, 112);
             this.txtTenSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSanPham.Multiline = true;
@@ -364,7 +364,7 @@
             // 
             // txtXuatXu
             // 
-            this.txtXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXuatXu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXuatXu.Location = new System.Drawing.Point(829, 141);
             this.txtXuatXu.Margin = new System.Windows.Forms.Padding(2);
             this.txtXuatXu.Multiline = true;
@@ -374,7 +374,7 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(829, 194);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Multiline = true;
@@ -384,6 +384,7 @@
             // 
             // txtMaSanPham
             // 
+            this.txtMaSanPham.Enabled = false;
             this.txtMaSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSanPham.Location = new System.Drawing.Point(608, 252);
             this.txtMaSanPham.Margin = new System.Windows.Forms.Padding(2);
@@ -407,10 +408,11 @@
             // 
             // dtpNgayNhap
             // 
+            this.dtpNgayNhap.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhap.Location = new System.Drawing.Point(829, 169);
             this.dtpNgayNhap.Name = "dtpNgayNhap";
-            this.dtpNgayNhap.Size = new System.Drawing.Size(189, 20);
+            this.dtpNgayNhap.Size = new System.Drawing.Size(189, 21);
             this.dtpNgayNhap.TabIndex = 35;
             // 
             // label8
@@ -427,7 +429,7 @@
             // 
             // txtGiaBan
             // 
-            this.txtGiaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaBan.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBan.Location = new System.Drawing.Point(829, 223);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaBan.Multiline = true;
@@ -473,7 +475,8 @@
             // 
             // txtMaSanPham_New
             // 
-            this.txtMaSanPham_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSanPham_New.Enabled = false;
+            this.txtMaSanPham_New.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSanPham_New.Location = new System.Drawing.Point(205, 52);
             this.txtMaSanPham_New.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSanPham_New.Multiline = true;
@@ -485,7 +488,7 @@
             // 
             // txtGiaBan_New
             // 
-            this.txtGiaBan_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaBan_New.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBan_New.Location = new System.Drawing.Point(205, 201);
             this.txtGiaBan_New.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaBan_New.Multiline = true;
@@ -495,7 +498,7 @@
             // 
             // txtXuatXu_New
             // 
-            this.txtXuatXu_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXuatXu_New.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXuatXu_New.Location = new System.Drawing.Point(205, 118);
             this.txtXuatXu_New.Margin = new System.Windows.Forms.Padding(2);
             this.txtXuatXu_New.Multiline = true;
@@ -505,15 +508,16 @@
             // 
             // dtpNgayNhap_New
             // 
+            this.dtpNgayNhap_New.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayNhap_New.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhap_New.Location = new System.Drawing.Point(205, 148);
             this.dtpNgayNhap_New.Name = "dtpNgayNhap_New";
-            this.dtpNgayNhap_New.Size = new System.Drawing.Size(203, 20);
+            this.dtpNgayNhap_New.Size = new System.Drawing.Size(203, 21);
             this.dtpNgayNhap_New.TabIndex = 35;
             // 
             // txtTenSanPham_New
             // 
-            this.txtTenSanPham_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSanPham_New.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSanPham_New.Location = new System.Drawing.Point(205, 81);
             this.txtTenSanPham_New.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSanPham_New.Multiline = true;
@@ -571,7 +575,7 @@
             // 
             // txtSoLuong_New
             // 
-            this.txtSoLuong_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong_New.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong_New.Location = new System.Drawing.Point(205, 171);
             this.txtSoLuong_New.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong_New.Multiline = true;
@@ -582,6 +586,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(109, 58);
@@ -606,7 +611,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.Black;
+            this.btnThoat.BackColor = System.Drawing.Color.BlueViolet;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -621,7 +626,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.BackColor = System.Drawing.Color.Black;
+            this.btnOK.BackColor = System.Drawing.Color.BlueViolet;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.WhiteSmoke;

@@ -1,4 +1,5 @@
 ﻿using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,7 @@ namespace CuaHangDoChoi
 
             // set tên cột
             dgvSanPham.Columns[0].HeaderText = "Mã sản phẩm";
+            dgvSanPham.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             dgvSanPham.Columns[1].HeaderText = "Tên sản phẩm";
 
@@ -40,11 +42,15 @@ namespace CuaHangDoChoi
 
             dgvSanPham.Columns[2].HeaderText = "Xuất xứ";
 
+
             dgvSanPham.Columns[4].HeaderText = "Ngày nhập";
+            dgvSanPham.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvSanPham.Columns[3].HeaderText = "Giá bán";
+            dgvSanPham.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             dgvSanPham.Columns[5].HeaderText = "Số lượng";
+            dgvSanPham.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             GanDuLieu();
         }
@@ -107,24 +113,38 @@ namespace CuaHangDoChoi
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
-            if (txtTimKiem.Text != "")
+            if(txtTimKiem.Text != "Nhập mã sản phẩm...")
             {
-                try
+                if (txtTimKiem.Text != "")
                 {
-                    int.Parse(txtTimKiem.Text);
-                }
-                catch
-                {
-                    MessageBox.Show("Vui lòng nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                {
-                    bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
-                    if (bd.Count == 0)
+                    try
                     {
-                        MessageBox.Show("Tìm không có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        int.Parse(txtTimKiem.Text);
                     }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    {
+                        bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
+                        if (bd.Count == 0)
+                        {
+                            MessageBox.Show("Tìm không có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    txtMaSanPham.DataBindings.Clear();
+                    txtTenSanPham.DataBindings.Clear();
+                    txtSoLuong.DataBindings.Clear();
+                    txtGiaBan.DataBindings.Clear();
+                    dtpNgayNhap.DataBindings.Clear();
+                    txtXuatXu.DataBindings.Clear();
+
+                    HienThiDanhSach();
                 }
             }
             else
@@ -138,6 +158,7 @@ namespace CuaHangDoChoi
 
                 HienThiDanhSach();
             }
+            
             //bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text.ToString()));
             //if (bd.Count == 0)
             //{
@@ -186,6 +207,7 @@ namespace CuaHangDoChoi
             txtSoLuong.Enabled = true;
 
             btnCapNhat.Visible = true;
+            btnCapNhat.Enabled = true;
             btThemSP.Enabled = false;
             btXoaSP.Enabled = false;
         }
@@ -241,57 +263,103 @@ namespace CuaHangDoChoi
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            try
+           
+            if (/*txtMaSanPham_New.Text != "" &&*/ txtTenSanPham_New.Text != "" && txtSoLuong_New.Text != "" && txtGiaBan_New.Text != "" && txtXuatXu_New.Text != "")
             {
-                masanpham = int.Parse(txtMaSanPham_New.Text);
-                tensanpham = txtTenSanPham_New.Text;
-                soluong = int.Parse(txtSoLuong_New.Text);
-                giaban = double.Parse(txtGiaBan_New.Text);
-                xuatxu = txtXuatXu_New.Text;
-                ngaynhap = dtpNgayNhap_New.Value;
+                try
+                {
+                    //masanpham = int.Parse(txtMaSanPham_New.Text);
+                    tensanpham = txtTenSanPham_New.Text;
+                    soluong = int.Parse(txtSoLuong_New.Text);
+                    giaban = double.Parse(txtGiaBan_New.Text);
+                    xuatxu = txtXuatXu_New.Text;
+                    ngaynhap = dtpNgayNhap_New.Value;
+                }
+                catch
+                {
+                    MessageBox.Show("Nhập chưa đúng định dạng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                bd.DataSource  = SanPhamDAO.Instance.TimSPtheoten(txtTenSanPham_New.Text);
+                if(bd.Count == 0)
+                {
+                    bool result = SanPhamDAO.Instance.ThemSP(tensanpham, xuatxu, ngaynhap, giaban, soluong);
+                    if (result)
+                    {
+                        //txtNhanVienIDNew.DataBindings.Clear();
+                        //txtNameNew.DataBindings.Clear();
+                        //txtSexNew.DataBindings.Clear();
+                        //dtpBirthdayNew.DataBindings.Clear();
+                        //txtCMNDNew.DataBindings.Clear();
+                        //txtNhanVienIDNew.DataBindings.Clear();
+
+                        txtMaSanPham.DataBindings.Clear();
+                        txtTenSanPham.DataBindings.Clear();
+
+                        txtXuatXu.DataBindings.Clear();
+                        txtSoLuong.DataBindings.Clear();
+                        dtpNgayNhap.DataBindings.Clear();
+                        txtGiaBan.DataBindings.Clear();
+
+
+                        MessageBox.Show("Thêm sản phẩm thành công", "Thêm sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        txtMaSanPham_New.DataBindings.Clear();
+                        txtTenSanPham_New.DataBindings.Clear();
+
+                        txtXuatXu_New.DataBindings.Clear();
+                        txtSoLuong_New.DataBindings.Clear();
+                        dtpNgayNhap_New.DataBindings.Clear();
+                        txtGiaBan_New.DataBindings.Clear();
+
+                        btThemSP.Enabled = true;
+                        btXoaSP.Enabled = true;
+                        btnChinhSua.Enabled = true;
+
+                        HienThiDanhSach();
+                        panelThemSanPham.Visible = false;
+                    }
+                    else
+                    {
+                        txtMaSanPham.DataBindings.Clear();
+                        txtTenSanPham.DataBindings.Clear();
+
+                        txtXuatXu.DataBindings.Clear();
+                        txtSoLuong.DataBindings.Clear();
+                        dtpNgayNhap.DataBindings.Clear();
+                        txtGiaBan.DataBindings.Clear();
+
+                        txtMaSanPham_New.DataBindings.Clear();
+                        txtTenSanPham_New.DataBindings.Clear();
+
+                        txtXuatXu_New.DataBindings.Clear();
+                        txtSoLuong_New.DataBindings.Clear();
+                        dtpNgayNhap_New.DataBindings.Clear();
+                        txtGiaBan_New.DataBindings.Clear();
+                        MessageBox.Show("Thêm sản phẩm thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        HienThiDanhSach();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tên sản phẩm đã tồn tại", "Thêm sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtMaSanPham_New.DataBindings.Clear();
+                    txtTenSanPham_New.DataBindings.Clear();
+
+                    txtXuatXu_New.DataBindings.Clear();
+                    txtSoLuong_New.DataBindings.Clear();
+                    dtpNgayNhap_New.DataBindings.Clear();
+                    txtGiaBan_New.DataBindings.Clear();
+                }
+
             }
-            catch
+            else
             {
-                MessageBox.Show("Nhập chưa đúng định dạng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Thêm sản phẩm thất bại, không được để trống thông tin", "Thêm sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            bool result = SanPhamDAO.Instance.ThemSP(masanpham, tensanpham, xuatxu, ngaynhap, giaban, soluong);
-            if (result)
-            {
-                //txtNhanVienIDNew.DataBindings.Clear();
-                //txtNameNew.DataBindings.Clear();
-                //txtSexNew.DataBindings.Clear();
-                //dtpBirthdayNew.DataBindings.Clear();
-                //txtCMNDNew.DataBindings.Clear();
-                //txtNhanVienIDNew.DataBindings.Clear();
-
-                txtMaSanPham.DataBindings.Clear();
-                txtTenSanPham.DataBindings.Clear();
-
-                txtXuatXu.DataBindings.Clear();
-                txtSoLuong.DataBindings.Clear();
-                dtpNgayNhap.DataBindings.Clear();
-                txtGiaBan.DataBindings.Clear();
-
-
-                MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                txtMaSanPham_New.DataBindings.Clear();
-                txtTenSanPham_New.DataBindings.Clear();
-
-                txtXuatXu_New.DataBindings.Clear();
-                txtSoLuong_New.DataBindings.Clear();
-                dtpNgayNhap_New.DataBindings.Clear();
-                txtGiaBan_New.DataBindings.Clear();
-
-                btThemSP.Enabled = true;
-                btXoaSP.Enabled = true;
-
-
-                HienThiDanhSach();
-                panelThemSanPham.Visible = false;
-            }
         }
 
         private void txtTimKiem_Click(object sender, EventArgs e)

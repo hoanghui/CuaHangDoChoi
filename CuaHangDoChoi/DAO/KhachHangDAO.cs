@@ -31,7 +31,7 @@ namespace DAO
         public List<KhachHang> LayDSKhachHang()
         {
             List<KhachHang> kh = new List<KhachHang>();
-            string query = "SELECT * FROM dbo.KhachHang";
+            string query = "SELECT * FROM dbo.KhachHang WHERE trangThai = 1";
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in table.Rows)
             {
@@ -40,13 +40,72 @@ namespace DAO
             return kh;
         }
 
-        public bool SuaKH(int makhachhang, string hoten, int cmnd, int sdt, string ngaysinh, string gioitinh, string diachi)
+        public bool SuaKH(int makhachhang, string hoten, int cmnd, int sdt, string ngaysinh, string gioitinh)
         {
             string query = "UPDATE dbo.KhachHang SET maKhachHang = " + makhachhang + ", hoTen = N'" + hoten + "', " +
-                           "CMND = " + cmnd + ", soDienThoai = " + sdt + ", ngaySinh = '" + ngaysinh + "', gioiTinh = '" + gioitinh + "', diaChi = N'" + diachi + "'";
+                           "CMND = " + cmnd + ", soDienThoai = " + sdt + ", ngaySinh = '" + ngaysinh + "', gioiTinh = '" + gioitinh + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
+        public List<KhachHang> TimKH(int makh)
+        {
+            List<KhachHang> kh = new List<KhachHang>();
+            if (makh > 0)
+            {
+
+                string query = "SELECT * FROM dbo.KhachHang WHERE maKhachHang = '" + makh + "'";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    kh.Add(new KhachHang(row));
+                }
+                return kh;
+            }
+            else
+            {
+                return kh;
+            }
+
+        }
+
+        public bool ThemKH( string hoten, int cmnd, int sodienthoai, string ngaysinh, string gioitinh)
+        {
+            if (cmnd <= 0)
+            {
+                return false;
+            }
+            else
+            { 
+                List<NhanVien> ds1 = new List<NhanVien>();
+                string query1 = "SELECT * FROM dbo.KhachHang WHERE CMND = " +cmnd+ " OR soDienThoai = "+sodienthoai;
+                DataTable table1 = DataProvider.Instance.ExecuteQuery(query1);
+                foreach (DataRow row in table1.Rows)
+                {
+                    ds1.Add(new NhanVien(row));
+                }
+
+                int result1 = ds1.Count;
+                if (/*result == 0 &&*/ result1 == 0)
+                {
+                    string query2 ="INSERT INTO dbo.KhachHang (hoTen,CMND,soDienThoai,ngaySinh,gioiTinh) VALUES( N'" + hoten + "'," + cmnd + ","+sodienthoai+",'" + ngaysinh + "', '" + gioitinh +"')";
+                    int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
+                    return result2 > 0;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+
+        }
+
+        public bool XoaKH (int makh)
+        {
+            string query = "UPDATE dbo.KhachHang SET trangThai = 0 WHERE maKhachHang =" + makh;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

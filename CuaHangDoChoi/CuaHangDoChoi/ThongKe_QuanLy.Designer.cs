@@ -279,6 +279,7 @@
             this.Controls.Add(this.btnDSKhachHang);
             this.Controls.Add(this.btnDSNhanVien);
             this.Name = "ThongKe_QuanLy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongKe";
             this.Load += new System.EventHandler(this.ThongKe_QuanLy_Load);
             this.panel1.ResumeLayout(false);

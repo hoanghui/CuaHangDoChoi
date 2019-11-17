@@ -77,5 +77,17 @@ namespace UnitTestCuaHangDoChoi
             double actual = hd;
             Assert.AreEqual(expected, actual);
         }
+
+        // Nếu ra sai là làm đúng
+        [TestMethod]
+        public void TestLayDachSachHoaDonTheoThangNamVoiNamSai()
+        {
+            double hd = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(8, 2020);
+            double expected = 70000;
+            double actual = hd;
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }

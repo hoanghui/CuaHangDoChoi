@@ -38,14 +38,17 @@ namespace CuaHangDoChoi
 
             // set tên cột
             dgvNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
-            
+            dgvNhanVien.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
             dgvNhanVien.Columns[1].HeaderText = "Họ tên nhân viên";
 
             dgvNhanVien.Columns[1].Width = 150; // set độ rộng cho cột
 
             dgvNhanVien.Columns[2].HeaderText = "CMND";
+            dgvNhanVien.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             dgvNhanVien.Columns[4].HeaderText = "Ngày sinh";
+            dgvNhanVien.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvNhanVien.Columns[3].HeaderText = "Giới tính";
 
@@ -124,7 +127,7 @@ namespace CuaHangDoChoi
 
                     btnXacNhan.Enabled = true;
                     btnThoat.Enabled = true;
-                    
+                    btnCapNhat.Visible = false;
 
 
                     HienThiDanhSach();
@@ -133,11 +136,11 @@ namespace CuaHangDoChoi
                 {
                     if (txtSex.Text != "Nam")
                     {
-                        sexNew = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nu", tendangnhap, matkhau);
+                        sexNew = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, "Nu", tendangnhap);
                     }
                     else
                     {
-                        sexNew = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nam", tendangnhap, matkhau);
+                        sexNew = NhanVienDAO.Instance.CapNhat(manv, hoten, cmnd, ngaysinh, "Nam", tendangnhap);
 
                     }
                     MessageBox.Show("Sửa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -200,7 +203,7 @@ namespace CuaHangDoChoi
 
         private void DanhSachNhanVien_QuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc muốn thoat? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Bạn có chắc muốn thoát? ", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
                 
@@ -338,7 +341,7 @@ namespace CuaHangDoChoi
                 // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
                 try
                 {
-                    manv = int.Parse(txtNhanVienIDNew.Text);
+
                     ngaysinh = dtpBirthdayNew.Value.Month + "/" + dtpBirthdayNew.Value.Day + "/" + dtpBirthdayNew.Value.Year;
                     BirthDay = dtpBirthdayNew.Value;
                     hoten = txtNameNew.Text;
@@ -353,92 +356,72 @@ namespace CuaHangDoChoi
                     MessageBox.Show("Nhập chưa đúng định dạng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
 
-                bool result = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiMaNhanVien(manv);
                 bool result1 = NhanVienDAO.Instance.KiemTraNhanVienTonTaiVoiTenDangNhap(tendangnhap);
                 bool result2;
-
-
-
-                if (result && result1)
+                if (result1)
                 {
-                    MessageBox.Show("Mã nhân viên và tên đăng nhập đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if (result)
-                {
-                    MessageBox.Show("Mã nhân viên đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tên đăng nhập đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
                 {
-                    
-                    if (result1)
+                    if (txtSexNew.Text != "Nam")
                     {
-                        MessageBox.Show("Tên đăng nhập đã tồn tại!", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        result2 = NhanVienDAO.Instance.ThemNV(hoten, cmnd, ngaysinh, "Nu", tendangnhap, matkhau);
                     }
                     else
                     {
-                        if (txtSexNew.Text != "Nam")
-                        {
-                            result2 = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nu", tendangnhap, matkhau);
-                        }
-                        else
-                        {
-                            result2 = NhanVienDAO.Instance.ThemNV(manv, hoten, cmnd, ngaysinh, "Nam", tendangnhap, matkhau);
-                            
-                        }
-                        if (result2)
-                        {
-                            //txtNhanVienIDNew.DataBindings.Clear();
-                            //txtNameNew.DataBindings.Clear();
-                            //txtSexNew.DataBindings.Clear();
-                            //dtpBirthdayNew.DataBindings.Clear();
-                            //txtCMNDNew.DataBindings.Clear();
-                            //txtNhanVienIDNew.DataBindings.Clear();
-
-                            txtNhanVienID.DataBindings.Clear();
-                            txtName.DataBindings.Clear();
-                            txtSex.DataBindings.Clear();
-                            txtUserName.DataBindings.Clear();
-                            dtpNgaySinh.DataBindings.Clear();
-                            txtCMND.DataBindings.Clear();
-
-
-                            MessageBox.Show("Thêm nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            panelThemNhanVien.Visible = false;
-                            txtNhanVienIDNew.Clear();
-                            txtNameNew.Clear();
-                            txtSexNew.Clear();
-                            //dtpBirthdayNew.Visible = false;
-                            dtpBirthdayNew.ResetText();
-                            txtCMNDNew.Clear();
-                            txtUserNameNew.Clear();
-
-                            // bật enabled các nút thêm, xóa, sửa, cập nhật
-                            btThemNV.Enabled = true;
-                            btXoaNV.Enabled = true;
-                            btnSua.Enabled = true;
-                            btnCapNhat.Enabled = true;
-
-                            HienThiDanhSach();
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Mã nhân viên phải lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
+                        result2 = NhanVienDAO.Instance.ThemNV(hoten, cmnd, ngaysinh, "Nam", tendangnhap, matkhau);
 
                     }
+                    if (result2)
+                    {
+                        //txtNhanVienIDNew.DataBindings.Clear();
+                        //txtNameNew.DataBindings.Clear();
+                        //txtSexNew.DataBindings.Clear();
+                        //dtpBirthdayNew.DataBindings.Clear();
+                        //txtCMNDNew.DataBindings.Clear();
+                        //txtNhanVienIDNew.DataBindings.Clear();
+
+                        txtNhanVienID.DataBindings.Clear();
+                        txtName.DataBindings.Clear();
+                        txtSex.DataBindings.Clear();
+                        txtUserName.DataBindings.Clear();
+                        dtpNgaySinh.DataBindings.Clear();
+                        txtCMND.DataBindings.Clear();
+
+
+                        MessageBox.Show("Thêm nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        panelThemNhanVien.Visible = false;
+                        txtNhanVienIDNew.Clear();
+                        txtNameNew.Clear();
+                        txtSexNew.Clear();
+                        //dtpBirthdayNew.Visible = false;
+                        dtpBirthdayNew.ResetText();
+                        txtCMNDNew.Clear();
+                        txtUserNameNew.Clear();
+
+                        // bật enabled các nút thêm, xóa, sửa, cập nhật
+                        btThemNV.Enabled = true;
+                        btXoaNV.Enabled = true;
+                        btnSua.Enabled = true;
+                        btnCapNhat.Enabled = true;
+
+                        HienThiDanhSach();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã nhân viên phải lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                 }
-                
-                
+
+
+
             }
-            
-            
         }
 
         private void btnDSKhachHang_Click(object sender, EventArgs e)
@@ -521,5 +504,7 @@ namespace CuaHangDoChoi
                 txtTimKiem.Text = "Nhập mã nhân viên...";
             }
         }
+
+       
     }
 }
