@@ -505,6 +505,9 @@ namespace CuaHangDoChoi
             }
         }
 
-       
+        private void txtSex_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

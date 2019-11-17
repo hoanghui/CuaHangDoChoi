@@ -40,10 +40,9 @@ namespace DAO
             return kh;
         }
 
-        public bool SuaKH(int makhachhang, string hoten, int cmnd, int sdt, string ngaysinh, string gioitinh)
+        public bool SuaKH(int makh, string hoten, int sdt,int cmnd , string ngaysinh, string gioitinh)
         {
-            string query = "UPDATE dbo.KhachHang SET maKhachHang = " + makhachhang + ", hoTen = N'" + hoten + "', " +
-                           "CMND = " + cmnd + ", soDienThoai = " + sdt + ", ngaySinh = '" + ngaysinh + "', gioiTinh = '" + gioitinh + "'";
+            string query = "suaKH " + makh + ", N'" + hoten + "', " + cmnd + ", " + sdt + ", '" + ngaysinh + "', '" + gioitinh + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

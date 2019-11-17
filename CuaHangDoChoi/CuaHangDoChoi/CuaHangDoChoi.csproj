@@ -212,5 +212,14 @@
   <ItemGroup>
     <None Include="Resources\908839b4b7b5dfc78d0aba177641d42f.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotachnen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down-Arrow-PNG-Pic.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -199,7 +199,7 @@ namespace CuaHangDoChoi
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            txtMaSanPham.Enabled = true;
+           
             txtTenSanPham.Enabled = true;
             txtXuatXu.Enabled = true;
             txtGiaBan.Enabled = true;
@@ -436,6 +436,11 @@ namespace CuaHangDoChoi
 
 
             }
+        }
+
+        private void btnListHangHoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

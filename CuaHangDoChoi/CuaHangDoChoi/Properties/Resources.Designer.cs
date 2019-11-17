@@ -19,7 +19,7 @@ namespace CuaHangDoChoi.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -93,6 +93,16 @@ namespace CuaHangDoChoi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bear_ {
+            get {
+                object obj = ResourceManager.GetObject("bear-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d625045f0b22faf8d8ab3bd236f86085 {
             get {
                 object obj = ResourceManager.GetObject("d625045f0b22faf8d8ab3bd236f86085", resourceCulture);
@@ -106,6 +116,16 @@ namespace CuaHangDoChoi.Properties {
         internal static System.Drawing.Bitmap dc71ac5a02da3452778e32761f4e81c5 {
             get {
                 object obj = ResourceManager.GetObject("dc71ac5a02da3452778e32761f4e81c5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Down_Arrow_PNG_Pic {
+            get {
+                object obj = ResourceManager.GetObject("Down-Arrow-PNG-Pic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace CuaHangDoChoi.Properties {
         internal static System.Drawing.Bitmap iconfinder_search_126577 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_search_126577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotachnen {
+            get {
+                object obj = ResourceManager.GetObject("logotachnen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -196,3 +196,16 @@ GO
 --select * from NhanVien
 
 >>>>>>> eb58b0835d9c68002f2dad916c625f3a592accd9
+
+go
+
+CREATE PROC suaKH
+(
+	@makh int, @hoTen NVARCHAR(50), @CMND INT, @soDienThoai INT, @ngaySinh DATETIME, @gioiTinh VARCHAR(10)
+)
+as 
+begin
+	UPDATE dbo.KhachHang SET hoTen = @hoTen, CMND= @CMND , soDienThoai = @soDienThoai , ngaySinh = @ngaySinh, gioiTinh = @gioiTinh WHERE maKhachHang = @makh
+end
+go
+

@@ -9,7 +9,7 @@ namespace DTO
 {
     public class KhachHang
     {
-        private string maKhachHang;
+        private int maKhachHang;
         private string hoTen;
         private int soDienThoai;
         private int cMND;
@@ -20,7 +20,7 @@ namespace DTO
 
         public KhachHang(DataRow row)
         {
-            this.maKhachHang = row["maKhachHang"].ToString();
+            this.maKhachHang = int.Parse(row["maKhachHang"].ToString());
             this.hoTen = row["hoTen"].ToString();
             this.cMND = (int)row["CMND"];
             this.soDienThoai = (int)row["soDienThoai"];
@@ -29,7 +29,7 @@ namespace DTO
             this.trangThai = (bool)row["trangThai"];
         }
 
-        public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
+        public int MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public int SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
         public int CMND { get => cMND; set => cMND = value; }

@@ -92,17 +92,15 @@ namespace DAO
         public double LayDanhSachHoaDonTheoThangNam(int thang, int nam)
         {
             List<HoaDon> hd = new List<HoaDon>();
+            string query1 = "SELECT * FROM dbo.HoaDon WHERE MONTH(ngayTao) = " + thang + " AND YEAR(ngayTao)= " + nam;
             string query = "SELECT SUM(thanhTien) FROM dbo.HoaDon WHERE MONTH(ngayTao) = "+thang+" AND YEAR(ngayTao)= "+ nam ;
-            DataTable table= DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow row in table.Rows)
+            DataTable table1= DataProvider.Instance.ExecuteQuery(query1);
+            if( table1.Rows.Count > 0)
             {
-                if(table != null)
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
                 {
                     return double.Parse(row[0].ToString());
-                }
-                else
-                {
-                    return -1.0;
                 }
             }
             return -1.0;

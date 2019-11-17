@@ -89,24 +89,6 @@ namespace CuaHangDoChoi
             this.Dispose(false);
         }
 
-        private void DanhSachHoaDon_QuanLy_Load(object sender, EventArgs e)
-        {
-             
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbSearch_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

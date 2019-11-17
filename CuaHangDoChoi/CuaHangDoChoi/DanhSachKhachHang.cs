@@ -134,7 +134,7 @@ namespace CuaHangDoChoi
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            txtMaKhachHang.Enabled = true;
+            
             txtTenKhachHang.Enabled = true;
             txtSex.Enabled = true;
             txtCMND.Enabled = true;
@@ -142,7 +142,8 @@ namespace CuaHangDoChoi
             txtSDT.Enabled = true;
             dgvKhachHang.Enabled = true;
             btnCapNhat.Visible = true;
-
+            btThemKH.Enabled = false;
+            btXoaKH.Enabled = false;
 
 
         }
@@ -158,12 +159,11 @@ namespace CuaHangDoChoi
                 try
                 {
                     makh = int.Parse(txtMaKhachHang.Text);
-                    ngaysinh = dtpNgaySinh.Value.Month + "-" + dtpNgaySinh.Value.Day + "-" + dtpNgaySinh.Value.Year;
+                    ngaysinh = dtpNgaySinh.Value.Month + "/" + dtpNgaySinh.Value.Day + "/" + dtpNgaySinh.Value.Year;
                     hoten = txtTenKhachHang.Text;
                     cmnd = int.Parse(txtCMND.Text);
                     gioitinh = txtSex.Text;
                     sodienthoai = int.Parse(txtSDT.Text);
-                    
                 }
                 catch
                 {
@@ -172,7 +172,7 @@ namespace CuaHangDoChoi
                 }
 
                 //bool sexNew;
-                bool result = KhachHangDAO.Instance.SuaKH(makh, hoten, cmnd, sodienthoai, ngaysinh, gioitinh);
+                bool result = KhachHangDAO.Instance.SuaKH(makh, hoten, sodienthoai, cmnd, ngaysinh, gioitinh);
                 if (result)
                 {
                     MessageBox.Show("Sửa thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -248,7 +248,9 @@ namespace CuaHangDoChoi
         private void btThemNV_Click(object sender, EventArgs e)
         {
             panelThem.Visible = true;
-
+            btThemKH.Enabled = false;
+            btXoaKH.Enabled = false;
+            btnChinhSua.Enabled = false;
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -312,7 +314,7 @@ namespace CuaHangDoChoi
                         
 
                         // bật enabled các nút thêm, xóa, sửa, cập nhật
-                        btThemNV.Enabled = true;
+                        btThemKH.Enabled = true;
                         btXoaKH.Enabled = true;
                         btnChinhSua.Enabled = true;
                         btnCapNhat.Enabled = true;
@@ -350,6 +352,31 @@ namespace CuaHangDoChoi
             else
             {
                 MessageBox.Show("Xóa không thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn khỏi thêm khách hàng? ", "Thoát khỏi thêm khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                // bật enabled các nút thêm, xóa, sửa, cập nhật
+                btXoaKH.Enabled = true;
+                btThemKH.Enabled = true;
+                btnChinhSua.Enabled = true;
+                btnCapNhat.Enabled = true;
+
+                panelThem.Visible = false;
+                txtTenKhachHang_New.Clear();
+                txtGioiTinh_New.Clear();
+                //dtpBirthdayNew.Visible = false;
+                dtpNgaySinh_New.ResetText();
+                txtCMND_New.Clear();
+             
+            
             }
         }
         // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
