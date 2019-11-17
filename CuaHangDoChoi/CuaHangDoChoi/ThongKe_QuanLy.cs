@@ -71,9 +71,26 @@ namespace CuaHangDoChoi
 
         private void btnXem_Click(object sender, EventArgs e)
         {
+           
             double thanhtien = 0; 
-            thanhtien = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(int.Parse(cbThang.Text), int.Parse(cbNam.Text));
-            lbDoanhThu.Text = String.Format("{0:0,0} VNĐ",thanhtien);
+            if(cbNam.Text != "" && cbThang.Text != "")
+            {
+                thanhtien = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(int.Parse(cbThang.Text), int.Parse(cbNam.Text));
+                if (thanhtien == -1.0)
+                {
+                    MessageBox.Show("Chọn không hợp lệ", "Thông báo thống kê", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+
+                    lbDoanhThu.Text = String.Format("{0:0,0} VNĐ", thanhtien);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn tháng năm cần thống kê!", "Thông báo thống kê", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }

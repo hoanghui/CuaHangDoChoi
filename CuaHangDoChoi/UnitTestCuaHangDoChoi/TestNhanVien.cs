@@ -107,7 +107,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestXoaNhanVien()
         {
             bool expected = true;
-            bool actual = NhanVienDAO.Instance.XoaNV(111,"admin");
+            bool actual = NhanVienDAO.Instance.XoaNV(111);
             Assert.AreEqual(expected, actual);
         }
 
@@ -115,7 +115,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestXoaNhanVienKhongTonTai()
         {
             bool expected = false;
-            bool actual = NhanVienDAO.Instance.XoaNV(48561186,"xamqua");
+            bool actual = NhanVienDAO.Instance.XoaNV(48561186);
             Assert.AreEqual(expected, actual);
         }
 
@@ -123,7 +123,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestXoaNhanVienSaiMaNhanVien()
         {
             bool expected = false;
-            bool actual = NhanVienDAO.Instance.XoaNV(48851, "aaaaa");
+            bool actual = NhanVienDAO.Instance.XoaNV(48851);
             Assert.AreEqual(expected, actual);
         }
 

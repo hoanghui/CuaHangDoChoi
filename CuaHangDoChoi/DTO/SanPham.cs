@@ -26,7 +26,7 @@ namespace DTO
             this.soLuong = (int)row["soLuong"];
         }
 
-        public int MaSanPham { get => maSanPham; set => maSanPham= value; }
+        public int MaSanPham { get => maSanPham; set => maSanPham = value; }
         public string TenSanPham { get => tenSanPham; set => tenSanPham = value; }
         public string XuatXu { get => xuatXu; set => xuatXu = value; }
         public double GiaBan { get => giaBan; set => giaBan = value; }
