@@ -15,6 +15,16 @@ namespace CuaHangDoChoi
     public partial class ThanhToan : Form
     {
         BindingSource bd = new BindingSource();
+
+        public int maSanPham { get; private set; }
+        public int maHoaDon { get; private set; }
+        public float donGia { get; private set; }
+        public float thanhTien { get; private set; }
+        public int soluong { get; private set; }
+        public int maKH { get; private set; }
+        public int maNV { get; private set; }
+        public DateTime ngayTao { get; private set; }
+
         public ThanhToan()
         {
             InitializeComponent();
@@ -71,6 +81,7 @@ namespace CuaHangDoChoi
             {
                 MessageBox.Show("Tìm không có", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTimKiem.ResetText();
+                HienThiDanhSach();
             }
             else
             {
@@ -83,35 +94,89 @@ namespace CuaHangDoChoi
                 {
                     MessageBox.Show("Vui lòng nhập mã sản phẩm", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtTimKiem.ResetText();
+                    HienThiDanhSach();
                     return;
                 }
                 if (bd.Count == 0)
                 {
                     MessageBox.Show("Tìm không có", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HienThiDanhSach();
                 }
             }
                 
         }       
-
-        //Gán ngày
-        public DateTime ganngay(string date)
-        {
-            char[] kitutach = {'/'};
-            string[] hientai = dateTimePicker1.Text.Split(kitutach);
-            
-            DateTime ngayhientai = new DateTime(int.Parse(hientai[2]), int.Parse(hientai[0]), int.Parse(hientai[1]));
-            return ngayhientai;
-        }
 
         //THanh toán
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             if (lvThanhToan.Items.Count > 0)
             {
-                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lvThanhToan = taomoisauthanhtoan();
-                lbMaKH = maKhachHangTaoMoi();
-                //addHD();
+                if (txtMaKH.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập mã khách hàng", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    int txtmkh;
+                    try
+                    {
+                        txtmkh = int.Parse(txtMaKH.Text);
+                        txtMaKH.Text = txtmkh.ToString();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng lại nhập mã khách hàng", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtMaKH.ResetText();
+                    }
+                    if (txtMaKH.Text.Length > 10)
+                    {
+                        MessageBox.Show("Vui lòng nhập lại", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtMaKH.ResetText();
+                    }
+                    else
+                    {
+                        addHoaDon();
+                        lvThanhToan = taomoisauthanhtoan();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMaKH.ResetText();
+            }
+        }
+
+        //Gán ngày
+        public DateTime ganngay(string date)
+        {
+            char[] kitutach = { '/' };
+            string[] hientai = dateTimePicker1.Text.Split(kitutach);
+
+            DateTime ngayhientai = new DateTime(int.Parse(hientai[2]), int.Parse(hientai[0]), int.Parse(hientai[1]));
+            return ngayhientai;
+        }
+
+
+        void addHoaDon()
+        {
+            try
+            {
+                maHoaDon = int.Parse(lbmaHoaDon.Text);
+                maKH = int.Parse(txtMaKH.Text);
+                maNV = int.Parse(lbMaNhanVien.Text);
+                ngayTao = ganngay(dateTimePicker1.ToString());
+                thanhTien = float.Parse(lbTongTien.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            if (HoaDonDAO.Instance.ThemHD(maHoaDon, maKH, maNV, ngayTao, thanhTien))
+            {
+                addChiTietHoaDon();
             }
             else
             {
@@ -119,25 +184,44 @@ namespace CuaHangDoChoi
             }
         }
 
-        //tạo mã khách hàng mới
-        Label maKhachHangTaoMoi()
-        {
-            int maKH ;
-            int a = 1;
-            maKH = int.Parse(lbMaKH.Text);
-            a += maKH;
-            lbMaKH.Dispose();
-            Label lbKH = new Label();
-            lbKH.Location = new Point(774, 162);
-            lbKH.Size = new Size(200, 27);
-            lbKH.BackColor = Color.Transparent;
-            lbKH.AutoSize = false;
-            lbKH.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
-            lbKH.TabIndex = 15;
-            lbKH.Parent = this;
-            lbKH.Text = a.ToString();
-            return lbKH;
+        Label maHoaDonTaoMoi()
+        {            
+            int maHD;
+            int b = 1;
+            maHD = int.Parse(lbmaHoaDon.Text);
+            b += maHD;
+            lbmaHoaDon.Text = b.ToString();
+            lbmaHoaDon.Dispose();
+            Label lbHD = new Label();
+            lbHD.Location = new Point(755, 133);
+            lbHD.Size = new Size(99, 27);
+            lbHD.BackColor = Color.Transparent;
+            lbHD.AutoSize = false;
+            lbHD.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
+            lbHD.TabIndex = 16;
+            lbHD.Parent = this;
+            lbHD.Text = b.ToString();
+            return lbHD;
         }
+
+        void addChiTietHoaDon()
+        {            
+            maSanPham = int.Parse(lvThanhToan.Items[0].Text);
+            donGia = float.Parse(lvThanhToan.Items[0].SubItems[4].Text);
+            soluong = int.Parse(lvThanhToan.Items[0].SubItems[3].Text);
+
+            if (ChiTietHoaDonDAO.Instance.themChiTietHoaDon(maHoaDon, maSanPham, donGia, soluong))
+            {
+                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lbmaHoaDon = maHoaDonTaoMoi();//test thêm dữ liệu                
+            }
+            else
+            {
+                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
 
         //load lại khung thanh toán
         ListView taomoisauthanhtoan()
@@ -161,6 +245,7 @@ namespace CuaHangDoChoi
         }
 
         float tongtien = 0;//biến tổng tiền cục bộ
+        string m;
         void hienthibill()
         {           
             //Đỗ dữ liệu từ datagrid sang listview
@@ -170,7 +255,7 @@ namespace CuaHangDoChoi
             {
                 foreach (DataGridViewRow row in dgvSanPham.SelectedRows)
                 {
-                    string m = row.Cells["giaBan"].Value.ToString();
+                    m = row.Cells["giaBan"].Value.ToString();
                     int giabansaukhitang = int.Parse(m) * int.Parse(nudCount.Value.ToString()); //giá bán sau khi tăng
                     lsvItem = new ListViewItem(row.Cells["maSanPham"].Value.ToString());
                     lsvItem.SubItems.Add(row.Cells["tenSanPham"].Value.ToString());
@@ -215,6 +300,5 @@ namespace CuaHangDoChoi
             dn.Show();
             this.Dispose(false);
         }
-
     }
 }
