@@ -56,10 +56,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbMaKH = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lbmaHoaDon = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.lbmaHoaDon = new System.Windows.Forms.Label();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -343,17 +343,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã Khách Hàng :";
             // 
-            // lbMaKH
-            // 
-            this.lbMaKH.BackColor = System.Drawing.Color.Transparent;
-            this.lbMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaKH.Location = new System.Drawing.Point(793, 162);
-            this.lbMaKH.Name = "lbMaKH";
-            this.lbMaKH.Size = new System.Drawing.Size(174, 27);
-            this.lbMaKH.TabIndex = 16;
-            this.lbMaKH.Text = "101";
-            this.lbMaKH.Click += new System.EventHandler(this.lbMaKH_Click);
-            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
@@ -364,16 +353,6 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Mã Hóa Đơn :";
             // 
-            // lbmaHoaDon
-            // 
-            this.lbmaHoaDon.BackColor = System.Drawing.Color.Transparent;
-            this.lbmaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmaHoaDon.Location = new System.Drawing.Point(765, 135);
-            this.lbmaHoaDon.Name = "lbmaHoaDon";
-            this.lbmaHoaDon.Size = new System.Drawing.Size(110, 27);
-            this.lbmaHoaDon.TabIndex = 16;
-            this.lbmaHoaDon.Text = "1101";
-            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -383,6 +362,25 @@
             this.txtTimKiem.Size = new System.Drawing.Size(420, 36);
             this.txtTimKiem.TabIndex = 18;
             // 
+            // lbmaHoaDon
+            // 
+            this.lbmaHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.lbmaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmaHoaDon.Location = new System.Drawing.Point(755, 133);
+            this.lbmaHoaDon.Name = "lbmaHoaDon";
+            this.lbmaHoaDon.Size = new System.Drawing.Size(99, 27);
+            this.lbmaHoaDon.TabIndex = 16;
+            this.lbmaHoaDon.Text = "100";
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKH.Location = new System.Drawing.Point(793, 162);
+            this.txtMaKH.Multiline = true;
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(114, 27);
+            this.txtMaKH.TabIndex = 19;
+            // 
             // ThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,9 +389,9 @@
             this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._908839b4b7b5dfc78d0aba177641d42f;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(998, 591);
+            this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.lbmaHoaDon);
-            this.Controls.Add(this.lbMaKH);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbMaNhanVien);
             this.Controls.Add(this.lbUserName);
@@ -458,9 +456,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbMaKH;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lbmaHoaDon;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label lbmaHoaDon;
+        private System.Windows.Forms.TextBox txtMaKH;
     }
 }

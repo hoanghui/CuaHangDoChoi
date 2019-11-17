@@ -47,9 +47,9 @@ namespace DAO
             return hd;
         }
 
-        public bool ThemHD(int maHD, int maKH, int maNV, DateTime ngayTao )
+        public bool ThemHD(int maHD, int maKH, int maNV, DateTime ngayTao, float thanhTien )
         {
-            if (maHD <= 0 || maNV <= 0)
+            if ( maNV <= 0)
             {
                 return false;
             }
@@ -66,7 +66,7 @@ namespace DAO
          
                 if (result == 0)
                 {
-                    string query2 ="INSERT INTO dbo.HoaDon VALUES(" + maHD + ",N'" + maKH + "'," + maNV + ",'" + ngayTao + "')";
+                    string query2 = "INSERT INTO dbo.HoaDon VALUES("+maHD+"," + maKH + "," + maNV + ",'" + ngayTao + "', " + thanhTien + ")";
                     int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
                     return result2 > 0;
                 }
@@ -115,5 +115,7 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+        
     }
 }

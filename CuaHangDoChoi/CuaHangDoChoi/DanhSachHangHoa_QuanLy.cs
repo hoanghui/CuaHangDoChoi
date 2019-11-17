@@ -303,11 +303,8 @@ namespace CuaHangDoChoi
                         txtGiaBan.DataBindings.Clear();
 
 
-<<<<<<< HEAD
-                MessageBox.Show("Thêm sản phẩm thành công", "Sử thông tin sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-=======
-                        MessageBox.Show("Thêm sản phẩm thành công", "Thêm sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Information);
->>>>>>> 5be7cf93e060b67ab4f7939f5cb96b209d5724e2
+
+                        MessageBox.Show("Thêm sản phẩm thành công", "Sử thông tin sản phẩm", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         txtMaSanPham_New.DataBindings.Clear();
                         txtTenSanPham_New.DataBindings.Clear();

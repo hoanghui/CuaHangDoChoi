@@ -19,6 +19,7 @@ namespace CuaHangDoChoi
         public int maSanPham { get; private set; }
         public int maHoaDon { get; private set; }
         public float donGia { get; private set; }
+        public float thanhTien { get; private set; }
         public int soluong { get; private set; }
         public int maKH { get; private set; }
         public int maNV { get; private set; }
@@ -110,17 +111,39 @@ namespace CuaHangDoChoi
         {
             if (lvThanhToan.Items.Count > 0)
             {
-                addHoaDon();
-                addChiTietHoaDon();
-                lvThanhToan = taomoisauthanhtoan();
-                lbmaHoaDon = maHoaDonTaoMoi();
-                lbMaKH = maKhachHangTaoMoi();                
-                //addHD();
-                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (txtMaKH.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập mã khách hàng", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    int txtmkh;
+                    try
+                    {
+                        txtmkh = int.Parse(txtMaKH.Text);
+                        txtMaKH.Text = txtmkh.ToString();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng lại nhập mã khách hàng", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtMaKH.ResetText();
+                    }
+                    if (txtMaKH.Text.Length > 10)
+                    {
+                        MessageBox.Show("Vui lòng nhập lại", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtMaKH.ResetText();
+                    }
+                    else
+                    {
+                        addHoaDon();
+                        lvThanhToan = taomoisauthanhtoan();
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMaKH.ResetText();
             }
         }
 
@@ -137,69 +160,41 @@ namespace CuaHangDoChoi
 
         void addHoaDon()
         {
-            maHoaDon = int.Parse(lbmaHoaDon.Text);
-            maKH = int.Parse(lbMaKH.Text);
-            maNV = int.Parse(lbMaNhanVien.Text);
-            ngayTao = ganngay(dateTimePicker1.ToString());
-            if (HoaDonDAO.Instance.ThemHD(maHoaDon, maKH, maNV, ngayTao))
+            try
             {
-                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);//test thêm dữ liệu
+                maHoaDon = int.Parse(lbmaHoaDon.Text);
+                maKH = int.Parse(txtMaKH.Text);
+                maNV = int.Parse(lbMaNhanVien.Text);
+                ngayTao = ganngay(dateTimePicker1.ToString());
+                thanhTien = float.Parse(lbTongTien.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            if (HoaDonDAO.Instance.ThemHD(maHoaDon, maKH, maNV, ngayTao, thanhTien))
+            {
+                addChiTietHoaDon();
             }
             else
             {
                 MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
-        }
-
-        void addChiTietHoaDon()
-        {
-            maHoaDon = int.Parse(lbmaHoaDon.Text);
-            maSanPham = int.Parse(lvThanhToan.Items[0].Text);
-            donGia = float.Parse(lvThanhToan.Items[0].SubItems[4].Text);
-            soluong = int.Parse(lvThanhToan.Items[0].SubItems[3].Text);
-
-            if (ChiTietHoaDonDAO.Instance.themChiTietHoaDon(maHoaDon, maSanPham, donGia, soluong))
-            {
-                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);//test thêm dữ liệu
-                
-            }
-            else
-            {
-                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //tạo mã khách hàng mới
-        Label maKhachHangTaoMoi()
-        {
-            int maKH ;
-            int a = 1;
-            maKH = int.Parse(lbMaKH.Text);
-            a += maKH;
-            lbMaKH.Dispose();
-            Label lbKH = new Label();
-            lbKH.Location = new Point(793, 162);
-            lbKH.Size = new Size(174, 27);
-            lbKH.BackColor = Color.Transparent;
-            lbKH.AutoSize = false;
-            lbKH.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
-            lbKH.TabIndex = 16;
-            lbKH.Parent = this;
-            lbKH.Text = a.ToString();
-            return lbKH;
         }
 
         Label maHoaDonTaoMoi()
-        {
+        {            
             int maHD;
             int b = 1;
             maHD = int.Parse(lbmaHoaDon.Text);
             b += maHD;
+            lbmaHoaDon.Text = b.ToString();
             lbmaHoaDon.Dispose();
             Label lbHD = new Label();
-            lbHD.Location = new Point(765, 135);
-            lbHD.Size = new Size(110, 27);
+            lbHD.Location = new Point(755, 133);
+            lbHD.Size = new Size(99, 27);
             lbHD.BackColor = Color.Transparent;
             lbHD.AutoSize = false;
             lbHD.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
@@ -208,6 +203,25 @@ namespace CuaHangDoChoi
             lbHD.Text = b.ToString();
             return lbHD;
         }
+
+        void addChiTietHoaDon()
+        {            
+            maSanPham = int.Parse(lvThanhToan.Items[0].Text);
+            donGia = float.Parse(lvThanhToan.Items[0].SubItems[4].Text);
+            soluong = int.Parse(lvThanhToan.Items[0].SubItems[3].Text);
+
+            if (ChiTietHoaDonDAO.Instance.themChiTietHoaDon(maHoaDon, maSanPham, donGia, soluong))
+            {
+                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lbmaHoaDon = maHoaDonTaoMoi();//test thêm dữ liệu                
+            }
+            else
+            {
+                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
 
         //load lại khung thanh toán
         ListView taomoisauthanhtoan()
@@ -285,11 +299,6 @@ namespace CuaHangDoChoi
             DangNhap dn = new DangNhap();
             dn.Show();
             this.Dispose(false);
-        }
-
-        private void lbMaKH_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

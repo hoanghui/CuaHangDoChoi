@@ -56,7 +56,7 @@ GO
 
 CREATE TABLE HoaDon   
 (
-	maHoaDon INT IDENTITY(100,2) PRIMARY KEY,
+	maHoaDon INT PRIMARY KEY,
 	maKhachHang INT,
 	maNhanVien INT,
 	ngayTao DATETIME NOT NULL,
@@ -121,15 +121,15 @@ INSERT INTO KhachHang (hoTen,CMND, soDienThoai, ngaySinh, gioiTinh,trangThai)VAL
 
 --Thêm dữ liệu vào bảng hóa đơn--
 
-INSERT INTO HoaDon (maKhachHang, maNhanVien, ngayTao, thanhTien) VALUES (104,11,'11/10/2018',400000)
-INSERT INTO HoaDon (maKhachHang, maNhanVien, ngayTao, thanhTien) VALUES (102,12,'9/1/2018',0)
-INSERT INTO HoaDon (maKhachHang, maNhanVien, ngayTao, thanhTien) VALUES (104,13,'9/12/2018',1500000)
+--INSERT INTO HoaDon (maKhachHang, maNhanVien, ngayTao, thanhTien) VALUES (104,11,'11/10/2018',400000)
+--INSERT INTO HoaDon (maKhachHang, maNhanVien, ngayTao, thanhTien) VALUES (102,12,'9/1/2018',0)
+--INSERT INTO HoaDon (maKhachHang, maNhanVien, ngayTao, thanhTien) VALUES (104,13,'9/12/2018',1500000)
 
--- Thêm dữ liệu vào bảng chi tiết hóa đơn --
+---- Thêm dữ liệu vào bảng chi tiết hóa đơn --
 
-INSERT INTO ChiTietHoaDon VALUES (100,1001,400000,2)
-INSERT INTO ChiTietHoaDon VALUES (102,1002,20000,2)
-INSERT INTO ChiTietHoaDon VALUES (104,1003,50000,1)
+--INSERT INTO ChiTietHoaDon VALUES (100,1001,400000,2)
+--INSERT INTO ChiTietHoaDon VALUES (102,1002,20000,2)
+--INSERT INTO ChiTietHoaDon VALUES (104,1003,50000,1)
 
 -- sua --
 --SELECT *
@@ -163,36 +163,5 @@ INSERT INTO ChiTietHoaDon VALUES (104,1003,50000,1)
 --DROP TABLE dbo.NhanVien
 --DROP TABLE dbo.HoaDon
 
-<<<<<<< HEAD
-	
-CREATE PROC InsertHoaDon
-@maHoaDon INT, @maKhachHang INT, @maNhanVien INT
-AS
-BEGIN
-	INSERT dbo.HoaDon 
-	(maHoaDon,
-     maKhachHang,
-     maNhanVien,
-	 ngayTao
-	)
-	VALUES
-	(
-	@maHoaDon,
-	@maKhachHang,
-	@maNhanVien,
-	GETDATE()
-	)
-END
-GO
-=======
---create proc xoa
---@ma int
---as
---begin
---	UPDATE dbo.NhanVien SET trangThai = 0 WHERE maNhanVien = @ma
---end
---go
 
---select * from NhanVien
 
->>>>>>> eb58b0835d9c68002f2dad916c625f3a592accd9

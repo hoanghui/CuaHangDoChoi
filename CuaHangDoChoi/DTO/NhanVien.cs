@@ -28,7 +28,7 @@ namespace DTO
             this.ngaySinh = (DateTime)row["ngaySinh"];
             this.gioiTinh = row["gioiTinh"].ToString();
             this.tenDangNhap = row["tenDangNhap"].ToString();
-            //this.trangThai = (bool)row["trangThai"];
+            this.trangThai = (bool)row["trangThai"];
         }
 
         public int MaNhanVien { get => maNhanVien; set => maNhanVien = value; }

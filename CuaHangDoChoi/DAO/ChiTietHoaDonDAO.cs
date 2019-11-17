@@ -41,9 +41,33 @@ namespace DAO
 
         public bool themChiTietHoaDon(int maHoaDon, int maSanPham, float donGia, int soLuong)
         {
-            string query = "INSERT INTO dbo.ChiTietHoaDon VALUES(" + maHoaDon + "," + maSanPham + "," + donGia + "," + soLuong + ")";
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result > 0;
+            
+            if (maHoaDon < 0)
+            {
+                return false;
+            }
+            else
+            {
+                List<ChiTietHoaDon> ds = new List<ChiTietHoaDon>();
+                string query = "SELECT * FROM dbo.ChiTietHoaDon WHERE maHoaDon= " + maHoaDon + "";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    ds.Add(new ChiTietHoaDon(row));
+                }
+                int result = ds.Count;
+
+                if (result == 0)
+                {
+                    string query2 = "INSERT INTO dbo.ChiTietHoaDon VALUES(" + maHoaDon + "," + maSanPham + "," + donGia + "," + soLuong + ")";
+                    int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
+                    return result2 > 0;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }
