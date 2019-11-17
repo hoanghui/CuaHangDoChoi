@@ -56,8 +56,8 @@
             this.lbUserName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbMaKH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -117,7 +117,7 @@
             this.txtTimKiem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtTimKiem.HideSelection = false;
             this.txtTimKiem.Location = new System.Drawing.Point(12, 155);
-            this.txtTimKiem.MaxLength = 30;
+            this.txtTimKiem.MaxLength = 100;
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(420, 36);
@@ -342,14 +342,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(793, 160);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 33);
-            this.textBox1.TabIndex = 16;
-            // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
@@ -360,6 +352,16 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã Khách Hàng :";
             // 
+            // lbMaKH
+            // 
+            this.lbMaKH.BackColor = System.Drawing.Color.Transparent;
+            this.lbMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaKH.Location = new System.Drawing.Point(774, 162);
+            this.lbMaKH.Name = "lbMaKH";
+            this.lbMaKH.Size = new System.Drawing.Size(200, 27);
+            this.lbMaKH.TabIndex = 16;
+            this.lbMaKH.Text = "101";
+            // 
             // ThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,7 +370,7 @@
             this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._908839b4b7b5dfc78d0aba177641d42f;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(998, 591);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbMaKH);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbMaNhanVien);
             this.Controls.Add(this.lbUserName);
@@ -433,7 +435,7 @@
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbMaKH;
     }
 }

@@ -66,85 +66,32 @@ namespace CuaHangDoChoi
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text));
-            if (bd.Count == 0)
+
+            if (txtTimKiem.Text == " ")
             {
                 MessageBox.Show("Tìm không có", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
-        }
-
-
-        private void btDangXuat_Click(object sender, EventArgs e)
-        {
-            DangNhap dn = new DangNhap();
-            dn.Show();
-            this.Dispose(false);
-        }
-
-        //THanh toán
-        private void btThanhToan_Click(object sender, EventArgs e)
-        {
-            if (lvThanhToan.Items.Count > 0)
-            {
-                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lvThanhToan = taomoisauthanhtoan();
-                addHD();
+                txtTimKiem.ResetText();
             }
             else
             {
-                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    bd.DataSource = SanPhamDAO.Instance.TimSP(int.Parse(txtTimKiem.Text));
+
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng nhập mã sản phẩm", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtTimKiem.ResetText();
+                    return;
+                }
+                if (bd.Count == 0)
+                {
+                    MessageBox.Show("Tìm không có", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
-        //Đổ dữ liệu hóa đơn vào database
-        void addHD()
-        {
-            try
-            {
-                maHD = int.Parse();
-                maKH = txtTenSanPham_New.Text;
-                maNV= int.Parse(txtSoLuong_New.Text);
-                ngayTao = dtpNgayNhap_New.Value;
-            }
-            catch
-            {
-                MessageBox.Show("Nhập chưa đúng định dạng!Nhập lại", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            bool result = HoaDonDAO.Instance.ThemHD(maHD, maKH, maNV, ngayTao);
-            if (result)
-            {
-                //txtNhanVienIDNew.DataBindings.Clear();
-                //txtNameNew.DataBindings.Clear();
-                //txtSexNew.DataBindings.Clear();
-                //dtpBirthdayNew.DataBindings.Clear();
-                //txtCMNDNew.DataBindings.Clear();
-                //txtNhanVienIDNew.DataBindings.Clear();
-
-                txtMaSanPham.DataBindings.Clear();
-                txtTenSanPham.DataBindings.Clear();
-
-                txtXuatXu.DataBindings.Clear();
-                txtSoLuong.DataBindings.Clear();
-                dtpNgayNhap.DataBindings.Clear();
-                txtGiaBan.DataBindings.Clear();
-
-
-                MessageBox.Show("Thêm nhân viên thành công", "Sử thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                txtMaSanPham_New.DataBindings.Clear();
-                txtTenSanPham_New.DataBindings.Clear();
-
-                txtXuatXu_New.DataBindings.Clear();
-                txtSoLuong_New.DataBindings.Clear();
-                dtpNgayNhap_New.DataBindings.Clear();
-                txtGiaBan_New.DataBindings.Clear();
-
-
-                HienThiDanhSach();
-                panelThemSanPham.Visible = false;
-            }
-
-        }
+                
+        }       
 
         //Gán ngày
         public DateTime ganngay(string date)
@@ -156,6 +103,43 @@ namespace CuaHangDoChoi
             return ngayhientai;
         }
 
+        //THanh toán
+        private void btThanhToan_Click(object sender, EventArgs e)
+        {
+            if (lvThanhToan.Items.Count > 0)
+            {
+                MessageBox.Show("Thanh toán thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lvThanhToan = taomoisauthanhtoan();
+                lbMaKH = maKhachHangTaoMoi();
+                //addHD();
+            }
+            else
+            {
+                MessageBox.Show("Thanh toán không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //tạo mã khách hàng mới
+        Label maKhachHangTaoMoi()
+        {
+            int maKH ;
+            int a = 1;
+            maKH = int.Parse(lbMaKH.Text);
+            a += maKH;
+            lbMaKH.Dispose();
+            Label lbKH = new Label();
+            lbKH.Location = new Point(774, 162);
+            lbKH.Size = new Size(200, 27);
+            lbKH.BackColor = Color.Transparent;
+            lbKH.AutoSize = false;
+            lbKH.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
+            lbKH.TabIndex = 15;
+            lbKH.Parent = this;
+            lbKH.Text = a.ToString();
+            return lbKH;
+        }
+
+        //load lại khung thanh toán
         ListView taomoisauthanhtoan()
         {
             lvThanhToan.Dispose(); //xóa hết dữ liệu cũ
@@ -176,7 +160,7 @@ namespace CuaHangDoChoi
             return lvnew;
         }
 
-        float tongtien = 0;
+        float tongtien = 0;//biến tổng tiền cục bộ
         void hienthibill()
         {           
             //Đỗ dữ liệu từ datagrid sang listview
@@ -187,7 +171,7 @@ namespace CuaHangDoChoi
                 foreach (DataGridViewRow row in dgvSanPham.SelectedRows)
                 {
                     string m = row.Cells["giaBan"].Value.ToString();
-                    int giabansaukhitang = int.Parse(m) * int.Parse(nudCount.Value.ToString()); //giá bán sau khi tan
+                    int giabansaukhitang = int.Parse(m) * int.Parse(nudCount.Value.ToString()); //giá bán sau khi tăng
                     lsvItem = new ListViewItem(row.Cells["maSanPham"].Value.ToString());
                     lsvItem.SubItems.Add(row.Cells["tenSanPham"].Value.ToString());
                     lsvItem.SubItems.Add(row.Cells["xuatXu"].Value.ToString());
@@ -225,5 +209,12 @@ namespace CuaHangDoChoi
                 MessageBox.Show("In hóa đơn không thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void btDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
+            this.Dispose(false);
+        }
+
     }
 }
