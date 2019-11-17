@@ -4,12 +4,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace DAO
 {
     public class ChiTietHoaDonDAO
     {
         private static ChiTietHoaDonDAO instance;
+
         public static ChiTietHoaDonDAO Instance
         {
             get 
@@ -18,28 +20,28 @@ namespace DAO
                     instance = new ChiTietHoaDonDAO();
                 return ChiTietHoaDonDAO.instance;
             }
-            private set {
-                ChiTietHoaDonDAO.instance = value;
-            }
+            private set { ChiTietHoaDonDAO.instance = value; }
         }
 
-        private ChiTietHoaDonDAO(DataRow item) { }
+        private ChiTietHoaDonDAO() { }
 
-        public ChiTietHoaDonDAO()
+        public List<ChiTietHoaDon> layCTHD(int id)
         {
-        }
-
-        public List<ChiTietHoaDonDAO> layChiTietHoaDon(int id)
-        {
-            List<ChiTietHoaDonDAO> cthd = new List<ChiTietHoaDonDAO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.ChiTietHoaDon WHERE maHoaDon =" + id);
+            List<ChiTietHoaDon> cthd = new List<ChiTietHoaDon>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.ChiTietHoaDon WHERE maHoaDon = " + id);
 
             foreach (DataRow item in data.Rows)
             {
-                ChiTietHoaDonDAO info = new ChiTietHoaDonDAO(item);
-                cthd.Add(info);
+                ChiTietHoaDon chiTiet = new ChiTietHoaDon(item);
+                cthd.Add(chiTiet);
             }
+
             return cthd;
+        }
+
+        public void InsertChiTietHoaDon(int maHoaDon, int maSanPham, float donGia, int soLuong)
+        {
+            DataProvider.Instance.ExecuteNonQuery("InsertChiTietHoaDon @maHoaDon , @maSanPham , @donGia , @soLuong", new object[] { maHoaDon, maSanPham, donGia, soLuong });
         }
     }
 }

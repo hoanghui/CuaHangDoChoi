@@ -19,7 +19,7 @@ namespace CuaHangDoChoi.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -73,6 +73,16 @@ namespace CuaHangDoChoi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _908839b4b7b5dfc78d0aba177641d42f {
+            get {
+                object obj = ResourceManager.GetObject("_908839b4b7b5dfc78d0aba177641d42f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap abbcfce899a860705041a1425e07488f {
             get {
                 object obj = ResourceManager.GetObject("abbcfce899a860705041a1425e07488f", resourceCulture);
@@ -86,6 +96,16 @@ namespace CuaHangDoChoi.Properties {
         internal static System.Drawing.Bitmap d625045f0b22faf8d8ab3bd236f86085 {
             get {
                 object obj = ResourceManager.GetObject("d625045f0b22faf8d8ab3bd236f86085", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dc71ac5a02da3452778e32761f4e81c5 {
+            get {
+                object obj = ResourceManager.GetObject("dc71ac5a02da3452778e32761f4e81c5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

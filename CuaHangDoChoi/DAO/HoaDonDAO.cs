@@ -22,6 +22,19 @@ namespace DAO
         private HoaDonDAO() { }
 
         // đổ data vào 
+
+        public int layhoadon(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.HoaDon WHERE maNhanVien = " + id + "");
+
+            if (data.Rows.Count > 0)
+            {
+                HoaDon hoaDon = new HoaDon(data.Rows[0]);
+                return hoaDon.MaHoaDon;
+            }
+            return -1;
+        }
+
         public List<HoaDon> LayDanhSachHoaDon()
         {
             List<HoaDon> hd = new List<HoaDon>();
@@ -32,6 +45,48 @@ namespace DAO
                 hd.Add(new HoaDon(row));
             }
             return hd;
+        }
+
+        public bool ThemHD(int maHD, int maKH, int maNV, DateTime ngayTao )
+        {
+            if (maHD <= 0 || maNV <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                List<HoaDon> ds = new List<HoaDon>();
+                string query = "SELECT * FROM dbo.HoaDon WHERE maHoaDon= " + maHD + "";
+                DataTable table = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in table.Rows)
+                {
+                    ds.Add(new HoaDon(row));
+                }
+                int result = ds.Count;
+         
+                if (result == 0)
+                {
+                    string query2 ="INSERT INTO dbo.HoaDon VALUES(" + maHD + ",N'" + maKH + "'," + maNV + ",'" + ngayTao + "')";
+                    int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
+                    return result2 > 0;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public int layHDlonnhat()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(maHoaDon) FROM dbo.HoaDon");
+            }
+            catch
+            {
+                return 1;
+            }
         }
 
         public double LayDanhSachHoaDonTheoThangNam(int thang, int nam)

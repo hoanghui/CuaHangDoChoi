@@ -31,7 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btThanhToan = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btInhoadon = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,8 +45,8 @@
             this.maSP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tenSP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.xuatXu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.giaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.soLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.giaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.lbHoTen = new System.Windows.Forms.Label();
@@ -56,6 +56,8 @@
             this.lbUserName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbMaKH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -95,17 +97,18 @@
             this.btThanhToan.UseVisualStyleBackColor = false;
             this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
-            // button2
+            // btInhoadon
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(248, 435);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(334, 59);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "IN HÓA ĐƠN";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btInhoadon.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btInhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInhoadon.ForeColor = System.Drawing.Color.White;
+            this.btInhoadon.Location = new System.Drawing.Point(248, 435);
+            this.btInhoadon.Name = "btInhoadon";
+            this.btInhoadon.Size = new System.Drawing.Size(334, 59);
+            this.btInhoadon.TabIndex = 3;
+            this.btInhoadon.Text = "IN HÓA ĐƠN";
+            this.btInhoadon.UseVisualStyleBackColor = false;
+            this.btInhoadon.Click += new System.EventHandler(this.btInhoadon_Click);
             // 
             // txtTimKiem
             // 
@@ -114,6 +117,7 @@
             this.txtTimKiem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtTimKiem.HideSelection = false;
             this.txtTimKiem.Location = new System.Drawing.Point(12, 155);
+            this.txtTimKiem.MaxLength = 100;
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(420, 36);
@@ -185,7 +189,6 @@
             this.btXoa.TabIndex = 6;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = false;
-            this.btXoa.Visible = false;
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btThem
@@ -197,7 +200,6 @@
             this.btThem.TabIndex = 6;
             this.btThem.Text = "Thêm ";
             this.btThem.UseVisualStyleBackColor = false;
-            this.btThem.Visible = false;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // nudCount
@@ -220,11 +222,12 @@
             this.xuatXu,
             this.soLuong,
             this.giaBan});
+            this.lvThanhToan.FullRowSelect = true;
             this.lvThanhToan.GridLines = true;
             this.lvThanhToan.HideSelection = false;
-            this.lvThanhToan.Location = new System.Drawing.Point(609, 157);
+            this.lvThanhToan.Location = new System.Drawing.Point(609, 197);
             this.lvThanhToan.Name = "lvThanhToan";
-            this.lvThanhToan.Size = new System.Drawing.Size(365, 272);
+            this.lvThanhToan.Size = new System.Drawing.Size(365, 232);
             this.lvThanhToan.TabIndex = 12;
             this.lvThanhToan.UseCompatibleStateImageBehavior = false;
             this.lvThanhToan.View = System.Windows.Forms.View.Details;
@@ -241,14 +244,13 @@
             // 
             this.xuatXu.Text = "Xuất Xứ";
             // 
+            // soLuong
+            // 
+            this.soLuong.Text = "Số Lượng";
+            // 
             // giaBan
             // 
             this.giaBan.Text = "Giá Bán";
-            // 
-            // soLuong
-            // 
-            this.soLuong.DisplayIndex = 3;
-            this.soLuong.Text = "Số Lượng";
             // 
             // groupBox1
             // 
@@ -275,7 +277,7 @@
             // 
             this.lbHoTen.BackColor = System.Drawing.Color.Transparent;
             this.lbHoTen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbHoTen.Location = new System.Drawing.Point(130, 22);
             this.lbHoTen.Name = "lbHoTen";
             this.lbHoTen.Size = new System.Drawing.Size(270, 23);
@@ -285,7 +287,7 @@
             // 
             this.lbChucVu.BackColor = System.Drawing.Color.Transparent;
             this.lbChucVu.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbChucVu.Location = new System.Drawing.Point(130, 52);
             this.lbChucVu.Name = "lbChucVu";
             this.lbChucVu.Size = new System.Drawing.Size(214, 31);
@@ -306,7 +308,7 @@
             // 
             this.lbMaNhanVien.BackColor = System.Drawing.Color.Transparent;
             this.lbMaNhanVien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbMaNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbMaNhanVien.Location = new System.Drawing.Point(518, 52);
             this.lbMaNhanVien.Name = "lbMaNhanVien";
             this.lbMaNhanVien.Size = new System.Drawing.Size(214, 23);
@@ -316,7 +318,7 @@
             // 
             this.lbUserName.BackColor = System.Drawing.Color.Transparent;
             this.lbUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbUserName.Location = new System.Drawing.Point(605, 20);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(168, 23);
@@ -334,19 +336,41 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(609, 131);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(605, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 23);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Mã Khách Hàng :";
+            // 
+            // lbMaKH
+            // 
+            this.lbMaKH.BackColor = System.Drawing.Color.Transparent;
+            this.lbMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaKH.Location = new System.Drawing.Point(774, 162);
+            this.lbMaKH.Name = "lbMaKH";
+            this.lbMaKH.Size = new System.Drawing.Size(200, 27);
+            this.lbMaKH.TabIndex = 16;
+            this.lbMaKH.Text = "101";
             // 
             // ThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._7d1d31c51d236bbda42b0ab01a6688be;
+            this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._908839b4b7b5dfc78d0aba177641d42f;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(998, 591);
+            this.Controls.Add(this.lbMaKH);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbMaNhanVien);
             this.Controls.Add(this.lbUserName);
@@ -355,6 +379,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lvThanhToan);
             this.Controls.Add(this.nudCount);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -362,7 +387,7 @@
             this.Controls.Add(this.btDangXuat);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btInhoadon);
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.btThanhToan);
             this.Controls.Add(this.txtTimKiem);
@@ -385,7 +410,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btThanhToan;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btInhoadon;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btDangXuat;
         private System.Windows.Forms.Label label1;
@@ -410,5 +435,7 @@
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbMaKH;
     }
 }

@@ -206,5 +206,11 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dc71ac5a02da3452778e32761f4e81c5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\908839b4b7b5dfc78d0aba177641d42f.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
