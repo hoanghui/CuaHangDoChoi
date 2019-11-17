@@ -163,29 +163,7 @@ INSERT INTO KhachHang (hoTen,CMND, soDienThoai, ngaySinh, gioiTinh,trangThai)VAL
 --DROP TABLE dbo.NhanVien
 --DROP TABLE dbo.HoaDon
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-CREATE PROC InsertHoaDon
-@maHoaDon INT, @maKhachHang INT, @maNhanVien INT
-AS
-BEGIN
-	INSERT dbo.HoaDon 
-	(maHoaDon,
-     maKhachHang,
-     maNhanVien,
-	 ngayTao
-	)
-	VALUES
-	(
-	@maHoaDon,
-	@maKhachHang,
-	@maNhanVien,
-	GETDATE()
-	)
-END
-GO
-=======
+
 --create proc xoa
 --@ma int
 --as
@@ -196,7 +174,6 @@ GO
 
 --select * from NhanVien
 
->>>>>>> eb58b0835d9c68002f2dad916c625f3a592accd9
 
 go
 
@@ -209,7 +186,7 @@ begin
 	UPDATE dbo.KhachHang SET hoTen = @hoTen, CMND= @CMND , soDienThoai = @soDienThoai , ngaySinh = @ngaySinh, gioiTinh = @gioiTinh WHERE maKhachHang = @makh
 end
 go
-=======
 
->>>>>>> a4cfbca72d71adc16cc9f358af6d2af5e310fb11
+
+
 

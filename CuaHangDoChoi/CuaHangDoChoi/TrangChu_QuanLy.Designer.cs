@@ -440,6 +440,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._908839b4b7b5dfc78d0aba177641d42f;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1080, 728);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbNgaySinh);

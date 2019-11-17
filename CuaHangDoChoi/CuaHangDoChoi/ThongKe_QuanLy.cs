@@ -97,5 +97,12 @@ namespace CuaHangDoChoi
         {
 
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
+            this.Dispose(false);
+        }
     }
 }

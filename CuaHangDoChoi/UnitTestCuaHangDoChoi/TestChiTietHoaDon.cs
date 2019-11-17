@@ -2,18 +2,18 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DTO;
 using DAO;
+using DTO;
 
 namespace UnitTestCuaHangDoChoi
 {
     /// <summary>
-    /// Summary description for TestHoaDon
+    /// Summary description for TestChiTietHoaDon
     /// </summary>
     [TestClass]
-    public class TestHoaDon
+    public class TestChiTietHoaDon
     {
-        public TestHoaDon()
+        public TestChiTietHoaDon()
         {
             //
             // TODO: Add constructor logic here
@@ -61,38 +61,28 @@ namespace UnitTestCuaHangDoChoi
         #endregion
 
         [TestMethod]
-        public void TestLayDachSachHoaDon()
+        public void TestLayChiTietHoaDon()
         {
-            List<HoaDon> hd = HoaDonDAO.Instance.LayDanhSachHoaDon();
-            int expected = 3;
-            int actual = hd.Count;
+            
+            List<ChiTietHoaDon> tk = ChiTietHoaDonDAO.Instance.layCTHD(100);
+            int expected = 1;
+            int actual = tk.Count;
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void TestLayDachSachHoaDonTheoThangNamNhapDung()
-        {
-            double hd = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(9,2018);
-            double expected = 1500000;
-            double actual = hd;
-            Assert.AreEqual(expected, actual);
-        }
-
-        // Nếu ra sai là làm đúng
-        [TestMethod]
-        public void TestLayDachSachHoaDonTheoThangNamVoiNamSai()
-        {
-            double hd = HoaDonDAO.Instance.LayDanhSachHoaDonTheoThangNam(9, 2020);
-            double expected = 200000;
-            double actual = hd;
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestThemHoaDon()
+        public void TestThemChiTietHoaDon()
         {
             bool expected = true;
-            bool actual = HoaDonDAO.Instance.ThemHD(100, 108, 11, DateTime.Parse("9/12/2018"),200000); 
+            bool actual = ChiTietHoaDonDAO.Instance.themChiTietHoaDon(100, 1000, 200000, 5);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestThemChiTietHoaDonVoiMaHoaDonNhoHon0()
+        {
+            bool expected = false;
+            bool actual = ChiTietHoaDonDAO.Instance.themChiTietHoaDon(-4, 1006, 200000, 5);
             Assert.AreEqual(expected, actual);
         }
 

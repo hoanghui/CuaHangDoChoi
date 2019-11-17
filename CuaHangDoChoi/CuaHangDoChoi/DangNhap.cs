@@ -21,7 +21,7 @@ namespace CuaHangDoChoi
 
         private void SignIn()
         {
-           
+
             string tenDangNhap = txtUsername.Text;
             string matKhau = txtPassword.Text;
             TaiKhoan taikhoan = TaiKhoanDAO.Instance.layTaiKhoan(tenDangNhap);
@@ -35,7 +35,7 @@ namespace CuaHangDoChoi
                         home.funData(this.txtUsername);
                         home.Show();
                         this.Dispose(false);
-                        
+
                     }
                     else
                     {
@@ -94,7 +94,7 @@ namespace CuaHangDoChoi
 
         protected override bool ProcessDialogKey(Keys keyData)
         {
-            switch(keyData)
+            switch (keyData)
             {
                 case Keys.Enter:
                     {
@@ -103,9 +103,9 @@ namespace CuaHangDoChoi
                     }
                 case Keys.Tab:
                     {
-                       
-                            return txtPassword.Focus();
-          
+
+                        return txtPassword.Focus();
+
                     }
             }
             return false;
@@ -115,5 +115,6 @@ namespace CuaHangDoChoi
         {
 
         }
+
     }
 }

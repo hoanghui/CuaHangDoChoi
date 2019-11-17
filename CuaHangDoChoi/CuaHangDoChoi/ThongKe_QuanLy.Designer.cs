@@ -90,6 +90,7 @@
             this.btnDangXuat.TabIndex = 12;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // button5
             // 
@@ -282,7 +283,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::CuaHangDoChoi.Properties.Resources.logotachnen;
             this.pictureBox2.Location = new System.Drawing.Point(659, 112);
             this.pictureBox2.Name = "pictureBox2";

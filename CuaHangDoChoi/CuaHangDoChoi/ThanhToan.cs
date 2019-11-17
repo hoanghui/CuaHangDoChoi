@@ -300,5 +300,12 @@ namespace CuaHangDoChoi
             dn.Show();
             this.Dispose(false);
         }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            DanhSachKhachHang_NhanVien kh = new DanhSachKhachHang_NhanVien();
+            kh.Show();
+            this.Dispose(false);
+        }
     }
 }

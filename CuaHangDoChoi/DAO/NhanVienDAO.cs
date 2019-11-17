@@ -112,7 +112,7 @@ namespace DAO
                 int result1 = ds1.Count;
                 if (/*result == 0 &&*/ result1 == 0)
                 {
-                    string query2 = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',1)" +
+                    string query2 = "INSERT INTO dbo.TaiKhoan VALUES('" + tendangnhap + "','" + matkhau + "',0)" +
                 "INSERT INTO dbo.NhanVien (hoTen,CMND,ngaySinh,gioiTinh,tenDangNhap, trangThai) VALUES( N'" + hoten + "'," + cmnd + ",'" + ngaysinh + "', '" + gioitinh + "','" + tendangnhap + "', 1)";
                     int result2 = DataProvider.Instance.ExecuteNonQuery(query2);
                     return result2 > 0;

@@ -67,6 +67,12 @@
     <Compile Include="DanhSachHoaDon_QuanLy.Designer.cs">
       <DependentUpon>DanhSachHoaDon_QuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachKhachHang _NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachKhachHang _NhanVien.Designer.cs">
+      <DependentUpon>DanhSachKhachHang _NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachHoaDon_QuanLy.resx">
       <DependentUpon>DanhSachHoaDon_QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachKhachHang _NhanVien.resx">
+      <DependentUpon>DanhSachKhachHang _NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachKhachHang.resx">
       <DependentUpon>DanhSachKhachHang.cs</DependentUpon>

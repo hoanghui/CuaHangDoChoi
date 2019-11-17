@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CuaHangDoChoi
 {
-    public partial class DanhSachKhachHang : Form
+    public partial class DanhSachKhachHang_NhanVien : Form
     {
         BindingSource bd = new BindingSource();
 
@@ -24,7 +24,7 @@ namespace CuaHangDoChoi
 
         public DateTime birthday { get; private set; }
 
-        public DanhSachKhachHang()
+        public DanhSachKhachHang_NhanVien()
         {
             InitializeComponent();
             HienThiDanhSach();
@@ -380,13 +380,14 @@ namespace CuaHangDoChoi
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-            DangNhap dn = new DangNhap();
-            dn.Show();
+            ThanhToan tt = new ThanhToan();
+            tt.Show();
             this.Dispose(false);
         }
+
+
         // bắt ngoại lệ khi người dùng nhập k đúng kiểu dữ liệu
 
 

@@ -11,20 +11,20 @@ namespace DTO
     {
         private int maSanPham;
         private int maHoaDon;
-        private int donGia;
+        private double donGia;
         private int soLuong;
 
         public ChiTietHoaDon(DataRow row)
         {
             this.MaHoaDon =(int)row["maHoaDon"];
             this.MaSanPham = (int)row["maSanPham"];
-            this.DonGia = (int)row["donGia"];
+            this.DonGia = (double)row["donGia"];
             this.SoLuong = (int)row["soLuong"];
         }
 
         public int MaSanPham { get => maSanPham; set => maSanPham = value; }
         public int MaHoaDon { get => maHoaDon; set => maHoaDon = value; }
-        public int DonGia { get => donGia; set => donGia = value; }
+        public double DonGia { get => donGia; set => donGia = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
     }
 }

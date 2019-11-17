@@ -28,12 +28,13 @@ namespace DAO
         public List<ChiTietHoaDon> layCTHD(int id)
         {
             List<ChiTietHoaDon> cthd = new List<ChiTietHoaDon>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.ChiTietHoaDon WHERE maHoaDon = " + id);
+            string query = "SELECT * FROM dbo.ChiTietHoaDon WHERE maHoaDon = " + id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
             {
-                ChiTietHoaDon chiTiet = new ChiTietHoaDon(item);
-                cthd.Add(chiTiet);
+               
+                cthd.Add(new ChiTietHoaDon(item));
             }
 
             return cthd;

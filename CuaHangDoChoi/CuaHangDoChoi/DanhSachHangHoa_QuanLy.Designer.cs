@@ -100,12 +100,12 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Oswald", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(381, -1);
+            this.label1.Font = new System.Drawing.Font("Oswald", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(5, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 73);
+            this.label1.Size = new System.Drawing.Size(254, 59);
             this.label1.TabIndex = 29;
             this.label1.Text = "H2K TOY STORE";
             // 
@@ -218,7 +218,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(234, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -245,7 +245,7 @@
             // 
             this.lbThongTin.BackColor = System.Drawing.Color.Transparent;
             this.lbThongTin.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThongTin.ForeColor = System.Drawing.Color.White;
+            this.lbThongTin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbThongTin.Location = new System.Drawing.Point(771, 49);
             this.lbThongTin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbThongTin.Name = "lbThongTin";
@@ -270,10 +270,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(817, 146);
+            this.label3.Location = new System.Drawing.Point(820, 146);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 31);
+            this.label3.Size = new System.Drawing.Size(68, 31);
             this.label3.TabIndex = 29;
             this.label3.Text = "Xuất xứ :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -421,18 +421,19 @@
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 9);
+            this.label9.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(279, 32);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(251, 25);
+            this.label9.Size = new System.Drawing.Size(356, 37);
             this.label9.TabIndex = 29;
             this.label9.Text = "DANH SÁCH SẢN PHẨM";
             // 
             // panelThemSanPham
             // 
-            this.panelThemSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelThemSanPham.BackColor = System.Drawing.Color.Transparent;
+            this.panelThemSanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelThemSanPham.Controls.Add(this.txtMaSanPham_New);
             this.panelThemSanPham.Controls.Add(this.txtGiaBan_New);
             this.panelThemSanPham.Controls.Add(this.txtXuatXu_New);
@@ -546,7 +547,7 @@
             // 
             this.lbThemSp.BackColor = System.Drawing.Color.Transparent;
             this.lbThemSp.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemSp.ForeColor = System.Drawing.Color.White;
+            this.lbThemSp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbThemSp.Location = new System.Drawing.Point(92, 0);
             this.lbThemSp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbThemSp.Name = "lbThemSp";
@@ -647,9 +648,9 @@
             // pbSanPham
             // 
             this.pbSanPham.BackColor = System.Drawing.Color.Transparent;
-            this.pbSanPham.Location = new System.Drawing.Point(671, 146);
+            this.pbSanPham.Location = new System.Drawing.Point(671, 118);
             this.pbSanPham.Name = "pbSanPham";
-            this.pbSanPham.Size = new System.Drawing.Size(110, 104);
+            this.pbSanPham.Size = new System.Drawing.Size(110, 132);
             this.pbSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSanPham.TabIndex = 33;
             this.pbSanPham.TabStop = false;
@@ -670,6 +671,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::CuaHangDoChoi.Properties.Resources.logotachnen;
             this.pictureBox2.Location = new System.Drawing.Point(206, 383);
             this.pictureBox2.Name = "pictureBox2";
@@ -683,6 +685,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._908839b4b7b5dfc78d0aba177641d42f;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1105, 667);
             this.Controls.Add(this.pictureBox2);

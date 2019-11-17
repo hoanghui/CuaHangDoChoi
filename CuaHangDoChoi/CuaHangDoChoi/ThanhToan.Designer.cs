@@ -60,6 +60,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbmaHoaDon = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.btnKhachHang = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,7 +92,7 @@
             this.btThanhToan.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btThanhToan.Location = new System.Drawing.Point(609, 541);
+            this.btThanhToan.Location = new System.Drawing.Point(703, 529);
             this.btThanhToan.Name = "btThanhToan";
             this.btThanhToan.Size = new System.Drawing.Size(365, 50);
             this.btThanhToan.TabIndex = 3;
@@ -137,7 +138,7 @@
             this.btDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btDangXuat.BackgroundImage = global::CuaHangDoChoi.Properties.Resources.iconfinder_exit_2676937__1_;
             this.btDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btDangXuat.Location = new System.Drawing.Point(901, 8);
+            this.btDangXuat.Location = new System.Drawing.Point(1065, 10);
             this.btDangXuat.Name = "btDangXuat";
             this.btDangXuat.Size = new System.Drawing.Size(52, 47);
             this.btDangXuat.TabIndex = 7;
@@ -216,7 +217,7 @@
             this.lvThanhToan.HideSelection = false;
             this.lvThanhToan.Location = new System.Drawing.Point(609, 197);
             this.lvThanhToan.Name = "lvThanhToan";
-            this.lvThanhToan.Size = new System.Drawing.Size(369, 232);
+            this.lvThanhToan.Size = new System.Drawing.Size(508, 232);
             this.lvThanhToan.TabIndex = 12;
             this.lvThanhToan.UseCompatibleStateImageBehavior = false;
             this.lvThanhToan.View = System.Windows.Forms.View.Details;
@@ -328,9 +329,9 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(881, 135);
+            this.dateTimePicker1.Location = new System.Drawing.Point(967, 133);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(97, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 20);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // label6
@@ -370,7 +371,7 @@
             this.lbmaHoaDon.Name = "lbmaHoaDon";
             this.lbmaHoaDon.Size = new System.Drawing.Size(99, 27);
             this.lbmaHoaDon.TabIndex = 16;
-            this.lbmaHoaDon.Text = "100";
+            this.lbmaHoaDon.Text = "111";
             // 
             // txtMaKH
             // 
@@ -378,8 +379,21 @@
             this.txtMaKH.Location = new System.Drawing.Point(793, 162);
             this.txtMaKH.Multiline = true;
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(114, 27);
+            this.txtMaKH.Size = new System.Drawing.Size(181, 27);
             this.txtMaKH.TabIndex = 19;
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btnKhachHang.Location = new System.Drawing.Point(984, 156);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(133, 35);
+            this.btnKhachHang.TabIndex = 3;
+            this.btnKhachHang.Text = "KHÁCH HÀNG";
+            this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // ThanhToan
             // 
@@ -388,7 +402,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::CuaHangDoChoi.Properties.Resources._908839b4b7b5dfc78d0aba177641d42f;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(998, 591);
+            this.ClientSize = new System.Drawing.Size(1143, 591);
             this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.lbmaHoaDon);
@@ -408,6 +422,7 @@
             this.Controls.Add(this.btDangXuat);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
+            this.Controls.Add(this.btnKhachHang);
             this.Controls.Add(this.btInhoadon);
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.btThanhToan);
@@ -416,6 +431,7 @@
             this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.label6);
             this.Name = "ThanhToan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.ThanhToan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
@@ -460,5 +476,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label lbmaHoaDon;
         private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.Button btnKhachHang;
     }
 }

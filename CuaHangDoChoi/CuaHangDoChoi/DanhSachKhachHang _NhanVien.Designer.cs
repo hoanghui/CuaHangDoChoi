@@ -1,6 +1,6 @@
 ﻿namespace CuaHangDoChoi
 {
-    partial class DanhSachKhachHang
+    partial class DanhSachKhachHang_NhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachKhachHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachKhachHang_NhanVien));
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.txtCMND_New = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.panelThem.SuspendLayout();
@@ -228,12 +229,12 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "Đăng xuất";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnThongKe
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.Plum;
             this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.Enabled = false;
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnThongKe.Location = new System.Drawing.Point(3, 346);
@@ -249,6 +250,7 @@
             // 
             this.btnDSHangHoa.BackColor = System.Drawing.Color.Plum;
             this.btnDSHangHoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDSHangHoa.Enabled = false;
             this.btnDSHangHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSHangHoa.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDSHangHoa.Location = new System.Drawing.Point(3, 218);
@@ -280,6 +282,7 @@
             // 
             this.btnDSNhanVien.BackColor = System.Drawing.Color.Plum;
             this.btnDSNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDSNhanVien.Enabled = false;
             this.btnDSNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSNhanVien.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDSNhanVien.Location = new System.Drawing.Point(3, 89);
@@ -295,6 +298,7 @@
             // 
             this.btnDSHoaDon.BackColor = System.Drawing.Color.Plum;
             this.btnDSHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDSHoaDon.Enabled = false;
             this.btnDSHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSHoaDon.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDSHoaDon.Location = new System.Drawing.Point(3, 282);
@@ -622,7 +626,22 @@
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             // 
-            // DanhSachKhachHang
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBack.Location = new System.Drawing.Point(12, 481);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(714, 39);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Trở lại trang thanh toán";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // DanhSachKhachHang_NhanVien
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -653,6 +672,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btXoaKH);
             this.Controls.Add(this.btnCapNhat);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btThemKH);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.btnThongKe);
@@ -662,7 +682,7 @@
             this.Controls.Add(this.btnDSNhanVien);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "DanhSachKhachHang";
+            this.Name = "DanhSachKhachHang_NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Khách Hàng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachKhachHang_FormClosing);
@@ -722,5 +742,6 @@
         private System.Windows.Forms.TextBox txtCMND_New;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

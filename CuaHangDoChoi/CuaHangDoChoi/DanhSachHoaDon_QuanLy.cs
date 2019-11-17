@@ -15,10 +15,14 @@ namespace CuaHangDoChoi
     public partial class DanhSachHoaDon_QuanLy : Form
     {
         BindingSource bd = new BindingSource();
+        BindingSource bd1 = new BindingSource();
+
         public DanhSachHoaDon_QuanLy()
         {
             InitializeComponent();
+           
             HienThiDanhSach();
+           
         }
         void HienThiDanhSach()
         {
@@ -37,21 +41,44 @@ namespace CuaHangDoChoi
             dgvHoaDon.Columns[4].HeaderText = "Thành tiền";
                 
             dgvHoaDon.Columns[0].Width = 150;
-            //GanDuLieu();
+
+            lbMaHoaDon.DataBindings.Clear();
+            lbMaNhanVien.DataBindings.Clear();
+            lbMaKhachHang.DataBindings.Clear();
+            lbNgayTao.DataBindings.Clear();
+            lbThanhTien.DataBindings.Clear();
+
+            GanDuLieu();
         }
 
-        //void GanDuLieu()
-        //{
-        //    txtNhanVienID.DataBindings.Add("Text", dgvNhanVien.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
-        //    txtName.DataBindings.Add("Text", dgvNhanVien.DataSource, "hoTen", true, DataSourceUpdateMode.Never);
-        //    txtCMND.DataBindings.Add("Text", dgvNhanVien.DataSource, "CMND", true, DataSourceUpdateMode.Never);
-        //    dtpNgaySinh.DataBindings.Add("Text", dgvNhanVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
-        //    txtSex.DataBindings.Add("Text", dgvNhanVien.DataSource, "gioiTinh", true, DataSourceUpdateMode.Never);
-        //    txtUserName.DataBindings.Add("Text", dgvNhanVien.DataSource, "tenDangNhap", true, DataSourceUpdateMode.Never);
-        //}
-        private void label7_Click(object sender, EventArgs e)
+        void GanDuLieu()
+        {
+            
+            lbMaHoaDon.DataBindings.Add("Text", dgvHoaDon.DataSource, "maHoaDon", true, DataSourceUpdateMode.Never);
+            
+            lbMaNhanVien.DataBindings.Add("Text", dgvHoaDon.DataSource, "maNhanVien", true, DataSourceUpdateMode.Never);
+            lbMaKhachHang.DataBindings.Add("Text", dgvHoaDon.DataSource, "maKhachHang", true, DataSourceUpdateMode.Never);
+            lbNgayTao.DataBindings.Add("Text", dgvHoaDon.DataSource, "ngayTao", true, DataSourceUpdateMode.Never);
+            lbThanhTien.DataBindings.Add("Text", dgvHoaDon.DataSource, "thanhTien", true, DataSourceUpdateMode.Never);
+            
+        }
+        
+        void HienThiChiTietHoaDon()
         {
 
+            bd1.DataSource = ChiTietHoaDonDAO.Instance.layCTHD(int.Parse(lbMaHoaDon.Text));
+            dgvSanPhamBan.DataSource = bd1;
+
+            // set tên cột
+            dgvSanPhamBan.Columns[0].HeaderText = "Mã hóa đơn";
+            dgvSanPhamBan.Columns[0].Width = 100;
+            dgvSanPhamBan.Columns[1].HeaderText = "Mã sản phẩm";
+
+            dgvSanPhamBan.Columns[2].HeaderText = "Đơn giá";
+
+            dgvSanPhamBan.Columns[3].HeaderText = "Số lượng";
+
+           
         }
 
         private void btListNhanVien_Click(object sender, EventArgs e)
@@ -89,6 +116,24 @@ namespace CuaHangDoChoi
             this.Dispose(false);
         }
 
-      
+        private void DanhSachHoaDon_QuanLy_Load(object sender, EventArgs e)
+        {
+            HienThiDanhSach();
+        }
+
+        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dgvSanPhamBan_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            HienThiChiTietHoaDon();
+        }
+
+        private void dgvHoaDon_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            HienThiChiTietHoaDon();
+        }
     }
 }

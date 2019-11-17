@@ -91,7 +91,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestThemNhanVien()
         {
             bool expected = true;
-            bool actual = NhanVienDAO.Instance.ThemNV(77, "Only C", 123456123, "7/7/1997", "Nam", "ada", "daonhac");
+            bool actual = NhanVienDAO.Instance.ThemNV("Only C", 123456123, "7/7/1997", "Nam", "ada", "daonhac");
             Assert.AreEqual(expected, actual);
         }
 
@@ -99,7 +99,7 @@ namespace UnitTestCuaHangDoChoi
         public void TestThemNhanVienVoiMaNhanVienTrung()
         {
             bool expected = false;
-            bool actual = NhanVienDAO.Instance.ThemNV(111, "Only C", 123456123, "7/7/1997", "Nam", "cvgbh", "ada");
+            bool actual = NhanVienDAO.Instance.ThemNV( "Only C", 123456123, "7/7/1997", "Nam", "cvgbh", "ada");
             Assert.AreEqual(expected, actual);
         }
 

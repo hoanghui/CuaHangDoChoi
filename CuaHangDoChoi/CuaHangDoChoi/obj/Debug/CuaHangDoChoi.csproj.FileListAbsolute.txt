@@ -182,3 +182,4 @@ E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debu
 E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.csproj.CopyComplete
 E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.exe
 E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.pdb
+E:\Kiemthutest\newupdate_thu7\CuaHangDoChoi\CuaHangDoChoi\CuaHangDoChoi\obj\Debug\CuaHangDoChoi.DanhSachKhachHang_NhanVien.resources
