@@ -39,9 +39,11 @@ namespace DAO
             return cthd;
         }
 
-        public void InsertChiTietHoaDon(int maHoaDon, int maSanPham, float donGia, int soLuong)
+        public bool themChiTietHoaDon(int maHoaDon, int maSanPham, float donGia, int soLuong)
         {
-            DataProvider.Instance.ExecuteNonQuery("InsertChiTietHoaDon @maHoaDon , @maSanPham , @donGia , @soLuong", new object[] { maHoaDon, maSanPham, donGia, soLuong });
+            string query = "INSERT INTO dbo.ChiTietHoaDon VALUES(" + maHoaDon + "," + maSanPham + "," + donGia + "," + soLuong + ")";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
     }
 }

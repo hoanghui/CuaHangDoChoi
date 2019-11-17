@@ -100,5 +100,12 @@ namespace DAO
             }
             return -1.0;
         }
+
+        public bool themHoaDon(int maHoaDon, int maKH, int maNV, DateTime ngayTao)
+        {
+            string query = "INSERT INTO dbo.HoaDon VALUES(" + maHoaDon + "," + maKH + "," + maNV + "," + ngayTao + ")";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }
